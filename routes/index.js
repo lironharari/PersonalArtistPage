@@ -124,7 +124,7 @@ router.get('/documentaries', async (req, res) => {
        
 });
 
-router.get('/drawings', async (req, res) => {
+router.get('/api/drawings', async (req, res) => {
 
     try {
         const drawings = await Photo.find({ category: 'drawing' });

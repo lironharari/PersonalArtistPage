@@ -64,7 +64,7 @@ class Gallery extends React.Component {
   }
 
   fetchDrawings = () => {
-    axios.get('/drawings')
+    axios.get('/api/drawings')
       .then((response) => {
         const { drawings } = response.data;            
         this.setState({ images: commonScript.sortByRank(drawings) })
