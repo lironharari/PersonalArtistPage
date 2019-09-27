@@ -73,7 +73,7 @@ class Gallery extends React.Component {
   }
 
   fetchStreetPhotography = () => {
-    axios.get('/streetPhotography')
+    axios.get('/api/streetPhotography')
       .then((response) => {
         const { photos } = response.data;
         this.setState({ photos: photos })
@@ -101,7 +101,7 @@ class Gallery extends React.Component {
     
   fetchDocumentaryPhotography = (location) => {
     axios({
-      url: '/documentaryPhotography',
+      url: '/api/documentaryPhotography',
       method: 'POST',
       data: {
         location

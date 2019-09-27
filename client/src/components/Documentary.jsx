@@ -22,7 +22,7 @@ class Documentary extends React.Component {
     
 
       fetchDocumentaries = () => {
-        axios.get('/documentaries')
+        axios.get('/api/documentaries')
           .then((response) => {
             const { documentaries } = response.data;
             this.setState({ episodes: commonScript.sortByRank(documentaries) })

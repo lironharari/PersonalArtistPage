@@ -6,7 +6,7 @@ const Photo = require('../models/photo');
 const Documentary = require('../models/documentary');
 const router = express.Router();
 
-router.post('/do', async (req, res) => {
+router.post('/api/do', async (req, res) => {
     console.log("at server");
     const data = {}
     try {
@@ -20,7 +20,7 @@ router.post('/do', async (req, res) => {
     }    
 });
 
-router.post('/documentaryPhotography', async (req, res) => {
+router.post('/api/documentaryPhotography', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
             message: 'Body should not be empty',
@@ -44,7 +44,7 @@ router.post('/documentaryPhotography', async (req, res) => {
     
 });
 
-router.get('/links', async (req, res) => {
+router.get('/api/links', async (req, res) => {
 
     try {
         const links = await HomeLink.find({});
@@ -60,7 +60,7 @@ router.get('/links', async (req, res) => {
        
 });
 
-router.get('/streetPhotography', async (req, res) => {
+router.get('/api/streetPhotography', async (req, res) => {
 
     try {
         const photos = await Photo.find({ category: 'photography', subcategory: 'street' });
@@ -76,7 +76,7 @@ router.get('/streetPhotography', async (req, res) => {
        
 });
 
-router.get('/photos', async (req, res) => {
+router.get('/api/photos', async (req, res) => {
 
     try {
         const photos = await Photo.find({});
@@ -92,7 +92,7 @@ router.get('/photos', async (req, res) => {
        
 });
 
-router.get('/songs', async (req, res) => {
+router.get('/api/songs', async (req, res) => {
 
     try {
         const songs = await Song.find({});
@@ -108,7 +108,7 @@ router.get('/songs', async (req, res) => {
        
 });
 
-router.get('/documentaries', async (req, res) => {
+router.get('/api/documentaries', async (req, res) => {
 
     try {
         const documentaries = await Documentary.find({});
@@ -140,7 +140,7 @@ router.get('/api/drawings', async (req, res) => {
        
 });
 
-router.post('/update', async (req, res) => {
+router.post('/api/update', async (req, res) => {
     if (isEmpty(req.body)) {
         return res.status(403).json({
             message: 'Body should not be empty',

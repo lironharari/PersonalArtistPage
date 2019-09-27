@@ -21,7 +21,7 @@ class Music extends React.Component {
       componentWillUnmount() {}
     
       fetchSongs = () => {
-            axios.get('/songs')
+            axios.get('/api/songs')
               .then((response) => {
                 const { songs } = response.data;
                 this.setState({ songs: commonScript.sortByRank(songs) })

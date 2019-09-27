@@ -24,7 +24,7 @@ class Home extends Component {
     do = () => {
       const data = {}
       axios({
-        url: '/do',
+        url: '/api/do',
         method: 'POST',
         data: {
           data
@@ -38,7 +38,7 @@ class Home extends Component {
     };
 
     fetchLinks = () => {
-        axios.get('/links')
+        axios.get('/api/links')
             .then((response) => {
               const { links } = response.data;
               this.setState({ links: commonScript.sortByRank(links) })
