@@ -141,12 +141,12 @@ export default function PersistentDrawerLeft() {
           </Typography>      
 
 
-          <Button color="inherit" onClick={() => window.location.href = "/documentary/human-history-revisited"}>documentary</Button>
+          <Button color="inherit" onClick={() => window.location.href = "/human-history-revisited"}>documentary</Button>
           <DropdownButton id="dropdown-item-button" title="photography">
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/photography/street"} >Street Photography</Dropdown.Item>            
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/street-photography"} >Street Photography</Dropdown.Item>            
               <Dropdown.Divider />
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/photography/documentary/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/photography/documentary/its-more-fun-in-manila"} >It's more fun in Manila!</Dropdown.Item>
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/its-more-fun-in-manila"} >It's more fun in Manila!</Dropdown.Item>
           </DropdownButton>
           <Button color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
           <Button color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
@@ -172,7 +172,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
 
         <List>  
-            <ListItem button onClick={() => window.location.href = "/documentary/human-history-revisited"} >
+            <ListItem button onClick={() => window.location.href = "/human-history-revisited"} >
               <ListItemIcon><PlayArrowIcon /></ListItemIcon>
               <ListItemText primary="Human History Revisited" />
             </ListItem>
@@ -180,15 +180,15 @@ export default function PersistentDrawerLeft() {
 
         <Divider />
         <List>
-        <ListItem button onClick={() => window.location.href = "/photography/street"} >
+        <ListItem button onClick={() => window.location.href = "/street-photography"} >
                         <ListItemIcon><DirectionsRunIcon /></ListItemIcon>
                         <ListItemText primary="Street Photography" />
             </ListItem>            
-            <ListItem button onClick={() => window.location.href = "/photography/documentary/life-on-the-railroads"} >
+            <ListItem button onClick={() => window.location.href = "/life-on-the-railroads"} >
                         <ListItemIcon><RailwayIcon /></ListItemIcon>
                         <ListItemText primary="Life on the Railroads" />
             </ListItem>                                    
-            <ListItem button onClick={() => window.location.href = "/photography/documentary/its-more-fun-in-manila"} >
+            <ListItem button onClick={() => window.location.href = "/its-more-fun-in-manila"} >
                         <ListItemIcon><CameraIcon /></ListItemIcon>
                         <ListItemText primary="It's more fun in Manila!" />
             </ListItem>                                                
@@ -219,11 +219,11 @@ export default function PersistentDrawerLeft() {
             <Switch>
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
             <Route path="/drawings" component={Drawings} />        
-            <Route path="/documentary/human-history-revisited" component={Documentary} />        
-            <Route path="/photography/street" component={StreetPhotography} />                  
+            <Route path="/human-history-revisited" component={Documentary} />        
+            <Route path="/street-photography" component={StreetPhotography} />                  
             <Route path="/music" component={Music} />
-            <Route path="/photography/documentary/life-on-the-railroads" component={DocumentaryPhotography} />       
-            <Route path="/photography/documentary/its-more-fun-in-manila" component={DocumentaryPhotography} />    
+            <Route path="/life-on-the-railroads" component={DocumentaryPhotography} />       
+            <Route path="/its-more-fun-in-manila" component={DocumentaryPhotography} />    
             <Route component={Notfound} />
             </Switch> 
         </Router> 

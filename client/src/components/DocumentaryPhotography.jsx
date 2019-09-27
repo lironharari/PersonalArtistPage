@@ -4,7 +4,7 @@ import PageHeader from './PageHeader';
 
 class DocumentaryPhotography extends React.Component {      
     render() {         
-      const manilaDocumentary =  "/photography/documentary/its-more-fun-in-manila";      
+      const manilaDocumentary =  "/its-more-fun-in-manila";      
       let title = "";
       let location = "";
 
@@ -18,8 +18,7 @@ class DocumentaryPhotography extends React.Component {
         title = "Kolkata, India";
         location = "kolkata";                            
       }
-        
-
+              
       return (        
         <div> 
             <PageHeader title={title} subtitle={subtitle}></PageHeader>                   

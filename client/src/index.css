@@ -300,8 +300,12 @@ border-top:1px solid black;
   flex-direction: column;  
 }
 
+.homeHeader{  
+  text-align: center;
+}
+
 .homeHeader h2{
-  color:rgba(0,0,0,.7);
+  color:rgba(0,0,0,.7);  
 }
 
 .homeHeader h4{
@@ -449,7 +453,7 @@ margin-bottom:40px;
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.02857em;
-  /* text-transform: none; */
+  text-transform: uppercase;
   border:none;
   box-shadow: none;
   outline: none;

@@ -56,8 +56,8 @@ class Home extends Component {
         <MDBRow className="mt-4 homeHeader">
             <MDBCol md="12" className="flex-center">              
                 <div>
-                    <h2>liron</h2>
-                    <h4>harari</h4>
+                    {/* <h2>liron</h2>
+                    <h4>welcome</h4> */}
                 </div>              
             </MDBCol>
         </MDBRow>
