@@ -14,7 +14,7 @@ export default Drawings
 // import PageHeader from './PageHeader';
 // import BrushIcon from '@material-ui/icons/Brush';
 
-// class Drawings1 extends React.Component {      
+// class Drawings extends React.Component {      
 //       render() {           
 //       return (
 //         <div>
@@ -25,4 +25,4 @@ export default Drawings
 //     }
 //   }
 
-// export default Drawings1;
+// export default Drawings;

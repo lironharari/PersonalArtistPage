@@ -148,7 +148,7 @@ export default function PersistentDrawerLeft() {
               <Dropdown.Item as="button" onClick={() => window.location.href = "/photography/documentary/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>
               <Dropdown.Item as="button" onClick={() => window.location.href = "/photography/documentary/its-more-fun-in-manila"} >It's more fun in Manila!</Dropdown.Item>
           </DropdownButton>
-          <Button color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
+          <Button color="inherit" onClick={() => window.location.href = "/drawing"}>drawings</Button>
           <Button color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
         </Toolbar>
       </AppBar>
@@ -195,7 +195,7 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-        <ListItem button onClick={() => window.location.href = "/drawings"} >
+        <ListItem button onClick={() => window.location.href = "/drawing"} >
               <ListItemIcon><DrawingsIcon /></ListItemIcon>
               <ListItemText primary="Drawings" />
             </ListItem>
@@ -218,7 +218,7 @@ export default function PersistentDrawerLeft() {
         <Router>  
             <Switch>
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
-            <Route path="/drawings" component={Drawings} />        
+            <Route path="/drawing" component={Drawings} />        
             <Route path="/documentary/human-history-revisited" component={Documentary} />        
             <Route path="/photography/street" component={StreetPhotography} />                  
             <Route path="/music" component={Music} />
