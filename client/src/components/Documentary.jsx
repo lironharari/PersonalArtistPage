@@ -73,11 +73,13 @@ class Documentary extends React.Component {
                             <Row className="documentaryRow">
                                 <Col>                          
                                     <h3>{obj.title}</h3>
-                                    <h2>{obj.subtitle}</h2>                                                    
-                                    {Parser(obj.description)}                                
+                                    <h2>{obj.subtitle}</h2>                  
+                                    <div>
+                                        {Parser(obj.description)}
+                                    </div>                                                                                                                                          
                                 </Col>
                                 <Col>
-                                    <object title={obj.title} data={obj.src} width="560" height="315">
+                                    <object title={obj.title} data={obj.src} >
                                         <span>could not diplay YouTube video</span>
                                     </object>                                    
                                 </Col>

@@ -382,7 +382,8 @@ border-top:1px solid black;
 .MuiButton-label,.MuiTypography-root,.MuiButtonBase-root{
   color:rgba(0,0,0,.4);  
 }
-.MuiTypography-root:hover,.MuiButtonBase-root:hover{
+
+.MuiTypography-root span:hover,.MuiButtonBase-root:hover{
   color:rgba(0,0,0,.5);   
 }
 
@@ -428,7 +429,7 @@ margin-bottom:40px;
   outline: 0;
 }
 
-.MuiTypography-root:hover,.thumbnailImage,.photographyContainer img:hover,.thumbnailtext{
+.MuiTypography-root span:hover,.thumbnailImage,.photographyContainer img:hover,.thumbnailtext{
   cursor: pointer;
 }
 
@@ -480,4 +481,9 @@ margin-bottom:40px;
 .dropdown .btn-primary.dropdown-toggle:focus{
   box-shadow: none !important;
   color:rgba(0,0,0,.4) !important;  
+}
+
+div.documentaryHeadContainer.row{
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }

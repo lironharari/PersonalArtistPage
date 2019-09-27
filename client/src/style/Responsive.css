@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 400px) {
+    .barLinks{
+      display: none !important;
+    }
+
+    .homeDescription h2{
+      font-size:1.5rem;
+    }    
+
+    .homeDescription h4{
+      font-size:1.2rem;
+    }        
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .barLinks{
+      display: none !important;
+    }
+    
+    .documentaryRow{
+      display: flex;
+      flex-wrap: wrap;
+    }    
+    
+    .documentaryRow .col h2,.documentaryRow .col h3{
+      width: 100%;      
+      display: inline-flexbox;
+      text-align: center;
+    }
+
+    .documentaryRow .col{
+      width: 100%;      
+      display: contents;
+    }    
+    
+    .documentaryRow object{
+      width: 100%;
+      height:315px;      
+    }    
+
+    .homeDescription h2{
+      font-size:1.7rem;
+    }    
+
+    .homeDescription h4{
+      font-size:1.3rem;
+    }        
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {    
+    .documentaryRow object{
+      width: 100%;
+      height:100%;
+    }    
+  }

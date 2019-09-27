@@ -136,20 +136,20 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap className={classes.title} onClick={() => window.location.href = "/"}>
-            Liron Harari            
+          <Typography variant="h6" noWrap className={classes.title}>
+            <span onClick={() => window.location.href = "/"}>
+                Liron Harari
+            </span>            
           </Typography>      
-
-
-          <Button color="inherit" onClick={() => window.location.href = "/human-history-revisited"}>documentary</Button>
-          <DropdownButton id="dropdown-item-button" title="photography">
+          <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/human-history-revisited"}>documentary</Button>
+          <DropdownButton className="barLinks" id="dropdown-item-button" title="photography">
               <Dropdown.Item as="button" onClick={() => window.location.href = "/street-photography"} >Street Photography</Dropdown.Item>            
               <Dropdown.Divider />
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>                  
               <Dropdown.Item as="button" onClick={() => window.location.href = "/its-more-fun-in-manila"} >It's more fun in Manila!</Dropdown.Item>
           </DropdownButton>
-          <Button color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
-          <Button color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
+          <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
+          <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
         </Toolbar>
       </AppBar>
 
