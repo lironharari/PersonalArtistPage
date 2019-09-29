@@ -11,7 +11,9 @@ const DataSchema = new Schema(
       location: String,
       year: String,
       keyWords:[String],
-      rank: Number
+      rank: Number,
+      width: Number,
+      height: Number
     },
     { timestamps: true }
   );

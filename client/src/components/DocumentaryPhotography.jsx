@@ -1,28 +1,54 @@
 import React from 'react';
-import Gallery from './Gallery';
+import axios from 'axios';
+//import Gallery from './Gallery';
 import PageHeader from './PageHeader';
+import ImageGallery from './ImageGallery';
+import * as commonScript from '../script/common';
 
-class DocumentaryPhotography extends React.Component {      
-    render() {         
-      const manilaDocumentary =  "/its-more-fun-in-manila";      
-      let title = "";
-      let location = "";
+class DocumentaryPhotography extends React.Component {   
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      photos: [],
+      manilaDocumentaryURL : "/its-more-fun-in-manila"
+    };   
+  }
+  componentDidMount() {    
+    this.fetchDocumentaryPhotography(); 
+  }
 
-      const subtitle = "Documentary";
+  componentWillUnmount() {}
+  
+  fetchDocumentaryPhotography = () => {        
+    const location = this.props.location.pathname === this.state.manilaDocumentaryURL ? "manila" : "kolkata";
 
-      if(this.props.location.pathname === manilaDocumentary){
-        location = "manila";
-        title = "Manila, The Philippines";
-      }        
-      else{
-        title = "Kolkata, India";
-        location = "kolkata";                            
+    axios({
+      url: '/api/documentaryPhotography',
+      method: 'POST',
+      data: {
+        location
       }
-              
+    })
+    .then((response) => {
+      const { photos } = response.data;
+      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(photos)) })
+    })
+    .catch(() => alert('Error fetching documentary photography'))
+  }
+
+  render() {         
+    const { photos } = this.state;    
+    const subtitle = "Documentary Photography";    
+    const title = this.props.location.pathname === this.state.manilaDocumentaryURL ? "Manila, The Philippines" : "Kolkata, India"
+
       return (        
-        <div> 
+        <div>             
             <PageHeader title={title} subtitle={subtitle}></PageHeader>                   
-            <Gallery category="documentary" location={location}></Gallery>
+            {photos.length > 0 &&
+              <ImageGallery photos={photos}></ImageGallery>
+              }                        
+            {/* <Gallery category="documentary" location={location}></Gallery> */}
         </div>                 
       );
     }

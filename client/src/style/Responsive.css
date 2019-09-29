@@ -44,6 +44,7 @@
     .documentaryRow object{
       width: 100%;
       height:315px;      
+      margin-top: 20px;
     }    
 
     .homeDescription h2{
@@ -52,7 +53,7 @@
 
     .homeDescription h4{
       font-size:1.3rem;
-    }        
+    }
   }
   
   /* Desktop Styles */

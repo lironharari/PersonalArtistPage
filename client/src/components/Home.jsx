@@ -16,26 +16,44 @@ class Home extends Component {
     
     componentDidMount() {
       this.fetchLinks();  
+            
+      //this.searchPhotoBySrc('8548905072_06e7440ba0_o.jpg',{height:3, width:2});    
     }
       
     componentWillUnmount() {
     }      
-  
-    do = () => {
-      const data = {}
+
+
+    updatePhoto = ( id, update ) => {
       axios({
-        url: '/api/do',
-        method: 'POST',
+        url: '/api/updatePhoto',
+        method: 'POST', 
         data: {
-          data
+          id,
+          update : update          
+        }
+      })
+      .then((response) => {        
+        console.log(response.data);        
+      })
+      .catch((error) => console.log(error))      
+    }
+
+    searchPhotoBySrc = (src, update) => {
+      axios({
+        url: '/api/searchPhotoBySrc',
+        method: 'POST', 
+        data: {
+          src
         }
       })
       .then((response) => {
-        const { data } = response.data;
-        console.log(data);
+        const { photo } = response.data;
+        console.log(photo);
+        this.updatePhoto( photo._id, update );
       })
-      .catch(() => alert('Error fetching documentary photography'))
-    };
+      .catch((error) => console.log(error))      
+    }
 
     fetchLinks = () => {
         axios.get('/api/links')
@@ -44,13 +62,13 @@ class Home extends Component {
               this.setState({ links: commonScript.sortByRank(links) })
             })
             .catch((error) => alert(error));
-        };
+        }
       
     render() {
       const { links } = this.state;
-
       return (
     <div className="homeContainer">
+
         <Nav> 
         <MDBContainer>
         <MDBRow className="mt-4 homeHeader">

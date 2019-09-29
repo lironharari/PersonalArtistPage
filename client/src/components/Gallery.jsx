@@ -28,15 +28,23 @@ class Gallery extends React.Component {
     this.filter = this.filter.bind(this);   
   }
   
-  componentDidMount() {    
-    if(this.props.category === "drawings" )
-      this.fetchDrawings(); 
-    else if(this.props.category === "documentary" )         
-      this.fetchDocumentaryPhotography(this.props.location); 
-    else if(this.props.category === "street" )         
-       this.fetchStreetPhotography();
-    else if(this.props.category === "humanHistory" )            
-      this.setState({ images: this.props.images });     
+  componentDidMount() { 
+    switch(this.props.category) {
+      case "drawings":
+        this.fetchDrawings(); 
+        break;
+      case "documentary":
+        this.fetchDocumentaryPhotography(this.props.location); 
+        break;
+      case "street":
+          this.fetchStreetPhotography(this.props.location); 
+          break;        
+      case "humanHistory":
+          this.setState({ images: this.props.images });     
+            break;                  
+      default:
+        // code block
+    } 
   }
 
   componentWillUnmount() {
@@ -47,7 +55,7 @@ class Gallery extends React.Component {
         const type = e.target.dataset.type;
         const name = e.target.dataset.name;
 
-        this.setState({ active: name })
+        this.setState({ active: name })     
 
         if(type === "dogs")
           this.setState({ images: commonScript.sortByRank(this.state.photos.filter(function (photo) { return photo.keyWords.includes('dogs');})) });                  
@@ -82,14 +90,14 @@ class Gallery extends React.Component {
       .catch(() => alert('Error fetching streetPhotography'));
   };  
   
-//   update(id){
-//     const {description} = this.state;    
+  // update(id){
+  //   const {description} = this.state;    
 
-//     axios.post('/api/updatePhoto', {
-//         id: id,
-//         update: { description: description },
-//       });      
-//   }
+  //   axios.post('/api/updatePhoto', {
+  //       id: id,
+  //       update: { description: description },
+  //     });      
+  // }
 
 //     deletePhoto(IdToDelete){
 //       axios.delete('/api/deletePhoto', {
@@ -117,12 +125,12 @@ class Gallery extends React.Component {
   renderImages(imagePath){
       let photoIndex = -1;
       const { images } = this.state;
-            
+      
       return images.map(obj => {
         photoIndex++;
         const privateKey = photoIndex;
           return (
-              <MDBCol md="4" key={photoIndex}>
+              <MDBCol md="4" key={photoIndex} className="galleryCol">
                 <figure>                    
                     <LazyLoad height={200}>
                         <Card className="photographyContainer">                                                               
@@ -190,9 +198,8 @@ class Gallery extends React.Component {
 }
 
 render() {
-const { photoIndex, isOpen, images, active } = this.state;
-const imagePath = "/images/";
-
+      const { photoIndex, isOpen, images, active } = this.state;
+      const imagePath = "/images/";        
   return (
     <div>
           <MDBContainer className="mt-5">
@@ -213,8 +220,8 @@ const imagePath = "/images/";
                       </ButtonToolbar>
                 </div>
               ) : ('')}
-            <div className="mdb-lightbox no-margin">
-              <MDBRow>
+            <div className="mdb-lightbox no-margin">                            
+              <MDBRow>                      
                 {this.renderImages(imagePath)}
               </MDBRow>
             </div>

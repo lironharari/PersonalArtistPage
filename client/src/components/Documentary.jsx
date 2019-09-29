@@ -2,9 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Gallery from './Gallery';
+//import Gallery from './Gallery';
 import Parser from 'html-react-parser';
 import * as commonScript from '../script/common';
+import ImageGallery from './ImageGallery';
 
 class Documentary extends React.Component {      
     constructor(props) {
@@ -19,8 +20,11 @@ class Documentary extends React.Component {
       }
 
       componentWillUnmount() {}
-    
-
+        
+      styleGalleryPhotos(photos) {
+        return commonScript.adjustGalleryPhotos(photos);
+      }
+          
       fetchDocumentaries = () => {
         axios.get('/api/documentaries')
           .then((response) => {
@@ -87,7 +91,10 @@ class Documentary extends React.Component {
                             <Row>
                                 <Col>
                                     <div className="humanHistoryThumbs">
-                                        <Gallery category="humanHistory" images={obj.photos}></Gallery>
+                                        {/* <Gallery category="humanHistory" images={obj.photos}></Gallery> */}
+                                        {obj.photos.length > 0 &&
+                                        <ImageGallery photos={this.styleGalleryPhotos(obj.photos)}></ImageGallery>
+                                        }        
                                     </div>                         
                                 </Col>                      
                             </Row>

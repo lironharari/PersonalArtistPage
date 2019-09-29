@@ -181,8 +181,7 @@ code {
 
 .streetFilter{  
   width: 100%;
-  padding: 20px 0;    
-  width: 100%;
+  padding: 20px 0;      
   text-align: center;
   display: flex;
   align-items: center;
@@ -227,25 +226,6 @@ code {
 .photographyGrid{  
   margin-bottom:30px; 
   margin-top:40px; 
-}
-
-.drawingContainer,.photographyContainer{
-  width: 30%;
-  float: left;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;   
-  margin:0 35px 40px 0;
-}
-
-.drawingContainer{
-  height: 350px; 
-}
-
-.photographyContainer{
-  height: 235px; 
-  width: 350px;  
 }
 
 .drawingImage,.photographyImage{
@@ -360,11 +340,6 @@ border-top:1px solid black;
 
 .fixed-top{
   z-index: 10 !important;
-}
-
-.humanHistoryThumbs .photographyContainer{
-  height: 200px; 
-  width: 325px;
 }
 
 .humanHistoryRows{
@@ -486,4 +461,12 @@ margin-bottom:40px;
 div.documentaryHeadContainer.row{
   margin-right: 0 !important;
   margin-left: 0 !important;
+}
+
+.MuiAppBar-root{
+  z-index: 1 !important;
+}
+
+.humanHistoryThumbs{
+  margin-top: 40px;
 }
