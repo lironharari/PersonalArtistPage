@@ -16,11 +16,29 @@ class Documentary extends React.Component {
         };   
       }
       componentDidMount() {    
-          this.fetchDocumentaries(); 
+          this.fetchDocumentaries();           
       }
 
       componentWillUnmount() {}
-        
+      
+      updateDocumentaries(episodes) {
+        // if(episodes.length>0)
+        // {
+        //     //console.log(episodes);
+        //     const found = episodes.find(function(element) {
+        //         return element._id === '5d7de2254cb26a1a9c53d245';
+        //       });
+              
+        //        const photos = found.photos;
+        //        //console.log(photos);
+
+        //       //photos.push({src:'sumer-laws.jpg',description:'sumer laws',height:350,width:350});
+              
+        //        //console.log(photos);                            
+        // //       //this.updateDocumentary('5d7de2254cb26a1a9c53d244',{photos:photos});    
+        //  }        
+      }
+
       styleGalleryPhotos(photos) {
         return commonScript.adjustGalleryPhotos(photos);
       }
@@ -34,8 +52,23 @@ class Documentary extends React.Component {
           .catch(() => alert('Error fetching documentaries'));
       }
     
+    updateDocumentary = ( id, update ) => {
+        axios({
+          url: '/api/updateDocumentary',
+          method: 'POST', 
+          data: {
+            id,
+            update : update          
+          }
+        })
+        .then((response) => {        
+          console.log(response.data);        
+        })
+        .catch((error) => console.log(error))      
+      }
+
       render() {   
-        const { episodes } = this.state;      
+        const { episodes } = this.state;              
         
       return (
         <div className="documentaryGrid">                  
