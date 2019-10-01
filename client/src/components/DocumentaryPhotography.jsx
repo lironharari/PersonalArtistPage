@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-//import Gallery from './Gallery';
 import PageHeader from './PageHeader';
 import ImageGallery from './ImageGallery';
 import * as commonScript from '../script/common';
@@ -45,10 +44,7 @@ class DocumentaryPhotography extends React.Component {
       return (        
         <div>             
             <PageHeader title={title} subtitle={subtitle}></PageHeader>                   
-            {photos.length > 0 &&
               <ImageGallery photos={photos}></ImageGallery>
-              }                        
-            {/* <Gallery category="documentary" location={location}></Gallery> */}
         </div>                 
       );
     }

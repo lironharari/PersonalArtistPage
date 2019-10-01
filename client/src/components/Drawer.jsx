@@ -16,9 +16,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MusicIcon from '@material-ui/icons/Audiotrack';
+import Pets from '@material-ui/icons/Pets';
 import DrawingsIcon from '@material-ui/icons/Create';
 import RailwayIcon from '@material-ui/icons/DirectionsRailway';
 import CameraIcon from '@material-ui/icons/LocalSee';
+import ChildCare from '@material-ui/icons/ChildCare';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import Button from '@material-ui/core/Button';
@@ -27,10 +29,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Notfound from './Notfound';
 import Home from './Home';
 import Drawings from './Drawings';
+import Poverty from './Poverty';
 import Documentary from './Documentary';
 import StreetPhotography from './StreetPhotography';
 import Music from './Music';
+import Animals from './Animals';
 import DocumentaryPhotography from './DocumentaryPhotography';
+import Kids from './Kids';
 
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -52,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,    
-    }),
+    })
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -143,10 +148,13 @@ export default function PersistentDrawerLeft() {
           </Typography>      
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/human-history-revisited"}>documentary</Button>
           <DropdownButton className="barLinks" id="dropdown-item-button" title="photography">
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/street-photography"} >Street Photography</Dropdown.Item>            
-              <Dropdown.Divider />
               <Dropdown.Item as="button" onClick={() => window.location.href = "/life-on-the-railroads"} >Life on the Railroads</Dropdown.Item>                  
               <Dropdown.Item as="button" onClick={() => window.location.href = "/its-more-fun-in-manila"} >It's more fun in Manila!</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/street-photography"} >Street Photography</Dropdown.Item>            
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/animals"} >Animals</Dropdown.Item>            
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/kids"} >Kids</Dropdown.Item>            
+              <Dropdown.Item as="button" onClick={() => window.location.href = "/poverty"} >Poverty</Dropdown.Item>                          
           </DropdownButton>
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
@@ -191,7 +199,19 @@ export default function PersistentDrawerLeft() {
             <ListItem button onClick={() => window.location.href = "/its-more-fun-in-manila"} >
                         <ListItemIcon><CameraIcon /></ListItemIcon>
                         <ListItemText primary="It's more fun in Manila!" />
-            </ListItem>                                                
+            </ListItem>    
+            <ListItem button onClick={() => window.location.href = "/animals"} >
+                        <ListItemIcon><Pets /></ListItemIcon>
+                        <ListItemText primary="Animals" />
+            </ListItem>                                                              
+            <ListItem button onClick={() => window.location.href = "/kids"} >
+                        <ListItemIcon><ChildCare /></ListItemIcon>
+                        <ListItemText primary="Kids" />
+            </ListItem>                      
+            <ListItem button onClick={() => window.location.href = "/poverty"} >
+                        <ListItemIcon><ChildCare /></ListItemIcon>
+                        <ListItemText primary="Poverty" />
+            </ListItem>                                              
         </List>
         <Divider />
         <List>
@@ -219,6 +239,9 @@ export default function PersistentDrawerLeft() {
             <Switch>
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
             <Route path="/drawings" component={Drawings} />        
+            <Route path="/animals" component={Animals} />                    
+            <Route path="/poverty" component={Poverty} />                    
+            <Route path="/kids" component={Kids} />                    
             <Route path="/human-history-revisited" component={Documentary} />        
             <Route path="/street-photography" component={StreetPhotography} />                  
             <Route path="/music" component={Music} />

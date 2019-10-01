@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-//import Gallery from './Gallery';
 import Parser from 'html-react-parser';
 import * as commonScript from '../script/common';
 import ImageGallery from './ImageGallery';
@@ -52,20 +51,20 @@ class Documentary extends React.Component {
           .catch(() => alert('Error fetching documentaries'));
       }
     
-    updateDocumentary = ( id, update ) => {
-        axios({
-          url: '/api/updateDocumentary',
-          method: 'POST', 
-          data: {
-            id,
-            update : update          
-          }
-        })
-        .then((response) => {        
-          console.log(response.data);        
-        })
-        .catch((error) => console.log(error))      
-      }
+    // updateDocumentary = ( id, update ) => {
+    //     axios({
+    //       url: '/api/updateDocumentary',
+    //       method: 'POST', 
+    //       data: {
+    //         id,
+    //         update : update          
+    //       }
+    //     })
+    //     .then((response) => {        
+    //       console.log(response.data);        
+    //     })
+    //     .catch((error) => console.log(error))      
+    //   }
 
       render() {   
         const { episodes } = this.state;              
@@ -124,10 +123,7 @@ class Documentary extends React.Component {
                             <Row>
                                 <Col>
                                     <div className="humanHistoryThumbs">
-                                        {/* <Gallery category="humanHistory" images={obj.photos}></Gallery> */}
-                                        {obj.photos.length > 0 &&
-                                        <ImageGallery photos={this.styleGalleryPhotos(obj.photos)}></ImageGallery>
-                                        }        
+                                        <ImageGallery photos={this.styleGalleryPhotos(obj.photos)}></ImageGallery>      
                                     </div>                         
                                 </Col>                      
                             </Row>

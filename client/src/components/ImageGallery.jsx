@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
@@ -6,22 +6,45 @@ export default function ImageGallery({ photos }) {
     const [currentImage, setCurrentImage] = useState(0);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
     
-    const openLightbox = useCallback((event, { photo, index }) => {
-      setCurrentImage(index);
-      setViewerIsOpen(true);
-    }, []);
+    // const openLightbox = useCallback((event, { photo, index }) => {
+    //   setCurrentImage(index);
+    //   setViewerIsOpen(true);
+    // }, []);
   
     const closeLightbox = () => {
       setCurrentImage(0);
       setViewerIsOpen(false);
     };      
 
+    const imageRenderer = ({
+      key,
+      index,
+      photo,     
+    }) => {
+      const handleOnClick = e => {
+        setCurrentImage(index);
+        setViewerIsOpen(true);
+      };        
+      return (
+        <div 
+            key={key} >          
+          <img                    
+            alt={photo.title}
+            className="galleryImage"
+            {...photo}
+            onClick={handleOnClick}
+          />          
+        </div>
+      );
+    };
+    
   return (
     <div>    
-        <Gallery 
-                photos={photos}                  
-                onClick={openLightbox}
-                margin={6}/>
+      
+      <Gallery 
+                renderImage={imageRenderer}
+                photos={photos}            
+                                />
         <ModalGateway>
         {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>

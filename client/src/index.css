@@ -5,7 +5,8 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: g1rayscale;
+  background-color: #ffffff !important;
 }
 
 code {
@@ -351,7 +352,7 @@ border-top:1px solid black;
 }
 
 .MuiAppBar-colorPrimary{
-  background-color:#eeeeee !important;  
+  background-color:#ffffff !important;  
 }
 
 .MuiButton-label,.MuiTypography-root,.MuiButtonBase-root{
@@ -422,7 +423,7 @@ margin-bottom:40px;
 } */
 
 .dropdown .btn-primary.dropdown-toggle{
-  background-color: #eeeeee !important;
+  background-color: #ffffff !important;
   color:rgba(0,0,0,.4) !important;
   font-size: 0.875rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -469,4 +470,42 @@ div.documentaryHeadContainer.row{
 
 .humanHistoryThumbs{
   margin-top: 40px;
+}
+
+header.MuiAppBar-root{  
+  box-shadow:none;
+}
+
+/* main{
+  background-color: #ffffff;
+} */
+
+header{
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+button.barLinks:hover, #dropdown-item-button:hover{  
+  background-color: rgba(0,0,0,.05) !important;
+}
+
+header.MuiAppBar-root::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;  
+  width: 90%;
+  left: 5%;    
+  border-bottom:1px solid rgba(0,0,0,.1);
+}
+
+.dropdown-item:hover{
+  background-color: rgba(0,0,0,.05) !important;
+}
+
+.galleryImage{
+  margin: 2px; display: block;
+}
+.galleryImage:hover{
+  cursor: pointer;
 }

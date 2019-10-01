@@ -61,8 +61,9 @@ router.get('/api/links', async (req, res) => {
 router.get('/api/streetPhotography', async (req, res) => {
 
     try {
-        const photos = await Photo.find({ category: 'photography', subcategory: 'street' });
-
+        const photos = await Photo.find({ category: 'photography', 
+                                            subcategory: 'street' });
+                                            
         return res.json({
             photos
         });
@@ -113,6 +114,51 @@ router.get('/api/documentaries', async (req, res) => {
 
         return res.json({
             documentaries
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+       
+});
+
+router.get('/api/poverty', async (req, res) => {
+
+    try {        
+        const poverty = await Photo.find({ category: 'photography', subcategory: 'poverty' });                                                              
+        return res.json({
+            poverty
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+       
+});
+
+router.get('/api/kids', async (req, res) => {
+
+    try {        
+        const kids = await Photo.find({ category: 'photography', subcategory: 'kids' });                                                              
+        return res.json({
+            kids
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }
+       
+});
+
+router.get('/api/animals', async (req, res) => {
+
+    try {        
+        const animals = await Photo.find({ category: 'photography', subcategory: 'animals' });                                                              
+        return res.json({
+            animals
         });
     } catch (error) {
         return res.status(500).json({

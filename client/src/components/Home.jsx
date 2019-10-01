@@ -1,81 +1,82 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Img from 'react-image'
-import Nav from 'react-bootstrap/Nav'
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import Skeleton from '@material-ui/lab/Skeleton';
-import * as commonScript from '../script/common';
+// import axios from 'axios';
+// import Img from 'react-image'
+// import Nav from 'react-bootstrap/Nav'
+// import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+// import Skeleton from '@material-ui/lab/Skeleton';
+// import * as commonScript from '../script/common';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      links:[]
-    };              
-  } 
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     links:[]
+  //   };              
+  // } 
     
-    componentDidMount() {
-      this.fetchLinks();  
+    // componentDidMount() {
+    //   //this.fetchLinks();  
             
-      //this.searchPhotoBySrc('8548905072_06e7440ba0_o.jpg',{height:3, width:2});    
-    }
+    //   //this.searchPhotoBySrc('8548905072_06e7440ba0_o.jpg',{height:3, width:2});    
+    // }
       
-    componentWillUnmount() {
-    }      
+    // componentWillUnmount() {
+    // }      
 
 
-    updatePhoto = ( id, update ) => {
-      axios({
-        url: '/api/updatePhoto',
-        method: 'POST', 
-        data: {
-          id,
-          update : update          
-        }
-      })
-      .then((response) => {        
-        console.log(response.data);        
-      })
-      .catch((error) => console.log(error))      
-    }
+    // updatePhoto = ( id, update ) => {
+    //   axios({
+    //     url: '/api/updatePhoto',
+    //     method: 'POST', 
+    //     data: {
+    //       id,
+    //       update : update          
+    //     }
+    //   })
+    //   .then((response) => {        
+    //     console.log(response.data);        
+    //   })
+    //   .catch((error) => console.log(error))      
+    // }
 
-    searchPhotoBySrc = (src, update) => {
-      axios({
-        url: '/api/searchPhotoBySrc',
-        method: 'POST', 
-        data: {
-          src
-        }
-      })
-      .then((response) => {
-        const { photo } = response.data;
-        console.log(photo);
-        this.updatePhoto( photo._id, update );
-      })
-      .catch((error) => console.log(error))      
-    }
+    // searchPhotoBySrc = (src, update) => {
+    //   axios({
+    //     url: '/api/searchPhotoBySrc',
+    //     method: 'POST', 
+    //     data: {
+    //       src
+    //     }
+    //   })
+    //   .then((response) => {
+    //     const { photo } = response.data;
+    //     console.log(photo);
+    //     this.updatePhoto( photo._id, update );
+    //   })
+    //   .catch((error) => console.log(error))      
+    // }
 
-    fetchLinks = () => {
-        axios.get('/api/links')
-            .then((response) => {
-              const { links } = response.data;
-              this.setState({ links: commonScript.sortByRank(links) })
-            })
-            .catch((error) => alert(error));
-        }
+    // fetchLinks = () => {
+    //     axios.get('/api/links')
+    //         .then((response) => {
+    //           const { links } = response.data;
+    //           this.setState({ links: commonScript.sortByRank(links) })
+    //         })
+    //         .catch((error) => alert(error));
+    //     }
       
     render() {
-      const { links } = this.state;
+      // const { links } = this.state;
       return (
     <div className="homeContainer">
 
+{/* 
         <Nav> 
         <MDBContainer>
         <MDBRow className="mt-4 homeHeader">
             <MDBCol md="12" className="flex-center">              
                 <div>
-                    {/* <h2>liron</h2>
-                    <h4>welcome</h4> */}
+                    <h2>liron</h2>
+                    <h4>welcome</h4>
                 </div>              
             </MDBCol>
         </MDBRow>
@@ -105,7 +106,7 @@ class Home extends Component {
                   }        
             </MDBRow>                 
               </MDBContainer>
-          </Nav> 
+          </Nav>  */}
         </div>      
       );
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import Gallery from './Gallery';
 import CameraRollIcon from '@material-ui/icons/CameraRoll';
 import PageHeader from './PageHeader';
 import ImageGallery from './ImageGallery';
@@ -27,17 +26,12 @@ class StreetPhotography extends React.Component {
   
 
   filter(e){          
-    const location = e.target.dataset.location;         
-    const type = e.target.dataset.type;
+    const location = e.target.dataset.location;             
     const name = e.target.dataset.name;
 
     this.setState({ active: name })     
-
-    if(type === "dogs")
-      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos.filter(function (photo) { return photo.keyWords.includes('dogs');}))) });                  
-    else if(type === "cats")
-      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos.filter(function (photo) { return photo.keyWords.includes('cats');}))) });          
-    else if(location === "")
+    
+    if(location === "")
       this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.shuffle(this.state.allPhotos)) });
     else          
       this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos.filter((obj) =>(obj.location === location && obj.keyWords.length === 0 )))) });     
@@ -49,12 +43,13 @@ class StreetPhotography extends React.Component {
         const { photos } = response.data;
         this.setState({ allPhotos: photos })
       })
-      .then(() => this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.shuffle(this.state.allPhotos)) }))
+      .then(() => this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.shuffle(this.state.allPhotos)) }))     
       .catch(() => alert('Error fetching streetPhotography'));
   };  
   
   render() {         
     const { photos, active } = this.state;
+
     return (        
       <div>                                   
           <PageHeader title="Street Photography" subtitle="various" icon={<CameraRollIcon className="icon"></CameraRollIcon>}></PageHeader>                              
@@ -66,17 +61,11 @@ class StreetPhotography extends React.Component {
                   <Button variant="link" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>Thailand</Button>
                   <Button variant="link" className={active === 'india' ? 'activeFilter' : ''}  data-name="india" data-location="india" onClick={this.filter}>India</Button>                        
                   <Button variant="link" className={active === 'america' ? 'activeFilter' : ''}  data-name="america" data-location="america" onClick={this.filter}>Latin America</Button>
-                  <Button variant="link" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>Israel</Button>
-                  <Button variant="link" className={active === 'laos' ? 'activeFilter' : ''}  data-name="laos" data-location="laos" onClick={this.filter}>Laos</Button>
-                  <Button variant="link" className={active === 'cats' ? 'activeFilter' : ''}  data-name="cats" data-type="cats" onClick={this.filter}>Cats</Button>
-                  <Button variant="link" className={active === 'dogs' ? 'activeFilter' : ''}  data-name="dogs" data-type="dogs" onClick={this.filter}>Dogs</Button>
+                  <Button variant="link" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>Israel</Button>                  
                   <Button variant="link"  data-location="" onClick={this.filter}>Show All</Button>
                 </ButtonToolbar>
-          </div>                    
-          {photos.length > 0 &&
+          </div>            
             <ImageGallery photos={photos}></ImageGallery>
-            }          
-          {/* <Gallery category="street"></Gallery> */}
       </div>                 
     );
   }

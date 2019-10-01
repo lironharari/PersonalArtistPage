@@ -39,11 +39,6 @@ class Music extends React.Component {
                 songs.map(obj => (
                   <div key={obj._id}>
                             <Row>
-                                <Col>
-                                    <hr/>
-                                </Col>                  
-                            </Row>            
-                            <Row>
                                 <Col>      
                                         <h2>{obj.title}</h2>                                                                
                                         {Parser(obj.lyrics)}                                
@@ -56,6 +51,11 @@ class Music extends React.Component {
                                     </div>                        
                                 </Col>
                             </Row>
+                            <Row>
+                                <Col>
+                                    <hr/>
+                                </Col>                  
+                            </Row>                                        
                     </div>
                 ))                  
               }
