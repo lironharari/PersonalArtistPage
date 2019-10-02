@@ -29,7 +29,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Notfound from './Notfound';
 import Home from './Home';
 import Drawings from './Drawings';
-import Poverty from './Poverty';
+// import Poverty from './Poverty';
+import Manager from './Manager';
 import Documentary from './Documentary';
 import StreetPhotography from './StreetPhotography';
 import Music from './Music';
@@ -154,7 +155,7 @@ export default function PersistentDrawerLeft() {
               <Dropdown.Item as="button" onClick={() => window.location.href = "/street-photography"} >Street Photography</Dropdown.Item>            
               <Dropdown.Item as="button" onClick={() => window.location.href = "/animals"} >Animals</Dropdown.Item>            
               <Dropdown.Item as="button" onClick={() => window.location.href = "/kids"} >Kids</Dropdown.Item>            
-              <Dropdown.Item as="button" onClick={() => window.location.href = "/poverty"} >Poverty</Dropdown.Item>                          
+              {/* <Dropdown.Item as="button" onClick={() => window.location.href = "/poverty"} >Poverty</Dropdown.Item>                           */}
           </DropdownButton>
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
@@ -208,10 +209,10 @@ export default function PersistentDrawerLeft() {
                         <ListItemIcon><ChildCare /></ListItemIcon>
                         <ListItemText primary="Kids" />
             </ListItem>                      
-            <ListItem button onClick={() => window.location.href = "/poverty"} >
+            {/* <ListItem button onClick={() => window.location.href = "/poverty"} >
                         <ListItemIcon><ChildCare /></ListItemIcon>
                         <ListItemText primary="Poverty" />
-            </ListItem>                                              
+            </ListItem>                                               */}
         </List>
         <Divider />
         <List>
@@ -239,8 +240,9 @@ export default function PersistentDrawerLeft() {
             <Switch>
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
             <Route path="/drawings" component={Drawings} />        
-            <Route path="/animals" component={Animals} />                    
-            <Route path="/poverty" component={Poverty} />                    
+            <Route path="/animals" component={Animals} />  
+            <Route path="/manager" component={Manager} />                                
+            {/* <Route path="/poverty" component={Poverty} />                     */}
             <Route path="/kids" component={Kids} />                    
             <Route path="/human-history-revisited" component={Documentary} />        
             <Route path="/street-photography" component={StreetPhotography} />                  

@@ -20,26 +20,10 @@ class Kids extends React.Component {
     axios.get('/api/kids')
       .then((response) => {
         const { kids } = response.data;
-        this.setState({ photos: commonScript.adjustGalleryPhotos(kids) })        
+        this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(kids)) })        
       })     
       .catch(() => alert('Error fetching kids'));
   };  
-
-//   updatePhoto = ( id, update ) => {
-//     axios({
-//       url: '/api/updatePhoto',
-//       method: 'POST', 
-//       data: {
-//         id,
-//         update : update          
-//       }
-//     })
-//     .then((response) => {        
-//       console.log(response.data);        
-//     })
-//     .catch((error) => console.log(error))      
-//   }
-
 
   componentWillUnmount() {}
 

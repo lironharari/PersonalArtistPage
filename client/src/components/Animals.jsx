@@ -19,7 +19,7 @@ class Animals extends React.Component {
     axios.get('/api/animals')
       .then((response) => {
         const { animals } = response.data;
-        this.setState({ photos: commonScript.adjustGalleryPhotos(animals) })        
+        this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(animals)) })        
       })     
       .catch(() => alert('Error fetching Animals'));
   };  

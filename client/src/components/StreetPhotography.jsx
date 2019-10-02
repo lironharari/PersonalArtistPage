@@ -32,7 +32,7 @@ class StreetPhotography extends React.Component {
     this.setState({ active: name })     
     
     if(location === "")
-      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.shuffle(this.state.allPhotos)) });
+      this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos)) });
     else          
       this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos.filter((obj) =>(obj.location === location && obj.keyWords.length === 0 )))) });     
 }
@@ -43,7 +43,7 @@ class StreetPhotography extends React.Component {
         const { photos } = response.data;
         this.setState({ allPhotos: photos })
       })
-      .then(() => this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.shuffle(this.state.allPhotos)) }))     
+      .then(() => this.setState({ photos: commonScript.adjustGalleryPhotos(commonScript.sortByRank(this.state.allPhotos)) }))     
       .catch(() => alert('Error fetching streetPhotography'));
   };  
   

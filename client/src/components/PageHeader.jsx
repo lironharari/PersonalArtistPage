@@ -15,7 +15,7 @@ class PageHeader extends React.Component {
       return (
             <Row className="pageHeader">
                 <Col>                       
-                    <h2>{title}</h2>
+                    <h1>{title}</h1>
                     <h4>{subtitle}</h4>
                 </Col>                
             </Row> 

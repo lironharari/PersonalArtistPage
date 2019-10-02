@@ -255,40 +255,32 @@ router.post('/api/updatePhoto', async (req, res) => {
     }
 });
 
+router.post('/addPhoto', async (req, res) => {
+    if (isEmpty(req.body)) {
+        return res.status(403).json({
+            message: 'Body should not be empty',
+            statusCode: 403
+        });
+    }
+    const { src, category, subcategory, width, height } = req.body;
 
-
-// router.post('/add', async (req, res) => {
-//     if (isEmpty(req.body)) {
-//         return res.status(403).json({
-//             message: 'Body should not be empty',
-//             statusCode: 403
-//         });
-//     }
-//     const { name, position, company } = req.body;
-
-//     const newUser = new User({
-//         position,
-//         name,
-//         company,
-//         date: Date.now()
-//     });
-//     try {
-//         await newUser.save();
-//         res.json({
-//             message: 'Data successfully saved',
-//             statusCode: 200,
-//             name,
-//             position,
-//             company
-//         });
-//     } catch (error) {
-//         console.log('Error: ', error);
-//         res.status(500).json({
-//             message: 'Internal Server error',
-//             statusCode: 500
-//         });
-//     }
-// });
+    const newPhoto = new Photo({src, category, subcategory, width, height});
+        
+    try {
+        await newPhoto.save();
+        res.json({
+            message: 'Data successfully saved',
+            statusCode: 200,
+            src, category, subcategory, width, height
+        });
+    } catch (error) {
+        console.log('Error: ', error);
+        res.status(500).json({
+            message: 'Internal Server error',
+            statusCode: 500
+        });
+    }
+});
 
 
 module.exports = router;

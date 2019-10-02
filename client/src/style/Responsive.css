@@ -30,6 +30,10 @@
       padding-right: 0;
       padding-left: 0;
     }
+    .homePage{
+      background-image: url(/images/home/mobile.jpg) !important;  
+      height: 1024px;    
+    }
   }
   
   /* Tablet Styles */
@@ -83,6 +87,10 @@
       left: 0;    
       border-bottom:1px solid rgba(0,0,0,.1);
     }
+    .homePage{
+      background-image: url(/images/home/tablet.jpg) !important;  
+      height: 470px;    
+    }
   }
   
   /* Desktop Styles */
@@ -93,5 +101,9 @@
     }    
     .MuiIconButton-root{
       display: none !important;
+    }
+    .homePage{
+      background-image: url(/images/home/desktop.jpg);  
+      height: 500px;          
     }
   }
