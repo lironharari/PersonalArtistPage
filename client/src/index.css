@@ -512,12 +512,9 @@ header.MuiAppBar-root::before {
   display: flex;
   align-items: center;
   justify-content: center;  
-  /* border:1px solid black;   */  
+   border:1px solid black;   
 }
 
 .homeContainer .mt-4{
   margin-top: 0 !important;  
-}
-.homeContainer{
-  width: 100%;  
 }

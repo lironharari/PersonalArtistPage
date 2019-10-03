@@ -20,6 +20,53 @@ class Manager extends Component {
     this.setState({ [name]: value });    
   };
 
+  addMultiplePhotos = e => {
+    e.preventDefault();
+    const list = [
+      // {
+      //   "src": "main-qimg-837a814784a1961317e8eee2a663e160-c.jpg",
+      //   "description": "the solar system",
+      //   "height": 437,
+      //   "width": 777
+      // },            
+    ];
+    
+    const photos = [];
+    
+    list.map((x) => {
+      photos.push({ 
+        src:x.src, 
+        category:"humanHistoryRevisited", 
+        subcategory:"episode3",
+        description:x.description,
+        width:x.width, 
+        height:x.height,         
+        rank:0});
+        return true;
+    });
+
+    //console.log(photos);
+    photos.map((x) => {          
+          axios({
+            url: '/addPhoto',
+            method: 'POST',
+            data: {
+              src:x.src, 
+              category:x.category,
+              subcategory:x.subcategory, 
+              width:x.width, 
+              height:x.height,
+              description:x.description,
+              rank:x.rank        
+            }
+          })
+            .then((response) => {        
+                console.log(response.data);              
+            })
+            .catch(() => alert('Failed adding photo'));
+      return true;    
+    });    
+  };  
   
   submitUpdate = e => {
     e.preventDefault();
@@ -152,6 +199,9 @@ searchPhotoBySrc = (src, update) => {
                     />
                     
                     <Button variant="contained" color="primary" onClick={this.submitUpdate}> update </Button>
+                </Col>
+                <Col>
+                    <Button variant="contained" color="primary" onClick={this.addMultiplePhotos}> add Multiple Photos </Button>
                 </Col>          
             </Row>         
     </form>      

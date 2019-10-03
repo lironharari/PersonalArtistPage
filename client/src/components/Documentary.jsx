@@ -11,64 +11,51 @@ class Documentary extends React.Component {
         super(props);
         
         this.state = {
-          episodes: []
+          episodes: [],
+          photos: []
         };   
       }
       componentDidMount() {    
           this.fetchDocumentaries();           
+          this.fetchEpisodePhotos();           
       }
 
-      componentWillUnmount() {}
-      
-      updateDocumentaries(episodes) {
-        // if(episodes.length>0)
-        // {
-        //     //console.log(episodes);
-        //     const found = episodes.find(function(element) {
-        //         return element._id === '5d7de2254cb26a1a9c53d245';
-        //       });
-              
-        //        const photos = found.photos;
-        //        //console.log(photos);
-
-        //       //photos.push({src:'sumer-laws.jpg',description:'sumer laws',height:350,width:350});
-              
-        //        //console.log(photos);                            
-        // //       //this.updateDocumentary('5d7de2254cb26a1a9c53d244',{photos:photos});    
-        //  }        
-      }
+      componentWillUnmount() {}    
 
       styleGalleryPhotos(photos) {
         return commonScript.adjustGalleryPhotos(photos);
       }
-          
+
+      fetchEpisodePhotos = () => {
+            axios.get('/api/episodePhotos')
+              .then((response) => {
+                const { photos } = response.data;
+                this.setState({ photos: photos })
+              })
+              .catch(() => alert('Error fetching documentaries photos'));
+          }           
       fetchDocumentaries = () => {
         axios.get('/api/documentaries')
           .then((response) => {
             const { documentaries } = response.data;
             this.setState({ episodes: commonScript.sortByRank(documentaries) })
           })
-          .catch(() => alert('Error fetching documentaries'));
-      }
-    
-    // updateDocumentary = ( id, update ) => {
-    //     axios({
-    //       url: '/api/updateDocumentary',
-    //       method: 'POST', 
-    //       data: {
-    //         id,
-    //         update : update          
-    //       }
-    //     })
-    //     .then((response) => {        
-    //       console.log(response.data);        
-    //     })
-    //     .catch((error) => console.log(error))      
-    //   }
+          .catch(() => alert('Error fetching episodes'));
+      }   
 
       render() {   
-        const { episodes } = this.state;              
-        
+        const { episodes, photos } = this.state;              
+        let episode1 = [];
+        let episode2 = [];
+        let episode3 = [];        
+
+        if(photos.length>0)
+        {          
+          episode1 = photos.filter(function (photo) { return photo.subcategory === "episode1";});          
+          episode2 = photos.filter(function (photo) { return photo.subcategory === "episode2";});          
+          episode3 = photos.filter(function (photo) { return photo.subcategory === "episode3";});                    
+        }
+
       return (
         <div className="documentaryGrid">                  
                   <Row className="documentaryHeadContainer">                
@@ -123,7 +110,9 @@ class Documentary extends React.Component {
                             <Row>
                                 <Col>
                                     <div className="humanHistoryThumbs">
-                                        <ImageGallery photos={this.styleGalleryPhotos(obj.photos)}></ImageGallery>      
+                                    {(obj.rank === 10) ? <ImageGallery photos={this.styleGalleryPhotos(episode1)}></ImageGallery>:''}           
+                                    {(obj.rank === 9) ? <ImageGallery photos={this.styleGalleryPhotos(episode2)}></ImageGallery>:''}           
+                                    {(obj.rank === 8) ? <ImageGallery photos={this.styleGalleryPhotos(episode3)}></ImageGallery>:''}                                                           
                                     </div>                         
                                 </Col>                      
                             </Row>

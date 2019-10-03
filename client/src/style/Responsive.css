@@ -30,9 +30,9 @@
       padding-right: 0;
       padding-left: 0;
     }
-    .homePage{
-      background-image: url(/images/home/mobile.jpg) !important;  
-      height: 1024px;    
+    .homePage{      
+      background-image: url(/images/home/mobile.jpg);  
+      height: 1024px;          
     }
   }
   
@@ -42,27 +42,39 @@
       display: none !important;
     }
     
-    .documentaryRow{
+    .documentaryRow,.musicRow{
       display: flex;
       flex-wrap: wrap;
     }    
     
+    .musicRow .col h2,.musicRow .col h3
     .documentaryRow .col h2,.documentaryRow .col h3{
       width: 100%;      
       display: inline-flexbox;
       text-align: center;
     }
 
-    .documentaryRow .col{
+    .documentaryRow .col,.musicRow .col{
       width: 100%;      
       display: contents;
     }    
     
-    .documentaryRow object{
+    .documentaryRow object,.musicRow object{
       width: 100%;
       height:315px;      
       margin-top: 20px;
-    }    
+    }  
+  
+    .musicRow{
+            text-align: center;            
+              display: flex;
+          align-items: center;
+          justify-content: center;  
+    }
+
+    .musicRow .lyrics{
+      text-align: center;                  
+    }
 
     .homeDescription h2{
       font-size:1.7rem;
@@ -87,23 +99,28 @@
       left: 0;    
       border-bottom:1px solid rgba(0,0,0,.1);
     }
-    .homePage{
-      background-image: url(/images/home/tablet.jpg) !important;  
-      height: 470px;    
+    .homePage{      
+      background-image: url(/images/home/tablet.jpg);  
+      height: 470px;          
     }
   }
   
   /* Desktop Styles */
   @media only screen and (min-width: 961px) {    
-    .documentaryRow object{
+    .documentaryRow object,.musicRow object{
       width: 100%;
       height:100%;
     }    
     .MuiIconButton-root{
       display: none !important;
     }
+
+    .homeContainer{
+      height: 500px;                      
+    } 
+
     .homePage{
       background-image: url(/images/home/desktop.jpg);  
-      height: 500px;          
-    }
+      height: 500px;                
+    }    
   }

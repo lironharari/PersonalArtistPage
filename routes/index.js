@@ -58,6 +58,21 @@ router.get('/api/links', async (req, res) => {
        
 });
 
+router.get('/api/episodePhotos', async (req, res) => {
+
+    try {
+        const photos = await Photo.find({ category: 'humanHistoryRevisited' });
+                                            
+        return res.json({
+            photos
+        });
+    } catch (error) {
+        return res.status(500).json({
+            message: 'Internal Server error'
+        });
+    }       
+});
+
 router.get('/api/streetPhotography', async (req, res) => {
 
     try {
@@ -71,8 +86,7 @@ router.get('/api/streetPhotography', async (req, res) => {
         return res.status(500).json({
             message: 'Internal Server error'
         });
-    }
-       
+    }       
 });
 
 router.get('/api/photos', async (req, res) => {
@@ -262,17 +276,17 @@ router.post('/addPhoto', async (req, res) => {
             statusCode: 403
         });
     }
-    const { src, category, subcategory, width, height } = req.body;
+    const { src, category, subcategory, width, height, description, rank} = req.body;
 
-    const newPhoto = new Photo({src, category, subcategory, width, height});
+    const newPhoto = new Photo({src, category, subcategory, width, height, description, rank});
         
     try {
         await newPhoto.save();
-        res.json({
-            message: 'Data successfully saved',
-            statusCode: 200,
-            src, category, subcategory, width, height
-        });
+        // res.json({
+        //     message: 'Data successfully saved',
+        //     statusCode: 200,
+        //     src, category, subcategory, width, height, description, rank
+        // });
     } catch (error) {
         console.log('Error: ', error);
         res.status(500).json({
