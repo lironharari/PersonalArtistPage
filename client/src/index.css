@@ -512,7 +512,7 @@ header.MuiAppBar-root::before {
   display: flex;
   align-items: center;
   justify-content: center;  
-   border:1px solid black;   
+   /* border:1px solid black;    */
 }
 
 .homeContainer .mt-4{
