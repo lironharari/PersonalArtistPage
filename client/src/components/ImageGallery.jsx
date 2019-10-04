@@ -1,30 +1,22 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
+import Lightbox from 'react-image-lightbox';
 
 export default function ImageGallery({ photos }) {
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+    const [photoIndex,setPhotoIndex] = useState(0);
+    const [isOpen,setIsOpen] = useState(false);    
     
-    // const openLightbox = useCallback((event, { photo, index }) => {
-    //   setCurrentImage(index);
-    //   setViewerIsOpen(true);
-    // }, []);
-  
-    const closeLightbox = () => {
-      setCurrentImage(0);
-      setViewerIsOpen(false);
-    };      
-
     const imageRenderer = ({
       key,
       index,
       photo,     
     }) => {
+      
       const handleOnClick = e => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-      };        
+        setIsOpen(true);
+        setPhotoIndex(index);
+      };  
+
       return (
         <div 
             key={key} >          
@@ -37,7 +29,7 @@ export default function ImageGallery({ photos }) {
         </div>
       );
     };
-    
+        
   return (
     <div>    
       
@@ -45,20 +37,20 @@ export default function ImageGallery({ photos }) {
                 renderImage={imageRenderer}
                 photos={photos}            
                                 />
-        <ModalGateway>
-        {viewerIsOpen ? (
-            <Modal onClose={closeLightbox}>
-            <Carousel
-                currentIndex={currentImage}
-                views={photos.map(x => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.description
-                }))}
+        {isOpen && (
+            <Lightbox
+              mainSrc={photos[photoIndex].src}
+              nextSrc={photos[(photoIndex + 1) % photos.length].src}
+              prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].src}
+              onCloseRequest={() => setIsOpen(false)}
+              onMovePrevRequest={() =>
+                setPhotoIndex((photoIndex + photos.length - 1) % photos.length)
+              }
+              onMoveNextRequest={() =>
+                setPhotoIndex((photoIndex + 1) % photos.length)
+              }
             />
-            </Modal>
-        ) : null}
-        </ModalGateway>
+          )}    
   </div>
   );
 }

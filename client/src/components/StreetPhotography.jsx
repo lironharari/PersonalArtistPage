@@ -4,8 +4,8 @@ import CameraRollIcon from '@material-ui/icons/CameraRoll';
 import PageHeader from './PageHeader';
 import ImageGallery from './ImageGallery';
 import * as commonScript from '../script/common';
-import Button from 'react-bootstrap/Button'
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 class StreetPhotography extends React.Component {      
   constructor(props) {
@@ -53,18 +53,17 @@ class StreetPhotography extends React.Component {
     return (        
       <div>                                   
           <PageHeader title="Street Photography" subtitle="various" icon={<CameraRollIcon className="icon"></CameraRollIcon>}></PageHeader>                              
-          <div className="streetFilter">               
-                <span>
-                    FILTER BY:
-                </span>
-                <ButtonToolbar>                        
-                  <Button variant="link" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>Thailand</Button>
-                  <Button variant="link" className={active === 'india' ? 'activeFilter' : ''}  data-name="india" data-location="india" onClick={this.filter}>India</Button>                        
-                  <Button variant="link" className={active === 'america' ? 'activeFilter' : ''}  data-name="america" data-location="america" onClick={this.filter}>Latin America</Button>
-                  <Button variant="link" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>Israel</Button>                  
-                  <Button variant="link"  data-location="" onClick={this.filter}>Show All</Button>
-                </ButtonToolbar>
-          </div>            
+          <div>
+              <DropdownButton className="barLinks" id="dropdown-item-button" title="Filter by:">
+                  <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>Thailand</Dropdown.Item>                  
+                  <Dropdown.Item as="button" className={active === 'india' ? 'activeFilter' : ''}  data-name="india" data-location="india" onClick={this.filter}>India</Dropdown.Item>
+                  
+                  <Dropdown.Item as="button" className={active === 'america' ? 'activeFilter' : ''}  data-name="america" data-location="america" onClick={this.filter}>Latin America</Dropdown.Item>            
+                  <Dropdown.Item as="button" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>Israel</Dropdown.Item>            
+                  <Dropdown.Divider />
+                  <Dropdown.Item as="button" data-location="" onClick={this.filter}>Show All</Dropdown.Item>            
+              </DropdownButton>            
+          </div>
             <ImageGallery photos={photos}></ImageGallery>
       </div>                 
     );
