@@ -46,7 +46,7 @@ class Music extends React.Component {
                                         </div>
                                 </Col>
                                 <Col>                                    
-                                    <object title={obj.title} data={obj.src}  >
+                                    <object title={obj.title} data={obj.src} >
                                         <span>could not diplay YouTube video</span>
                                     </object>                                    
                                 </Col>

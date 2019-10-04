@@ -14,11 +14,11 @@ code {
     monospace;
 }
 
-.documentaryRow{
+.documentaryRow,.musicRow{
   margin-top: 20px;
 }
 
-.documentaryRow h2{
+.documentaryRow h2, .musicRow h2{
   margin-bottom: 30px;
 }
 
@@ -99,6 +99,7 @@ code {
 
 .documentaryHeader,
 .documentaryRow,
+.musicRow,
 .navbarFooter,
 .navbarFooter a,
 .navbarFooter .footerCopyright,
