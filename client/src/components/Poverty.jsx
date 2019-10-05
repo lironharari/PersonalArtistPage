@@ -30,7 +30,7 @@ class Poverty extends React.Component {
         const { photos } = this.state;      
       return (
         <div>
-            <PageHeader title="Photography" subtitle="poverty"></PageHeader>            
+            <PageHeader title="Street Photography" subtitle="poverty"></PageHeader>            
             <ImageGallery photos={photos}></ImageGallery>
         </div>        
         );

@@ -31,7 +31,7 @@ class Animals extends React.Component {
   console.log(photos);
       return (
         <div>
-            <PageHeader title="Photography" subtitle="animals"></PageHeader>            
+            <PageHeader title="Street Photography" subtitle="animals"></PageHeader>            
             <ImageGallery photos={photos}></ImageGallery>           
         </div>        
         );

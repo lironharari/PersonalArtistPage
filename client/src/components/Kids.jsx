@@ -31,7 +31,7 @@ class Kids extends React.Component {
         const { photos } = this.state;      
       return (
         <div>
-            <PageHeader title="Photography" subtitle="kids"></PageHeader>            
+            <PageHeader title="Street Photography" subtitle="kids"></PageHeader>            
             <ImageGallery photos={photos}></ImageGallery>                   
         </div>        
         );
