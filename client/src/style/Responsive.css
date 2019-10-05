@@ -33,6 +33,14 @@
     .homePage{      
       background-image: url(/images/home/mobile.jpg);  
       height: 1024px;          
+      display: inline-block;
+      width: 100%;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;              
     }
     
     .galleryImage{
@@ -51,8 +59,7 @@
       align-items: center;
       justify-content: center;   
     }
-
-    .musicRow h2,.musicRow .lyrics, .documentaryRow .description, .documentaryRow h2,.documentaryRow h3{
+    .musicRow h2,.musicRow .lyrics,  .documentaryRow h2,.documentaryRow h3{
       width: 100%;  
       text-align: center;
     }
@@ -132,7 +139,18 @@
     }
     .homePage{      
       background-image: url(/images/home/tablet.jpg);  
-      height: 470px;          
+      height: 470px;  
+      display: inline-block;
+      width: 100%;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;                            
+    }
+    .documentaryRow .description{
+      text-align: left;
     }
   }
   
@@ -155,6 +173,14 @@
 
     .homePage{
       background-image: url(/images/home/desktop.jpg);  
-      height: 500px;                
+      height: 500px;        
+      display: inline-block;
+      width: 100%;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      background-size: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;              
     }    
   }
