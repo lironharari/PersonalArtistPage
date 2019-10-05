@@ -1,6 +1,4 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 class PageHeader extends React.Component {  
     constructor(props) {
@@ -13,12 +11,10 @@ class PageHeader extends React.Component {
     render() {        
         const {title, subtitle} = this.state;
       return (
-            <Row className="pageHeader">
-                <Col>                       
-                    <h1>{title}</h1>
-                    <h4>{subtitle}</h4>
-                </Col>                
-            </Row> 
+          <div className="pageHeader">
+                <h1>{title}</h1>
+                <h4>{subtitle}</h4>
+          </div>         
         );
     }
   }

@@ -71,6 +71,22 @@
       /* margin-left:-15px;  */
       /* padding-left: 0; */
     }  
+    .pageHeader{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .pageHeader
+    {
+      display: inline;
+    }
+    .pageHeader h4,
+    .pageHeader h1{      
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-top: 0;
+      margin-bottom:0; 
+    }
   }
   
   /* Tablet Styles */
@@ -152,6 +168,22 @@
     .documentaryRow .description{
       text-align: left;
     }
+    .pageHeader{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .pageHeader
+    {
+      display: inline;
+    }
+    .pageHeader h4,
+    .pageHeader h1{      
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-top: 0;
+      margin-bottom:0;       
+    }
   }
   
   /* Desktop Styles */
@@ -182,5 +214,21 @@
       background-size: 100%;
       background-position: 50% 50%;
       background-repeat: no-repeat;              
+    }
+    .pageHeader{
+      display: inline;            
+    }
+    .pageHeader h4{      
+      margin-bottom:0;
+    }
+     .pageHeader h1{
+      margin-top: 10px;      
+    }
+
+    .pageHeader h4,
+    .pageHeader h1{      
+      text-align: center;
+      width: 100%;
+      display: block;            
     }    
   }
