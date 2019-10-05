@@ -45,7 +45,7 @@ class Music extends React.Component {
                                               {Parser(obj.lyrics)}                                
                                         </div>
                                 </Col>
-                                <Col>                                    
+                                <Col className="musicCol">                                    
                                     <object title={obj.title} data={obj.src} >
                                         <span>could not diplay YouTube video</span>
                                     </object>                                    

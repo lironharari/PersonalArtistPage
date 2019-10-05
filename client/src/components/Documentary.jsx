@@ -97,11 +97,11 @@ class Documentary extends React.Component {
                                 <Col>                          
                                     <h3>{obj.title}</h3>
                                     <h2>{obj.subtitle}</h2>                  
-                                    <div>
+                                    <div className="description">
                                         {Parser(obj.description)}
                                     </div>                                                                                                                                          
                                 </Col>
-                                <Col>
+                                <Col className="documentaryCol">                                    
                                     <object title={obj.title} data={obj.src} >
                                         <span>could not diplay YouTube video</span>
                                     </object>                                    

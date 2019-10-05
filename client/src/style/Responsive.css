@@ -34,17 +34,35 @@
       background-image: url(/images/home/mobile.jpg);  
       height: 1024px;          
     }
+    
+    .galleryImage{
+      pointer-events: none;
+      cursor: default;
+    }
 
-    .musicRow .lyrics{
-      width: 100%;
+    .documentaryHeader,.musicGrid,.documentaryGrid,.documentaryRow,.documentaryRow .description{
+      padding:0 0 !important;
+      margin:0 0 !important;
+    }
+
+    .musicCol,.documentaryCol{
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;   
+    }
+
+    .musicRow h2,.musicRow .lyrics, .documentaryRow .description, .documentaryRow h2,.documentaryRow h3{
+      width: 100%;  
+      text-align: center;
     }
     .documentaryRow object,.musicRow object{
       width: 240px;      
       height:150px;      
       margin-top: 20px;
       margin-bottom: 20px;
-      margin-left:-15px; 
-      padding-left: 0;
+      /* margin-left:-15px;  */
+      /* padding-left: 0; */
     }  
   }
   
