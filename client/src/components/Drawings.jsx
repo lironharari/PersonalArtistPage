@@ -29,7 +29,7 @@ class Drawings extends React.Component {
       render() {    
         const { drawings } = this.state;              
       return (
-        <div>
+        <div className="drawingsPhotography">                                   
             <PageHeader title="Drawings" subtitle="various"></PageHeader>            
             <ImageGallery photos={drawings}></ImageGallery>          
         </div>        

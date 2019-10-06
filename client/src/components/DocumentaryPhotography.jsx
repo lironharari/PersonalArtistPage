@@ -42,7 +42,7 @@ class DocumentaryPhotography extends React.Component {
     const title = this.props.location.pathname === this.state.manilaDocumentaryURL ? "Manila, The Philippines" : "Kolkata, India"
 
       return (        
-        <div>             
+        <div className="documentaryPhotography">                                   
             <PageHeader title={title} subtitle={subtitle}></PageHeader>                   
               <ImageGallery photos={photos}></ImageGallery>
         </div>                 

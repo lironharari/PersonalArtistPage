@@ -47,11 +47,13 @@
       cursor: default;
     } */
 
-    .documentaryHeader,.musicGrid,.documentaryGrid,.documentaryRow,.documentaryRow .description{
+    .documentaryHeader,.musicGrid,.documentaryRow,.documentaryRow .description{
       padding:0 0 !important;
       margin:0 0 !important;
     }
-
+    .documentaryGrid{
+      width: 100%;
+    }
     .musicCol,.documentaryCol{
       text-align: center;
       display: flex;
@@ -88,8 +90,7 @@
       margin-top: 10px;
     }
     .main{
-      width: 100%;
-      margin: 0 5%;
+      width: 100%;      
     }
     .toolbarTop::before {
       content: '';
@@ -99,7 +100,11 @@
       width: 100%;
       left: 0;
       border-bottom:1px solid rgba(0,0,0,.1);
-    }    
+    }        
+    .animalsPhotography,.streetPhotography,.drawingsPhotography,.kidsPhotography,.documentaryPhotography
+    {
+      margin: 0 5%;
+    }
   }
 
   /* Tablet Styles */
@@ -215,6 +220,9 @@
     .homeContainer{
       width: 98%;
     }
+    .documentaryPhotography,.kidsPhotography,.animalsPhotography,.drawingsPhotography,.streetPhotography{
+      margin: 0 5%;
+    }
   }
 
   /* Desktop Styles */
@@ -277,7 +285,7 @@
       width: 100%;
       display: block;
     }
-    .galleryContainer,.filter{
+    .documentaryPhotography,.kidsPhotography,.animalsPhotography,.drawingsPhotography,.streetPhotography{
       margin: 0 5%;
     }
   }
