@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   /* Mobile Styles */
   @media only screen and (max-width: 400px) {
     .barLinks{
@@ -12,40 +12,40 @@
 
     .homeDescription h2{
       font-size:1.5rem;
-    }    
+    }
 
     .homeDescription h4{
       font-size:1.2rem;
-    }        
+    }
     header.MuiAppBar-root::before {
       content: '';
       display: block;
       position: absolute;
-      top: 100%;  
+      top: 100%;
       width: 100%;
-      left: 0;    
+      left: 0;
       border-bottom:1px solid rgba(0,0,0,.1);
     }
     header{
       padding-right: 0;
       padding-left: 0;
     }
-    .homePage{      
-      background-image: url(/images/home/mobile.jpg);  
-      height: 1024px;          
+    .homePage{
+      background-image: url(/images/home/mobile.jpg);
+      height: 1024px;
       display: inline-block;
       width: 100%;
       font-size: 0;
       line-height: 0;
       vertical-align: middle;
-      background-size: 100%;      
-      background-repeat: no-repeat;                    
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
-    
-    .galleryImage{
+
+    /* .galleryImage{
       pointer-events: none;
       cursor: default;
-    }
+    } */
 
     .documentaryHeader,.musicGrid,.documentaryGrid,.documentaryRow,.documentaryRow .description{
       padding:0 0 !important;
@@ -56,20 +56,17 @@
       text-align: center;
       display: flex;
       align-items: center;
-      justify-content: center;   
+      justify-content: center;
     }
     .musicRow h2,.musicRow .lyrics,  .documentaryRow h2,.documentaryRow h3{
-      width: 100%;  
+      width: 100%;
       text-align: center;
     }
     .documentaryRow object,.musicRow object{
-      width: 240px;      
-      height:150px;      
+      height:200px;
       margin-top: 20px;
       margin-bottom: 20px;
-      /* margin-left:-15px;  */
-      /* padding-left: 0; */
-    }  
+    }
     .pageHeader{
       margin-top: 0;
       margin-bottom: 0;
@@ -79,63 +76,76 @@
       display: inline;
     }
     .pageHeader h4,
-    .pageHeader h1{      
+    .pageHeader h1{
       text-align: center;
       width: 100%;
-      display: block;     
+      display: block;
     }
-    .pageHeader h4{      
-      margin-bottom: 10px; 
+    .pageHeader h4{
+      margin-bottom: 10px;
     }
      .pageHeader h1{
-      margin-top: 10px;      
+      margin-top: 10px;
     }
+    .main{
+      width: 100%;
+      margin: 0 5%;
+    }
+    .toolbarTop::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }    
   }
-  
+
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
     .barLinks{
       display: none !important;
     }
-    
+
     .documentaryRow,.musicRow{
       display: flex;
       flex-wrap: wrap;
-    }    
-    
+    }
+
     .musicRow .col h2,.musicRow .col h3
     .documentaryRow .col h2,.documentaryRow .col h3{
-      width: 100%;      
+      width: 100%;
       display: inline-flexbox;
       text-align: center;
     }
 
     .documentaryRow .col,.musicRow .col{
-      width: 100%;      
+      width: 100%;
       display: contents;
-    }    
-    
+    }
+
     .documentaryRow object,.musicRow object{
       width: 500px;
-      height:315px;      
+      height:315px;
       margin-top: 20px;
       margin-bottom: 20px;
-    }  
-    
+    }
+
     .documentaryRow,.musicRow{
-      text-align: center;            
+      text-align: center;
       display: flex;
       align-items: center;
-      justify-content: center;  
+      justify-content: center;
     }
 
     .musicRow .lyrics{
-      text-align: center;                  
+      text-align: center;
     }
 
     .homeDescription h2{
       font-size:1.7rem;
-    }    
+    }
 
     .homeDescription h4{
       font-size:1.3rem;
@@ -151,21 +161,21 @@
       content: '';
       display: block;
       position: absolute;
-      top: 100%;  
+      top: 100%;
       width: 100%;
-      left: 0;    
+      left: 0;
       border-bottom:1px solid rgba(0,0,0,.1);
     }
-    .homePage{      
-      background-image: url(/images/home/tablet.jpg);  
-      height: 470px;  
+    .homePage{
+      background-image: url(/images/home/tablet.jpg);
+      height: 470px;
       display: inline-block;
       width: 100%;
       font-size: 0;
       line-height: 0;
       vertical-align: middle;
-      background-size: 100%;  
-      background-repeat: no-repeat;                            
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
     .documentaryRow .description{
       text-align: left;
@@ -178,27 +188,56 @@
     {
       display: inline;
     }
-    .pageHeader h4{      
-      margin-bottom: 10px; 
+    .pageHeader h4{
+      margin-bottom: 10px;
     }
      .pageHeader h1{
-      margin-top: 10px;      
+      margin-top: 10px;
     }
     .pageHeader h4,
-    .pageHeader h1{      
+    .pageHeader h1{
       text-align: center;
       width: 100%;
-      display: block;       
+      display: block;
+    }
+    .main{
+      width: 100%;
+    }
+    .toolbarTop::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
+    .homeContainer{
+      width: 98%;
     }
   }
-  
+
   /* Desktop Styles */
-  @media only screen and (min-width: 961px) {    
+  @media only screen and (min-width: 961px) {
     .documentaryRow object,.musicRow object{
       width: 500px;
-      height:315px;      
-      margin-top: 70px;      
-      padding:0 0;      
+      height:315px;
+      margin-top: 70px;
+      padding:0 0;
+    }
+
+    .toolbarTop::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 90%;
+      left: 5%;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
+
+    .main{
+      width: 100%;
     }
 
     .MuiIconButton-root{
@@ -206,35 +245,39 @@
     }
 
     .homeContainer{
-      height: 500px;                      
-    } 
+      height: 500px;
+      width: 98%;
+    }
 
     .homePage{
-      background-image: url(/images/home/desktop.jpg);  
-      height: 500px;        
+      background-image: url(/images/home/desktop.jpg);
+      height: 500px;
       display: inline-block;
       width: 100%;
       font-size: 0;
       line-height: 0;
       vertical-align: middle;
-      background-size: 100%;      
-      background-repeat: no-repeat;              
-    }   
-    .pageHeader h4{      
-      margin-bottom: 10px; 
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .pageHeader h4{
+      margin-bottom: 10px;
     }
      .pageHeader h1{
-      margin-top: 10px;      
+      margin-top: 10px;
     }
     .pageHeader{
-      display: inline;            
+      display: inline;
     }
-    
-    
+
     .pageHeader h4,
-    .pageHeader h1{      
+    .pageHeader h1{
       text-align: center;
       width: 100%;
-      display: block;            
-    } 
+      display: block;
+    }
+    .galleryContainer,.filter{
+      margin: 0 5%;
+    }
   }

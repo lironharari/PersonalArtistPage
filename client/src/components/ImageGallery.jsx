@@ -31,7 +31,7 @@ export default function ImageGallery({ photos }) {
     };
         
   return (
-    <div>    
+    <div className="galleryContainer">    
       
       <Gallery 
                 renderImage={imageRenderer}

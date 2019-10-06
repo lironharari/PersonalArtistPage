@@ -246,10 +246,6 @@ border-top:1px solid black;
   margin-top: 30px;
 }
 
-/* .dropdown:hover .dropdown-menu {
-  display: block;
-} */
-
 .homeCol:hover a, .homeCol:hover a .homeDescription {
   visibility: visible;
   opacity: 1;
@@ -474,27 +470,66 @@ header.MuiAppBar-root{
   padding-top:5px !important;  
 }
 
-/* main{
-  background-color: #ffffff;
-} */
-
 header{
   padding-right: 5%;
   padding-left: 5%;
 }
 
-button.barLinks:hover, #dropdown-item-button:hover{  
-  background-color: rgba(0,0,0,.05) !important;
+.toolbarTop{       
+  margin-bottom: 1px;
 }
 
-header.MuiAppBar-root::before {
-  content: '';
+.barhome span,
+.barhome h6
+{  
+  float:left;  
+}
+
+.barhome button,.drawerCloser{ 
+  outline: 0 !important;
+}
+
+.barhome{    
   display: block;
-  position: absolute;
-  top: 100%;  
-  width: 90%;
-  left: 5%;    
-  border-bottom:1px solid rgba(0,0,0,.1);
+  width: 40px;
+  float: left;  
+}
+
+.barLinks
+{  
+  margin-right:25px;
+  display: block;    
+  position:absolute;
+  right:0;
+  top:0;
+  width: 450px;      
+}
+
+.barLinks button
+{  
+  margin: 20px 0;
+  display: block;
+  float: left;
+  
+}
+.barLinks .dropdown-menu .dropdown-divider{
+  border-top:1px solid rgba(59, 57, 57, 0.1);
+  height: 1px;
+  width: 100%;  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.barLinks .dropdown-menu  button
+{
+  margin: 5px 0;
+  display: block;
+  float: left;
+}
+
+button.barLinks:hover, #dropdown-item-button:hover{  
+  background-color: rgba(0,0,0,.05) !important;
 }
 
 .dropdown-item:hover{

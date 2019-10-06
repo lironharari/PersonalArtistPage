@@ -41,7 +41,7 @@ import Kids from './Kids';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-const drawerWidth = 300;
+const drawerWidth = 400;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -161,98 +161,100 @@ export default function PersistentDrawerLeft() {
           <Button className="barLinks" color="inherit" onClick={() => window.location.href = "/music"}>music</Button>          
         </Toolbar>
       </AppBar>
+      
+      
+          <Drawer
+            className={classes.drawer}
+            variant="persistent"
+            anchor="left"
+            open={open}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <div className={classes.drawerHeader}>
+              <IconButton onClick={handleDrawerClose}>
+                {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+              </IconButton>
+            </div>
+
+            <Divider />
+
+            <List>  
+                <ListItem button onClick={() => window.location.href = "/human-history-revisited"} >
+                  <ListItemIcon><PlayArrowIcon /></ListItemIcon>
+                  <ListItemText primary="Human History Revisited" />
+                </ListItem>
+            </List>
+
+            <Divider />
+            <List>
+            <ListItem button onClick={() => window.location.href = "/street-photography"} >
+                            <ListItemIcon><DirectionsRunIcon /></ListItemIcon>
+                            <ListItemText primary="Street Photography" />
+                </ListItem>            
+                <ListItem button onClick={() => window.location.href = "/life-on-the-railroads"} >
+                            <ListItemIcon><RailwayIcon /></ListItemIcon>
+                            <ListItemText primary="Life on the Railroads" />
+                </ListItem>                                    
+                <ListItem button onClick={() => window.location.href = "/its-more-fun-in-manila"} >
+                            <ListItemIcon><CameraIcon /></ListItemIcon>
+                            <ListItemText primary="It's more fun in Manila!" />
+                </ListItem>    
+                <ListItem button onClick={() => window.location.href = "/animals"} >
+                            <ListItemIcon><Pets /></ListItemIcon>
+                            <ListItemText primary="Animals" />
+                </ListItem>                                                              
+                <ListItem button onClick={() => window.location.href = "/kids"} >
+                            <ListItemIcon><ChildCare /></ListItemIcon>
+                            <ListItemText primary="Kids" />
+                </ListItem>                      
+                {/* <ListItem button onClick={() => window.location.href = "/poverty"} >
+                            <ListItemIcon><ChildCare /></ListItemIcon>
+                            <ListItemText primary="Poverty" />
+                </ListItem>                                               */}
+            </List>
+            <Divider />
+            <List>
+            <ListItem button onClick={() => window.location.href = "/drawings"} >
+                  <ListItemIcon><DrawingsIcon /></ListItemIcon>
+                  <ListItemText primary="Drawings" />
+                </ListItem>
+                <ListItem button onClick={() => window.location.href = "/music"} >
+                  <ListItemIcon><MusicIcon /></ListItemIcon>
+                  <ListItemText primary="Music" />
+                </ListItem>            
+            </List>
+          </Drawer>      
+      
 
 
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </div>
 
-        <Divider />
-
-        <List>  
-            <ListItem button onClick={() => window.location.href = "/human-history-revisited"} >
-              <ListItemIcon><PlayArrowIcon /></ListItemIcon>
-              <ListItemText primary="Human History Revisited" />
-            </ListItem>
-        </List>
-
-        <Divider />
-        <List>
-        <ListItem button onClick={() => window.location.href = "/street-photography"} >
-                        <ListItemIcon><DirectionsRunIcon /></ListItemIcon>
-                        <ListItemText primary="Street Photography" />
-            </ListItem>            
-            <ListItem button onClick={() => window.location.href = "/life-on-the-railroads"} >
-                        <ListItemIcon><RailwayIcon /></ListItemIcon>
-                        <ListItemText primary="Life on the Railroads" />
-            </ListItem>                                    
-            <ListItem button onClick={() => window.location.href = "/its-more-fun-in-manila"} >
-                        <ListItemIcon><CameraIcon /></ListItemIcon>
-                        <ListItemText primary="It's more fun in Manila!" />
-            </ListItem>    
-            <ListItem button onClick={() => window.location.href = "/animals"} >
-                        <ListItemIcon><Pets /></ListItemIcon>
-                        <ListItemText primary="Animals" />
-            </ListItem>                                                              
-            <ListItem button onClick={() => window.location.href = "/kids"} >
-                        <ListItemIcon><ChildCare /></ListItemIcon>
-                        <ListItemText primary="Kids" />
-            </ListItem>                      
-            {/* <ListItem button onClick={() => window.location.href = "/poverty"} >
-                        <ListItemIcon><ChildCare /></ListItemIcon>
-                        <ListItemText primary="Poverty" />
-            </ListItem>                                               */}
-        </List>
-        <Divider />
-        <List>
-        <ListItem button onClick={() => window.location.href = "/drawings"} >
-              <ListItemIcon><DrawingsIcon /></ListItemIcon>
-              <ListItemText primary="Drawings" />
-            </ListItem>
-            <ListItem button onClick={() => window.location.href = "/music"} >
-              <ListItemIcon><MusicIcon /></ListItemIcon>
-              <ListItemText primary="Music" />
-            </ListItem>            
-        </List>
-      </Drawer>
-
-
-
-
-      <main
-        className={clsx(classes.content, {
-          [classes.contentShift]: open,
-        })}
-      >
-        <div className={classes.drawerHeader} />        
-        <Router>  
-            <Switch>
-            <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
-            <Route path="/drawings" component={Drawings} />        
-            <Route path="/animals" component={Animals} />  
-            <Route path="/manager" component={Manager} />                                
-            {/* <Route path="/poverty" component={Poverty} />                     */}
-            <Route path="/kids" component={Kids} />                    
-            <Route path="/human-history-revisited" component={Documentary} />        
-            <Route path="/street-photography" component={StreetPhotography} />                  
-            <Route path="/music" component={Music} />
-            <Route path="/life-on-the-railroads" component={DocumentaryPhotography} />       
-            <Route path="/its-more-fun-in-manila" component={DocumentaryPhotography} />    
-            <Route component={Notfound} />
-            </Switch> 
-        </Router> 
-      </main>
+      
+          <main
+            className={clsx(classes.content, {
+              [classes.contentShift]: open,
+            })}
+          >
+            <div className={classes.drawerHeader} />        
+            <Router>  
+                <Switch>
+                <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
+                <Route path="/drawings" component={Drawings} />        
+                <Route path="/animals" component={Animals} />  
+                <Route path="/manager" component={Manager} />                                
+                {/* <Route path="/poverty" component={Poverty} />                     */}
+                <Route path="/kids" component={Kids} />                    
+                <Route path="/human-history-revisited" component={Documentary} />        
+                <Route path="/street-photography" component={StreetPhotography} />                  
+                <Route path="/music" component={Music} />
+                <Route path="/life-on-the-railroads" component={DocumentaryPhotography} />       
+                <Route path="/its-more-fun-in-manila" component={DocumentaryPhotography} />    
+                <Route component={Notfound} />
+                </Switch> 
+            </Router> 
+          </main>        
+      
     </div>
   );
 }
