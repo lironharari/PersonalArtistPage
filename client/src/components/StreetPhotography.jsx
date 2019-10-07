@@ -51,7 +51,7 @@ class StreetPhotography extends React.Component {
     const { photos, active } = this.state;
 
     return (        
-      <div className="streetPhotography">                                   
+      <div className="pageContainer">                                   
           <PageHeader title="Street Photography" subtitle="various" icon={<CameraRollIcon className="icon"></CameraRollIcon>}></PageHeader>                              
               <DropdownButton className="filter" id="dropdown-item-button" title="Filter by location:">
                   <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>Thailand</Dropdown.Item>                  

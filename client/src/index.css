@@ -553,8 +553,7 @@ button.barLinks:hover, #dropdown-item-button:hover{
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;  
-   /* border:1px solid black;    */
+  justify-content: center;     
 }
 
 .homeContainer .mt-4{

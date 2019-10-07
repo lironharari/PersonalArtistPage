@@ -30,7 +30,7 @@ class Kids extends React.Component {
       render() {    
         const { photos } = this.state;      
       return (
-        <div className="kidsPhotography">                                   
+        <div className="pageContainer">                                   
             <PageHeader title="Street Photography" subtitle="kids"></PageHeader>            
             <ImageGallery photos={photos}></ImageGallery>                   
         </div>        
