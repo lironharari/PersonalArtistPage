@@ -153,7 +153,13 @@ code {
   float: right; 
 }
 
-.drawingGrid,.photographyGrid,.documentaryGrid,.musicGrid{  
+.documentaryGrid,.musicGrid{
+  display: inline-block;
+  width: 100%;
+  padding: 0 5%;  
+}
+
+.drawingGrid,.photographyGrid{  
   display: inline-block;
   width: 100%;
   padding: 0 10% 40px 10%;  
@@ -553,4 +559,9 @@ button.barLinks:hover, #dropdown-item-button:hover{
 
 .homeContainer .mt-4{
   margin-top: 0 !important;  
+}
+
+.documentaryHeader.col{
+padding-right: 0 !important;
+padding-left: 0 !important;
 }

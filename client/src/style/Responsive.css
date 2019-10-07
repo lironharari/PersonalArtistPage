@@ -47,10 +47,16 @@
       cursor: default;
     } */
 
-    .documentaryHeader,.musicGrid,.documentaryRow,.documentaryRow .description{
+    .documentaryHeader,.musicGrid,.documentaryRow{
+      padding:0 3% !important;
+      margin:0 0 !important;
+    }
+    
+    .documentaryRow .description{
       padding:0 0 !important;
       margin:0 0 !important;
     }
+
     .documentaryGrid{
       width: 100%;
     }
@@ -113,6 +119,12 @@
       display: none !important;
     }
 
+    .documentaryGrid,.musicGrid{
+      display: inline-block;
+      width: 100%;
+      padding: 0 7%;  
+    }
+    
     .documentaryRow,.musicRow{
       display: flex;
       flex-wrap: wrap;
@@ -184,6 +196,7 @@
     }
     .documentaryRow .description{
       text-align: left;
+      padding: 0 2%;
     }
     .pageHeader{
       margin-top: 0;
