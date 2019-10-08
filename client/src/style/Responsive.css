@@ -38,13 +38,15 @@
     .homePage{
       background-image: url(/images/home/mobile.jpg);
       height: 1400px;
-      display: inline-block;
+      /* display: inline-block;
       width: 97%;
       font-size: 0;
-      line-height: 0;
+      line-height: 0; */
       /* vertical-align: middle;
       background-size: 100%;
       background-repeat: no-repeat; */
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
 
     /* .galleryImage{
@@ -196,14 +198,16 @@
     }
     .homePage{
       background-image: url(/images/home/tablet.jpg);      
-      height: 520px;
-      display: inline-block;
+      height: 500px;
+      /* display: inline-block;
       width: 100%;
       font-size: 0;
       line-height: 0;
       vertical-align: middle;
       background-size: 100%;
+      /*  */
       background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
     .documentaryRow .description{
       text-align: left;
@@ -283,18 +287,20 @@
 
     .homePage{
       background-image: url(/images/home/desktop.jpg);
-      height: 550px;
-      display: inline-block;
+      height: 520px;
+      /* display: inline-block;
       width: 100%;
       font-size: 0;
       line-height: 0;
       vertical-align: middle;
       background-size: 100%;
+      background-repeat: no-repeat; */
       background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
 
     .pageHeader h4{
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
      .pageHeader h1{
       margin-top: 10px;
