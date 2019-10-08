@@ -118,7 +118,7 @@ export default function TemporaryDrawer() {
                 <ListItem button onClick={() => window.location.href = "/kids"} >
                             <ListItemIcon><ChildCare /></ListItemIcon>
                             <ListItemText primary="Kids" />
-                </ListItem>                                                                     */}
+                </ListItem>                                                                     
             </List>
             <Divider />
             <List>
