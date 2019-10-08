@@ -2,6 +2,7 @@
 // Importing Modules
 const mongoose = require('mongoose');
 const express = require('express');
+const compression = require("compression");
 const bodyParser = require('body-parser');
 const path = require('path');
 
@@ -14,6 +15,11 @@ const log = console.log;
 const PORT = process.env.PORT || 8080; // Step 1
 
 
+function shouldCompress(req, res) {
+    if (req.headers["x-no-compression"]) return false;
+    return compression.filter(req, res);
+  }
+
 // Step 2
 mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://test1:yVj2V2Rx6BHoOPE3@cluster0-vlvmu.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -24,6 +30,10 @@ mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://test1:yVj2V2Rx6BHoOP
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
+app.use(compression({
+    level: 2,               // set compression level from 1 to 9 (6 by default)
+    filter: shouldCompress, // set predicate to determine whether to compress
+  }));
 
 // Step 3
 if (process.env.NODE_ENV === 'production') {
