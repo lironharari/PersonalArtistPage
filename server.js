@@ -37,11 +37,7 @@ app.use(compression({
 
 // Step 3
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static( 'client/build' ));
-    // app.use(express.static(__dirname + '/dist'));
-    // app.get('*', (req, res) => {
-    //     res.sendFile(path.join(__dirname, 'dist', 'index.html')); // relative path
-    // });
+    app.use(express.static( 'client/build' ));    
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
     });
