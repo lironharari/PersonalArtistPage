@@ -10,16 +10,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Notfound from './Notfound';
-import Home from './Home';
-import Drawings from './Drawings';
-import Manager from './Manager';
-import Documentary from './Documentary';
-import StreetPhotography from './StreetPhotography';
-import Music from './Music';
-import Animals from './Animals';
-import DocumentaryPhotography from './DocumentaryPhotography';
-import Kids from './Kids';
 import MusicIcon from '@material-ui/icons/Audiotrack';
 import Pets from '@material-ui/icons/Pets';
 import DrawingsIcon from '@material-ui/icons/Create';
@@ -34,6 +24,16 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Loadable from "react-loadable";
+
+const LazyRoute = (props) => {
+  const component = Loadable({
+    loader: props.component,
+    loading: () => <div></div>,
+  });
+
+  return <Route {...props} component={component} />;
+};
 
 const useStyles = makeStyles(theme => ({
 root: {
@@ -118,11 +118,7 @@ export default function TemporaryDrawer() {
                 <ListItem button onClick={() => window.location.href = "/kids"} >
                             <ListItemIcon><ChildCare /></ListItemIcon>
                             <ListItemText primary="Kids" />
-                </ListItem>                      
-                {/* <ListItem button onClick={() => window.location.href = "/poverty"} >
-                            <ListItemIcon><ChildCare /></ListItemIcon>
-                            <ListItemText primary="Poverty" />
-                </ListItem>                                               */}
+                </ListItem>                                                                     */}
             </List>
             <Divider />
             <List>
@@ -181,23 +177,20 @@ export default function TemporaryDrawer() {
         </Toolbar>
             <Router>  
                 <Switch>
-                <Route activeClassName='is-active' exact={true} path="/" component={Home} />            
-                <Route path="/drawings" component={Drawings} />        
-                <Route path="/animals" component={Animals} />  
-                <Route path="/manager" component={Manager} />                                
-                <Route path="/kids" component={Kids} />                    
-                <Route path="/human-history-revisited" component={Documentary} />        
-                <Route path="/street-photography" component={StreetPhotography} />                  
-                <Route path="/music" component={Music} />
-                <Route path="/life-on-the-railroads" component={DocumentaryPhotography} />       
-                <Route path="/its-more-fun-in-manila" component={DocumentaryPhotography} />    
-                <Route component={Notfound} />
+                <LazyRoute activeClassName='is-active' exact={true} path="/" component={() => import("./Home")} />
+                <LazyRoute exact path="/drawings" component={() => import("./Drawings")} />
+                <LazyRoute exact path="/animals" component={() => import("./Animals")} />
+                <LazyRoute exact path="/manager" component={() => import("./Manager")} />    
+                <LazyRoute exact path="/kids" component={() => import("./Kids")} />    
+                <LazyRoute exact path="/human-history-revisited" component={() => import("./Documentary")} />    
+                <LazyRoute exact path="/street-photography" component={() => import("./StreetPhotography")} />    
+                <LazyRoute exact path="/music" component={() => import("./Music")} />    
+                <LazyRoute exact path="/life-on-the-railroads" component={() => import("./DocumentaryPhotography")} />    
+                <LazyRoute exact path="/its-more-fun-in-manila" component={() => import("./DocumentaryPhotography")} />    
+                <LazyRoute component={() => import("./Notfound")} />                    
                 </Switch> 
             </Router> 
           </main>        
-
-
-      
       
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}

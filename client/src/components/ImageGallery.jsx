@@ -19,13 +19,13 @@ export default function ImageGallery({ photos }) {
 
       return (
         <div 
-            key={key} >          
-          <img                    
-            alt={photo.title}
-            className="galleryImage"
-            {...photo}
-            onClick={handleOnClick}
-          />          
+            key={key} >  
+                  <img                    
+                    alt={photo.title}
+                    className="galleryImage"
+                    {...photo}
+                    onClick={handleOnClick}
+                  />                            
         </div>
       );
     };
