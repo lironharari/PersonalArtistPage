@@ -123,7 +123,7 @@
   }
 
   /* Tablet Styles */
-  @media only screen and (min-width: 401px) and (max-width: 1024px) {
+  @media only screen and (min-width: 416px) and (max-width: 1023px) {
     .ril__image{      
       left: -15px !important;          
     }
