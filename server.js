@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 8080; // Step 1
 
 // Step 2
 mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://test1:yVj2V2Rx6BHoOPE3@cluster0-vlvmu.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 // Configuration
