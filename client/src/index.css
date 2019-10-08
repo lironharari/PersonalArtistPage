@@ -563,3 +563,6 @@ button.barLinks:hover, #dropdown-item-button:hover{
 padding-right: 0 !important;
 padding-left: 0 !important;
 }
+.videoThumbnail:hover{
+  cursor: pointer;
+}

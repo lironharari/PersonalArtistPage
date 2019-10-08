@@ -8,7 +8,8 @@ const DataSchema = new Schema(
       src:String,
       year: String,
       keyWords:[String],
-      rank: Number
+      rank: Number,
+      videoThumbnail: String
     },
     { timestamps: true }
   );

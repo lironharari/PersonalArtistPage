@@ -6,13 +6,17 @@ import HeadsetIcon from '@material-ui/icons/Headset';
 import PageHeader from './PageHeader';
 import Parser from 'html-react-parser';
 import * as commonScript from '../script/common';
+import ModalVideo from 'react-modal-video'
 
 class Music extends React.Component {      
     constructor(props) {
         super(props);        
         this.state = {
-          songs: []
+          songs: [],
+          isOpen: false,
+          videoId:""          
         };   
+        this.openModal = this.openModal.bind(this)
       }
       componentDidMount() {    
           this.fetchSongs(); 
@@ -20,6 +24,13 @@ class Music extends React.Component {
 
       componentWillUnmount() {}
     
+      openModal (e) {
+        const video = e.target.dataset.video;                 
+
+        this.setState({videoId: video});
+        this.setState({isOpen: true});
+      }
+
       fetchSongs = () => {
             axios.get('/api/songs')
               .then((response) => {
@@ -46,9 +57,13 @@ class Music extends React.Component {
                                         </div>
                                 </Col>
                                 <Col className="musicCol">                                    
-                                    <object title={obj.title} data={obj.src} >
-                                        <span>could not diplay YouTube video</span>
-                                    </object>                                    
+                                    <div className="videoContainer" >
+                                      <img  src={obj.videoThumbnail}
+                                            className="videoThumbnail"
+                                            alt={obj.title}                                               
+                                            data-video={obj.src}
+                                            onClick={this.openModal} />
+                                  </div>                                    
                                 </Col>
                             </Row>
                             <Row>
@@ -59,6 +74,12 @@ class Music extends React.Component {
                     </div>
                 ))                  
               }
+              <ModalVideo 
+                        channel='youtube' 
+                        isOpen={this.state.isOpen} 
+                        videoId={this.state.videoId} 
+                        onClose={() => this.setState({isOpen: false})} 
+                        />              
           </div>          
         );
     }

@@ -10,7 +10,8 @@ const DataSchema = new Schema(
       src:String,
       year: String,
       keyWords:[String],
-      photos:[{ src: String, description: String }]
+      photos:[{ src: String, description: String }],
+      videoThumbnail: String
     },
     { timestamps: true }
   );

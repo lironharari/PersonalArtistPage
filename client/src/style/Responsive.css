@@ -6,11 +6,22 @@
 
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
-
+    .videoThumbnail{            
+      margin-top: 20px;
+      margin-bottom: 20px; 
+      margin-right: 0;
+      margin-left: 0; 
+      height: 150px;                                          
+      width: 250px;                                          
+    }
+    .videoContainer{    
+      margin: 0 auto;
+      height: 150px;                                          
+      width: 250px;                                          
+    }
     .ril__image{      
       left: -15px !important;          
-    }
-
+    }    
     .barLinks{
       display: none !important;
     }
@@ -66,7 +77,8 @@
     .documentaryGrid{
       width: 100%;
     }
-    .musicCol,.documentaryCol{
+    /* .musicCol,.documentaryCol{ */
+    .musicCol{
       text-align: center;
       display: flex;
       align-items: center;
@@ -126,6 +138,12 @@
   @media only screen and (min-width: 416px) and (max-width: 1023px) {
     .ril__image{      
       left: -15px !important;          
+    }
+    
+    .videoThumbnail{      
+      margin-top: 20px;
+      display: flex;                 
+      height: 250px;      
     }
 
     .barLinks{
@@ -260,6 +278,13 @@
       height:315px;
       margin-top: 70px;
       padding:0 0;      
+    }
+    
+    .videoThumbnail{
+      height: 315px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      float: right;
     }
 
     .toolbarTop::before {

@@ -1,10 +1,11 @@
-import React from 'react';
-import axios from 'axios';
+import React from 'react'
+import axios from 'axios'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Parser from 'html-react-parser';
-import * as commonScript from '../script/common';
-import ImageGallery from './ImageGallery';
+import Parser from 'html-react-parser'
+import * as commonScript from '../script/common'
+import ImageGallery from './ImageGallery'
+import ModalVideo from 'react-modal-video'
 
 class Documentary extends React.Component {      
     constructor(props) {
@@ -12,8 +13,11 @@ class Documentary extends React.Component {
         
         this.state = {
           episodes: [],
-          photos: []
+          photos: [],
+          isOpen: false,
+          videoId:""
         };   
+        this.openModal = this.openModal.bind(this)
       }
       componentDidMount() {    
           this.fetchDocumentaries();           
@@ -24,6 +28,13 @@ class Documentary extends React.Component {
 
       styleGalleryPhotos(photos) {
         return commonScript.adjustGalleryPhotos(photos);
+      }
+
+      openModal (e) {
+        const video = e.target.dataset.video;                 
+
+        this.setState({videoId: video});
+        this.setState({isOpen: true});
       }
 
       fetchEpisodePhotos = () => {
@@ -57,7 +68,7 @@ class Documentary extends React.Component {
         }
 
       return (
-        <div className="documentaryGrid">                  
+        <div className="documentaryGrid">                                              
                   <Row className="documentaryHeadContainer">                
                       <Col>
                             <h1>Human History Revisited</h1>
@@ -94,17 +105,21 @@ class Documentary extends React.Component {
                                 </Col>                  
                             </Row>
                             <Row className="documentaryRow">
-                                <Col>                          
-                                    <h3>{obj.title}</h3>
-                                    <h2>{obj.subtitle}</h2>                  
-                                    <div className="description">
-                                        {Parser(obj.description)}
-                                    </div>                                                                                                                                          
+                              <Col>                                                                  
+                                  <h3>{obj.title}</h3>
+                                  <h2>{obj.subtitle}</h2>                  
+                                  <div className="description">
+                                      {Parser(obj.description)}
+                                  </div>              
                                 </Col>
                                 <Col className="documentaryCol">                                    
-                                    <object title={obj.title} data={obj.src} >
-                                        <span>could not diplay YouTube video</span>
-                                    </object>                                    
+                                  <div className="videoContainer" >
+                                      <img  src={obj.videoThumbnail}
+                                            className="videoThumbnail"
+                                            alt={obj.title}                                               
+                                            data-video={obj.src}
+                                            onClick={this.openModal} />
+                                  </div>
                                 </Col>
                             </Row>
                             <Row>
@@ -119,6 +134,12 @@ class Documentary extends React.Component {
                     </div>
                 ))                  
               }            
+              <ModalVideo 
+                        channel='youtube' 
+                        isOpen={this.state.isOpen} 
+                        videoId={this.state.videoId} 
+                        onClose={() => this.setState({isOpen: false})} 
+                        />
           </div>          
         );
     }
