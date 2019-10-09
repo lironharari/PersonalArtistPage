@@ -117,15 +117,7 @@
     .main{
       width: 100%;      
     }
-    .toolbarTop::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      left: 0;
-      border-bottom:1px solid rgba(0,0,0,.1);
-    }        
+    
     .pageContainer{
       margin: 0 5%;
     }
@@ -216,7 +208,7 @@
     }
     .homePage{
       background-image: url(/images/home/tablet.jpg);      
-      height: 500px;
+      height: 1024px;
       /* display: inline-block;
       width: 100%;
       font-size: 0;
@@ -254,7 +246,7 @@
     .main{
       width: 100%;
     }
-    .toolbarTop::before {
+    /* .toolbarTop::before {
       content: '';
       display: block;
       position: absolute;
@@ -262,7 +254,7 @@
       width: 100%;
       left: 0;
       border-bottom:1px solid rgba(0,0,0,.1);
-    }
+    } */
     .homeContainer{
       width: 96%;
     }
@@ -287,16 +279,6 @@
       float: right;
     }
 
-    .toolbarTop::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 100%;
-      width: 90%;
-      left: 5%;
-      border-bottom:1px solid rgba(0,0,0,.1);
-    }
-
     .main{
       width: 100%;
     }
@@ -312,7 +294,7 @@
 
     .homePage{
       background-image: url(/images/home/desktop.jpg);
-      height: 520px;
+      height: 1024px;
       /* display: inline-block;
       width: 100%;
       font-size: 0;

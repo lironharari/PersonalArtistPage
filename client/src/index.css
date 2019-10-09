@@ -480,8 +480,14 @@ header{
   padding-left: 5%;
 }
 
-.toolbarTop{       
-  margin-bottom: 1px;
+.toolbarTop{
+  border-bottom:1px solid rgba(0,0,0,.1);  
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed !important;
+  top: 0; 
+  width: 100%;
+  z-index: 1;
 }
 
 .barhome span,
@@ -549,6 +555,7 @@ button.barLinks:hover, #dropdown-item-button:hover{
 }
 
 .homePage{  
+  z-index: 0;  
   text-align: center;
   display: flex;
   align-items: center;
