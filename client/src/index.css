@@ -34,8 +34,11 @@ code {
 }
 
  .navbar {
-  padding: 1.5rem 10% !important;
+  padding: 0.7rem 10% !important;
 } 
+.dropdown-menu .dropdown-item{
+  text-transform:none !important;
+}
 
 .documentaryHeadContainer h1{
   text-align: center;  
@@ -47,31 +50,10 @@ code {
 
 .pageHeader{
   width: 100%;
-  text-align: center;
-  display: flex;
+  text-align: center;  
   align-items: center;
   justify-content: center;   
-  color:rgba(0,0,0,.5);
-}
-.pageHeader .circle{
-  height: 50px;
-  width: 50px;
-  background-color: rgba(243, 235, 235, .3);
-  border: 1px solid rgba(0,0,0,.5);
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-  align-items: center;
-  justify-content: center;     
-}
-
-.pageHeader .icon{
-  height: 25px;
-  width: 25px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;     
-  margin-top:14px;
+  color:rgba(0,0,0,.5);  
 }
 
 .homeDescription h2,
@@ -127,18 +109,6 @@ code {
   text-decoration: underline;
 }
 
-.navbar .navbar-brand{
-  color:rgba(0,0,0,.5) !important;
-}
-
-.navbar .navbar-brand:hover{
-  color:rgba(0,0,0,.7) !important;
-}
-
-.navbar .dropdown-menu a:active{
-  background-color: #FFFFFF !important;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -179,42 +149,6 @@ code {
 .musicGrid h2{
   margin-bottom:20px;  
 }
-
-/* .streetFilter{  
-  width: 100%;
-  padding: 20px 0;      
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-
-.streetFilter .btn-toolbar .btn.btn-link{  
-  font-size: 1.2rem;
-  font-weight: 400;
-  color:rgba(0,0,0,.5) !important;
-  padding: 5px 10px;
-} */
-/* 
-.streetFilter .btn-toolbar .btn.btn-link:hover{
-  color:rgba(0,0,0,.8) !important;
-  text-decoration: none;
-  border-radius:4px;  
-  background: rgb(234, 236, 231);
-}
-
-.streetFilter .btn-toolbar .activeFilter{
-  color:rgba(0,0,0,.8) !important;
-  text-decoration: none;
-  border-radius:4px;  
-  background: rgb(234, 236, 231);
-}
-
-.streetFilter span{
-  font-size: 1.2rem;
-  font-weight: 400;
-  color:rgba(0,0,0,.7);
-} */
 
 .streetGallery .mt-5{
   margin-top: 0 !important;
@@ -410,28 +344,21 @@ margin-bottom:40px;
   letter-spacing: 0.02857em;  
 }
 
-/* .MuiButton-root{
-  text-transform: none !important;
-} */
-
+.dropdown-menu .dropdown-item,
 .dropdown .btn-primary.dropdown-toggle{
   background-color: #ffffff !important;
   color:rgba(0,0,0,.4) !important;
-  font-size: 0.875rem;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;  
+  font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0.02857em;
-  text-transform: uppercase;
+  text-transform: none;
   border:none;
   box-shadow: none;
-  outline: none;
-  
+  outline: none;  
 }
 
-.dropdown-menu .dropdown-item{
-  text-transform: uppercase;
-}
 
 .dropdown-menu .dropdown-item:active{
   background-color: #DBDBDB !important;
@@ -462,16 +389,6 @@ div.documentaryHeadContainer.row{
 
 .humanHistoryThumbs{
   margin-top: 40px;
-}
-
-header.MuiAppBar-root{  
-  box-shadow:none;
-  padding-top:5px !important;  
-}
-
-header{
-  padding-right: 5%;
-  padding-left: 5%;
 }
 
 .toolbarTop{
@@ -567,7 +484,7 @@ padding-left: 0 !important;
   cursor: pointer;
 }
 .pageContainer{
-  margin-top: 70px;
+  margin-top: 100px;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -575,5 +492,38 @@ padding-left: 0 !important;
   display: inline-block;
   width: 100%;
   padding: 0 5%;  
-  margin-top: 70px;
+  margin-top: 100px;
 }
+.navbar{
+  border-bottom:1px solid rgba(0,0,0,.1);    
+}
+.nav-link{  
+  padding-left: 10px !important;
+  color:rgba(0,0,0,.4) !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+}
+
+.nav-link:hover{  
+  background-color: rgba(0,0,0,.05) !important;
+  color:rgba(0,0,0,.5);
+}
+
+.navbar .navbar-brand{
+  color:rgba(0,0,0,.4) !important;
+}
+
+.navbar .navbar-brand:hover{
+  color:rgba(0,0,0,.5) !important;
+}
+
+.navbar-nav{
+  padding-top: 5px !important;
+}
+
+.navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
+  outline: 0;
+}
+

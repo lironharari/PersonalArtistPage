@@ -53,14 +53,14 @@ class StreetPhotography extends React.Component {
     return (        
       <div className="pageContainer">                                   
           <PageHeader title="Street Photography" subtitle="various" icon={<CameraRollIcon className="icon"></CameraRollIcon>}></PageHeader>                              
-              <DropdownButton className="filter" id="dropdown-item-button" title="Filter by location:">
-                  <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>Thailand</Dropdown.Item>                  
-                  <Dropdown.Item as="button" className={active === 'india' ? 'activeFilter' : ''}  data-name="india" data-location="india" onClick={this.filter}>India</Dropdown.Item>
+              <DropdownButton className="filter" id="dropdown-item-button" title="filter by location:">
+                  <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''} data-name="thailand" data-location="thailand" onClick={this.filter}>thailand</Dropdown.Item>                  
+                  <Dropdown.Item as="button" className={active === 'india' ? 'activeFilter' : ''}  data-name="india" data-location="india" onClick={this.filter}>india</Dropdown.Item>
                   
-                  <Dropdown.Item as="button" className={active === 'america' ? 'activeFilter' : ''}  data-name="america" data-location="america" onClick={this.filter}>Latin America</Dropdown.Item>            
-                  <Dropdown.Item as="button" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>Israel</Dropdown.Item>            
+                  <Dropdown.Item as="button" className={active === 'america' ? 'activeFilter' : ''}  data-name="america" data-location="america" onClick={this.filter}>latin america</Dropdown.Item>            
+                  <Dropdown.Item as="button" className={active === 'israel' ? 'activeFilter' : ''}  data-name="israel" data-location="israel" onClick={this.filter}>israel</Dropdown.Item>            
                   <Dropdown.Divider />
-                  <Dropdown.Item as="button" data-location="" onClick={this.filter}>Show All</Dropdown.Item>            
+                  <Dropdown.Item as="button" data-location="" onClick={this.filter}>show all</Dropdown.Item>            
               </DropdownButton>            
             <ImageGallery photos={photos}></ImageGallery>
       </div>                 

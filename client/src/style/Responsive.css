@@ -14,11 +14,20 @@
       height: 150px;                                          
       width: 250px;                                          
     }
+
+    .dropdown-menu{
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
+      margin:0 !important;
+    }
+
     .videoContainer{    
       margin: 0 auto;
       height: 150px;                                          
       width: 250px;                                          
-    }
+      margin-bottom: 40px;
+    } 
     .ril__image{      
       left: -15px !important;          
     }    
@@ -33,37 +42,13 @@
     .homeDescription h4{
       font-size:1.2rem;
     }
-    header.MuiAppBar-root::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      left: 0;
-      border-bottom:1px solid rgba(0,0,0,.1);
-    }
-    header{
-      padding-right: 0;
-      padding-left: 0;
-    }
+    
     .homePage{
       background-image: url(/images/home/mobile.jpg);
       height: 1400px;
-      /* display: inline-block;
-      width: 97%;
-      font-size: 0;
-      line-height: 0; */
-      /* vertical-align: middle;
-      background-size: 100%;
-      background-repeat: no-repeat; */
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
-
-    /* .galleryImage{
-      pointer-events: none;
-      cursor: default;
-    } */
             
     .documentaryRow .description,
     .documentaryRow .col{
@@ -77,7 +62,7 @@
     .documentaryGrid{
       width: 100%;
     }
-    /* .musicCol,.documentaryCol{ */
+    
     .musicCol{
       text-align: center;
       display: flex;
@@ -113,6 +98,7 @@
     }
      .pageHeader h1{
       margin-top: 10px;
+      font-size:1.7rem;
     }
     .main{
       width: 100%;      
@@ -129,6 +115,18 @@
       left: -15px !important;          
     }
     
+    .videoContainer{    
+      
+      margin-bottom: 40px;
+    } 
+
+    .dropdown-menu{
+      border-left: none !important;
+      border-right: none !important;
+      border-radius: 0 !important;
+      margin:0 !important;
+    }
+
     .videoThumbnail{      
       margin-top: 20px;
       display: flex;                 
@@ -206,13 +204,6 @@
     .homePage{
       background-image: url(/images/home/tablet.jpg);      
       height: 1024px;
-      /* display: inline-block;
-      width: 100%;
-      font-size: 0;
-      line-height: 0;
-      vertical-align: middle;
-      background-size: 100%;
-      /*  */
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -233,6 +224,7 @@
     }
      .pageHeader h1{
       margin-top: 10px;
+      font-size:1.7rem;
     }
     .pageHeader h4,
     .pageHeader h1{
@@ -243,15 +235,6 @@
     .main{
       width: 100%;
     }
-    /* .toolbarTop::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      left: 0;
-      border-bottom:1px solid rgba(0,0,0,.1);
-    } */
     .homeContainer{
       width: 96%;
     }
@@ -289,13 +272,6 @@
     .homePage{
       background-image: url(/images/home/desktop.jpg);
       height: 1024px;
-      /* display: inline-block;
-      width: 100%;
-      font-size: 0;
-      line-height: 0;
-      vertical-align: middle;
-      background-size: 100%;
-      background-repeat: no-repeat; */
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -305,6 +281,7 @@
     }
      .pageHeader h1{
       margin-top: 10px;
+      font-size:2.1rem;
     }
     .pageHeader{
       display: inline;

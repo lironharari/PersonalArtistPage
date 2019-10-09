@@ -173,7 +173,6 @@ export default function TemporaryDrawer() {
                     <Button color="inherit" onClick={() => window.location.href = "/drawings"}>drawings</Button>
                     <Button color="inherit" onClick={() => window.location.href = "/music"}>music</Button>                              
                 </div>
-
         </Toolbar>
             <Router>  
                 <Switch>
