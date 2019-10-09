@@ -118,9 +118,6 @@
       width: 100%;      
     }
     
-    .pageContainer{
-      margin: 0 5%;
-    }
     .homeContainer{
       width: 95%;
     }
@@ -258,9 +255,6 @@
     .homeContainer{
       width: 96%;
     }
-    .pageContainer{
-      margin: 0 5%;
-    }
   }
 
   /* Desktop Styles */
@@ -321,9 +315,6 @@
       text-align: center;
       width: 100%;
       display: block;
-    }
-    .pageContainer{
-      margin: 0 5%;
     }
     .documentaryCol object{
       float: right;

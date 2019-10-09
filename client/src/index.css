@@ -152,12 +152,6 @@ code {
   float: right; 
 }
 
-.documentaryGrid,.musicGrid{
-  display: inline-block;
-  width: 100%;
-  padding: 0 5%;  
-}
-
 .drawingGrid,.photographyGrid{  
   display: inline-block;
   width: 100%;
@@ -244,7 +238,7 @@ border-top:1px solid black;
 }
 
 #dropdown-item-button{
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .documentaryHeader{
@@ -481,8 +475,7 @@ header{
 }
 
 .toolbarTop{
-  border-bottom:1px solid rgba(0,0,0,.1);  
-  overflow: hidden;
+  border-bottom:1px solid rgba(0,0,0,.1);    
   background-color: #ffffff;
   position: fixed !important;
   top: 0; 
@@ -518,7 +511,7 @@ header{
 
 .barLinks button
 {  
-  margin: 20px 0;
+  margin: 15px 0;
   display: block;
   float: left;
   
@@ -572,4 +565,15 @@ padding-left: 0 !important;
 }
 .videoThumbnail:hover{
   cursor: pointer;
+}
+.pageContainer{
+  margin-top: 70px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.documentaryGrid,.musicGrid{
+  display: inline-block;
+  width: 100%;
+  padding: 0 5%;  
+  margin-top: 70px;
 }

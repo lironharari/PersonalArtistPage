@@ -39,6 +39,8 @@ export default function ImageGallery({ photos }) {
                                 />
         {isOpen && (
             <Lightbox              
+              imageTitle={photos[photoIndex].title}
+              imageCaption={photos[photoIndex].description}
               mainSrc={photos[photoIndex].src}
               nextSrc={photos[(photoIndex + 1) % photos.length].src}
               prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].src}

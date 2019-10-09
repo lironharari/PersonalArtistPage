@@ -20,7 +20,8 @@ export function adjustGalleryPhotos(photos) {
                                 sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],                                
                                 width: isCustomSize ? photo.width : defaultWidth, 
                                 height: isCustomSize ? photo.height : defaultHeight, 
-                                alt:photo.title,
+                                alt:"",
+                                title: photo.title,
                                 description: photo.description });                                
     });
     return galleryPhotos;
