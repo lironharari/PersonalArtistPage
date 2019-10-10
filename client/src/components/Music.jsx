@@ -46,34 +46,36 @@ class Music extends React.Component {
       return (
           <div className="musicGrid">                                        
               <PageHeader title="Music" subtitle="demos" icon={<HeadsetIcon className="icon"></HeadsetIcon>}></PageHeader>                                                            
-              {
-                songs.map(obj => (
-                  <div key={obj._id}>
-                            <Row className="musicRow">
-                                <Col>      
-                                        <h2>{obj.title}</h2>                                                                
-                                        <div className="lyrics">
-                                              {Parser(obj.lyrics)}                                
-                                        </div>
-                                </Col>
-                                <Col className="musicCol">                                    
-                                    <div className="videoContainer" >
-                                      <img  src={obj.videoThumbnail}
-                                            className="videoThumbnail"
-                                            alt={obj.title}                                               
-                                            data-video={obj.src}
-                                            onClick={this.openModal} />
-                                  </div>                                    
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <hr/>
-                                </Col>                  
-                            </Row>                                        
-                    </div>
-                ))                  
-              }
+              <div className="musicBody">
+                  {
+                    songs.map(obj => (
+                      <div key={obj._id}>
+                                <Row className="musicRow">
+                                    <Col>      
+                                            <h2>{obj.title}</h2>                                                                
+                                            <div className="lyrics">
+                                                  {Parser(obj.lyrics)}                                
+                                            </div>
+                                    </Col>
+                                    <Col className="musicCol">                                    
+                                        <div className="videoContainer" >
+                                          <img  src={obj.videoThumbnail}
+                                                className="videoThumbnail"
+                                                alt={obj.title}                                               
+                                                data-video={obj.src}
+                                                onClick={this.openModal} />
+                                      </div>                                    
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <hr/>
+                                    </Col>                  
+                                </Row>                                        
+                        </div>
+                    ))                  
+                  }
+              </div>
               <ModalVideo 
                         channel='youtube' 
                         isOpen={this.state.isOpen} 

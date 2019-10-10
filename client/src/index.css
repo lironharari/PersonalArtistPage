@@ -22,9 +22,7 @@ code {
   margin-bottom: 30px;
 }
 
-.documentaryHeadContainer{
-  margin-top: 20px;
-  margin-bottom: 20px;
+.documentaryHeadContainer{  
   width: 100%;
 }
 
@@ -33,9 +31,6 @@ code {
   max-height: 100%;
 }
 
- .navbar {
-  padding: 0.7rem 10% !important;
-} 
 .dropdown-menu .dropdown-item{
   text-transform:none !important;
 }
@@ -99,10 +94,6 @@ code {
   font-size: 1.2rem;
   font-weight: 400;
   color:rgba(0,0,0,.5);
-}
-
-.navbar{
-  box-shadow:none;
 }
 
 .is-active{
@@ -169,10 +160,6 @@ code {
  
 .page-footer{
 border-top:1px solid black;
-}
-
-#dropdown-item-button{
-  margin: 15px 0;
 }
 
 .documentaryHeader{
@@ -347,7 +334,7 @@ margin-bottom:40px;
 .dropdown-menu .dropdown-item,
 .dropdown .btn-primary.dropdown-toggle{
   background-color: #ffffff !important;
-  color:rgba(0,0,0,.4) !important;
+  color:rgba(0,0,0,.5) !important;
   font-size: 1.2rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;  
   font-weight: 400;
@@ -385,10 +372,6 @@ div.documentaryHeadContainer.row{
 
 .MuiAppBar-root{
   z-index: 1 !important;
-}
-
-.humanHistoryThumbs{
-  margin-top: 40px;
 }
 
 .toolbarTop{
@@ -484,7 +467,7 @@ padding-left: 0 !important;
   cursor: pointer;
 }
 .pageContainer{
-  margin-top: 100px;
+  margin-top: 90px;  
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -492,14 +475,11 @@ padding-left: 0 !important;
   display: inline-block;
   width: 100%;
   padding: 0 5%;  
-  margin-top: 100px;
+  margin-top: 90px;
 }
-.navbar{
-  border-bottom:1px solid rgba(0,0,0,.1);    
-}
+
 .nav-link{  
   padding-left: 10px !important;
-  color:rgba(0,0,0,.4) !important;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.2rem;
   line-height: 1.75;
@@ -508,15 +488,17 @@ padding-left: 0 !important;
 
 .nav-link:hover{  
   background-color: rgba(0,0,0,.05) !important;
-  color:rgba(0,0,0,.5);
+  color:rgba(0,0,0,.6) !important;
 }
 
+.navbar-nav .dropdown-item,
 .navbar .navbar-brand{
-  color:rgba(0,0,0,.4) !important;
+  color:rgba(0,0,0,.5) !important;
 }
 
+.navbar-nav .dropdown-item,
 .navbar .navbar-brand:hover{
-  color:rgba(0,0,0,.5) !important;
+  color:rgba(0,0,0,.6) !important;
 }
 
 .navbar-nav{
@@ -526,4 +508,9 @@ padding-left: 0 !important;
 .navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
   outline: 0;
 }
-
+.musicBody{
+  margin-top: 10px;
+}
+.galleryContainer{
+  margin-top: 20px;
+}

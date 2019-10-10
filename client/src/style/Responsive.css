@@ -14,7 +14,10 @@
       height: 150px;                                          
       width: 250px;                                          
     }
-
+    .navbar {
+      padding: 0.9rem 5% !important;      
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
     .dropdown-menu{
       border-left: none !important;
       border-right: none !important;
@@ -114,7 +117,11 @@
     .ril__image{      
       left: -15px !important;          
     }
-    
+    .navbar {
+      padding: 0.9rem 5% !important;      
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }     
+
     .videoContainer{    
       
       margin-bottom: 40px;
@@ -248,7 +255,21 @@
       margin-top: 70px;
       padding:0 0;      
     }
-    
+    .navbar {    
+      padding: 0.5rem 5% !important;            
+      outline: 0;
+    } 
+
+    .navbar::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      width: 90%;
+      left: 5%;
+      border-bottom:1px solid rgba(0,0,0,.1);
+    }
+
     .videoThumbnail{
       height: 315px;
       margin-top: 20px;
