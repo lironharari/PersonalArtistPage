@@ -114,7 +114,7 @@
   }
 
   /* Tablet Styles */
-  @media only screen and (min-width: 416px) and (max-width: 1023px) {
+  @media only screen and (min-width: 415px) and (max-width: 1024px) {
     .ril-image-current{      
       left: -9px !important;          
     }
