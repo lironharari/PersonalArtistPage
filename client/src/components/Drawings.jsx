@@ -21,7 +21,7 @@ class Drawings extends React.Component {
     axios.get('/api/drawings')
       .then((response) => {
         const { drawings } = response.data;            
-        this.setState({ drawings: commonScript.sortByRank(commonScript.adjustGalleryPhotos(drawings)) })
+        this.setState({ drawings: commonScript.adjustGalleryPhotos(commonScript.sortByRank(drawings)) })
       })
       .catch(() => alert('Error fetching drawings'));
   }       

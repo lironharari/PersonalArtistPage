@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
 
+  
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
     .videoThumbnail{            
@@ -14,6 +15,7 @@
       height: 150px;                                          
       width: 250px;                                          
     }
+
     .navbar {
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
@@ -32,9 +34,13 @@
       margin-bottom: 40px;
     } 
     .ril-image-current{      
-      left: -9px !important;          
-    } 
-       
+      left: -9px !important;                      
+    }  
+    /* chrome */
+    .selector:not(*:root), .ril-image-current {
+      left: -9px !important;
+    }
+  
     .barLinks{
       display: none !important;
     }
