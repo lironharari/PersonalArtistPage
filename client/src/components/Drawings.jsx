@@ -21,13 +21,13 @@ class Drawings extends React.Component {
     axios.get('/api/drawings')
       .then((response) => {
         const { drawings } = response.data;            
-        this.setState({ drawings: commonScript.adjustGalleryPhotos(commonScript.sortByRank(drawings)) })
+        this.setState({ drawings: commonScript.sortByRank(commonScript.adjustGalleryPhotos(drawings)) })
       })
       .catch(() => alert('Error fetching drawings'));
   }       
 
       render() {    
-        const { drawings } = this.state;              
+        const { drawings } = this.state;  
       return (
         <div className="pageContainer">                                   
             <PageHeader title="Drawings" subtitle="various"></PageHeader>            

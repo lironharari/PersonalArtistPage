@@ -1,6 +1,6 @@
 export function sortByRank(list) {
-    return list.sort((a, b) => a.rank < b.rank);      
-  }
+  return list.sort((a, b) => b.rank - a.rank );      
+}
 
 export function adjustGalleryPhotos(photos) {
     const galleryPhotos = [];
@@ -22,6 +22,7 @@ export function adjustGalleryPhotos(photos) {
                                 height: isCustomSize ? photo.height : defaultHeight, 
                                 alt:"",
                                 title: "",
+                                rank: photo.rank,
                                 description: photo.description });                                
     });
     return galleryPhotos;
