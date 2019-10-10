@@ -32,7 +32,7 @@
       margin-bottom: 40px;
     } 
     .ril__image{      
-      left: -15px !important;          
+      left: -9px !important;          
     }    
     .barLinks{
       display: none !important;
@@ -115,7 +115,7 @@
   /* Tablet Styles */
   @media only screen and (min-width: 416px) and (max-width: 1023px) {
     .ril__image{      
-      left: -15px !important;          
+      left: -9px !important;          
     }
     .navbar {
       padding: 0.9rem 5% !important;      
