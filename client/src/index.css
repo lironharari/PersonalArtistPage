@@ -527,3 +527,13 @@ padding-left: 0 !important;
 .modal-video-movie-wrap{
   background-color: #000000;
 }
+.closeButton{
+  text-align: right;  
+}
+
+.react-images__view-image {
+  user-select: all !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: all !important;
+  -ms-user-select: initial !important;
+}

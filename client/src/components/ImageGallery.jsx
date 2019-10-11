@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
-
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
     const [isOpen,setIsOpen] = useState(false);    
-    //const [photoSrc,setPhotoSrc] = useState("");
-    
+    //const [photoSrc,setPhotoSrc] = useState("");    
+
     const imageRenderer = ({
       key,
       index,

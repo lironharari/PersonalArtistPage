@@ -5,7 +5,6 @@ import './style/Fonts.css';
 import './style/modal-video.scss';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'react-image-lightbox/style.css';
 import NavBar from './components/NavBar';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Notfound from './components/Notfound';
