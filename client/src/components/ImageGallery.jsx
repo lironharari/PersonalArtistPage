@@ -45,10 +45,6 @@ export default function ImageGallery({ photos }) {
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
-                        framePropsObject={{
-                          accessibility: true,
-                          autoSize: true
-                        }}
                          />
               </Modal>
             ) : null}
