@@ -8,7 +8,7 @@ class NavBar extends React.Component {
         
       return (
         <div>
-            <Navbar fixed='top' collapseOnSelect expand="lg" bg="white">
+            <Navbar collapseOnSelect expand="lg" bg="white">
                 <Navbar.Brand href="/">liron harari</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

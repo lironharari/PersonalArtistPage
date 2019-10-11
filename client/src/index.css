@@ -252,17 +252,11 @@ border-top:1px solid black;
   text-align: center;
 }
 
-.fixed-top{
-  z-index: 1 !important;
-}
-
 .humanHistoryRows{
   margin-bottom: 10px;
 }
 
-.ReactModalPortal .ReactModal__Overlay{
-  z-index: 1100 !important;
-}
+
 
 .MuiAppBar-colorPrimary{
   background-color:#ffffff !important;
@@ -467,7 +461,7 @@ padding-left: 0 !important;
   cursor: pointer;
 }
 .pageContainer{
-  margin-top: 90px;
+  margin-top: 30px;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -475,7 +469,7 @@ padding-left: 0 !important;
   display: inline-block;
   width: 100%;
   padding: 0 5%;
-  margin-top: 90px;
+  margin-top: 30px;
 }
 
 .nav-link{
@@ -513,4 +507,20 @@ padding-left: 0 !important;
 }
 .galleryContainer{
   margin-top: 20px;
+}
+.modal-video{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-video-close-btn{
+  top:10px;
+  right: -45px;
+}
+.react-images__footer__count {
+  display: none;
+}
+.react-images__footer__caption {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family:inherit;
 }

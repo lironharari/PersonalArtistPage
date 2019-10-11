@@ -40,7 +40,10 @@ export default function ImageGallery({ photos }) {
                                 />
             <ModalGateway>
             {isOpen ? (
-              <Modal onClose={() => setIsOpen(false)}>
+              <Modal 
+                  onClose={() => setIsOpen(false)}
+                  allowFullscreen={false}
+                  >
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
@@ -50,22 +53,7 @@ export default function ImageGallery({ photos }) {
           </ModalGateway>                                
 
 
-         {/* {isOpen && (
-            <Lightbox              
-              imageTitle={photos[photoIndex].title}
-              imageCaption={photos[photoIndex].description}
-              mainSrc={photos[photoIndex].src}
-              nextSrc={photos[(photoIndex + 1) % photos.length].src}
-              prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].src}
-              onCloseRequest={() => setIsOpen(false)}
-              onMovePrevRequest={() =>
-                setPhotoIndex((photoIndex + photos.length - 1) % photos.length)
-              }
-              onMoveNextRequest={() =>
-                setPhotoIndex((photoIndex + 1) % photos.length)
-              }
-            />
-          )}      */}
+
   </div>
   );
 }
