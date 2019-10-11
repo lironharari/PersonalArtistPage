@@ -527,3 +527,6 @@ padding-left: 0 !important;
 .modal-video-movie-wrap{
   background-color: #000000;
 }
+.react-images__view-image {
+  touch-action: manipulation;
+}
