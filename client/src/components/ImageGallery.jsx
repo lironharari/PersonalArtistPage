@@ -45,7 +45,6 @@ export default function ImageGallery({ photos }) {
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
-                        hideControlsWhenIdle={false}
                          />
               </Modal>
             ) : null}
