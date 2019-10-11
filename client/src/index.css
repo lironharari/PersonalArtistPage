@@ -531,11 +531,24 @@ padding-left: 0 !important;
   text-align: right;  
 }
 
-.react-images__container,
-.react-images__view-image {
+.fullscreen,
+.react-images__blanket,
+.react-images__positioner,
+.react-images__dialog,
+.react-images__container
+.react-images__header,
+.react-images__footer,
+.react-images__pager,
+.react-images__track,
+.react-images__frame,
+.react-images__view-wrapper,
+.react-images__view,
+.react-images__view-image,
+.react-images__view-image img{
   user-select: all !important;
   -webkit-user-select: auto !important;
   -moz-user-select: all !important;
   -ms-user-select: initial !important;
   touch-action: manipulation !important;
 }
+
