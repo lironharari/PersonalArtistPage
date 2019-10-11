@@ -40,11 +40,15 @@ export default function ImageGallery({ photos }) {
             {isOpen ? (
               <Modal 
                   onClose={() => setIsOpen(false)}
-                  allowFullscreen={true}
+                  allowFullscreen={false}
                   >
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
+                        framePropsObject={{
+                          accessibility: true,
+                          autoSize: true
+                        }}
                          />
               </Modal>
             ) : null}
