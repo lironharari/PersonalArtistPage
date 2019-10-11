@@ -45,6 +45,16 @@ export default function ImageGallery({ photos }) {
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
+                        styles={{
+                          container: base => ({
+                            ...base,
+                            touchAction: 'manipulation'
+                          }),
+                          view: base => ({
+                            ...base,
+                            touchAction: 'manipulation'                            
+                          }),
+                        }}
                          />
               </Modal>
             ) : null}

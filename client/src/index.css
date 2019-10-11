@@ -527,12 +527,3 @@ padding-left: 0 !important;
 .modal-video-movie-wrap{
   background-color: #000000;
 }
-.react-images__view-image,
-.react-images__view-wrapper,
-.react-images__track,
-.react-images__frame,
-.react-images__pager,
-.react-images__container,
-.react-images__blanket {
-  touch-action: manipulation;
-}
