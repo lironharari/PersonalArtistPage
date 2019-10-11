@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
-import Lightbox from 'react-image-lightbox';
+//import Lightbox from 'react-image-lightbox';
+import Carousel, { Modal, ModalGateway } from 'react-images';
 
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
@@ -37,7 +38,19 @@ export default function ImageGallery({ photos }) {
                 renderImage={imageRenderer}
                 photos={photos}            
                                 />
-        {isOpen && (
+            <ModalGateway>
+            {isOpen ? (
+              <Modal onClose={() => setIsOpen(false)}>
+                <Carousel 
+                        views={photos}
+                        currentIndex={photoIndex}
+                         />
+              </Modal>
+            ) : null}
+          </ModalGateway>                                
+
+
+         {/* {isOpen && (
             <Lightbox              
               imageTitle={photos[photoIndex].title}
               imageCaption={photos[photoIndex].description}
@@ -52,7 +65,7 @@ export default function ImageGallery({ photos }) {
                 setPhotoIndex((photoIndex + 1) % photos.length)
               }
             />
-          )}    
+          )}      */}
   </div>
   );
 }

@@ -22,7 +22,8 @@ export function adjustGalleryPhotos(photos) {
                                 height: isCustomSize ? photo.height : defaultHeight, 
                                 alt:"",
                                 title: "",
-                                description: photo.description });                                
+                                description: photo.description 
+                              });                                
     });
     return galleryPhotos;
   }

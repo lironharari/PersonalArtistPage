@@ -22,7 +22,7 @@ code {
   margin-bottom: 30px;
 }
 
-.documentaryHeadContainer{  
+.documentaryHeadContainer{
   width: 100%;
 }
 
@@ -36,7 +36,7 @@ code {
 }
 
 .documentaryHeadContainer h1{
-  text-align: center;  
+  text-align: center;
 }
 .documentaryHeadContainer h4{
   text-align: center;
@@ -45,10 +45,10 @@ code {
 
 .pageHeader{
   width: 100%;
-  text-align: center;  
+  text-align: center;
   align-items: center;
-  justify-content: center;   
-  color:rgba(0,0,0,.5);  
+  justify-content: center;
+  color:rgba(0,0,0,.5);
 }
 
 .homeDescription h2,
@@ -90,7 +90,7 @@ code {
 .navbar,
 .navbar.navbar-light .breadcrumb .nav-item .nav-link,
 .navbar.navbar-light .navbar-nav .nav-item .nav-link,.navbar .dropdown-menu a,.navbar .dropdown-item{
-  
+
   font-size: 1.2rem;
   font-weight: 400;
   color:rgba(0,0,0,.5);
@@ -108,15 +108,15 @@ code {
 .logo{
     margin-left:15px;
  }
- 
+
  .links{
-  float: right; 
+  float: right;
 }
 
-.drawingGrid,.photographyGrid{  
+.drawingGrid,.photographyGrid{
   display: inline-block;
   width: 100%;
-  padding: 0 10% 40px 10%;  
+  padding: 0 10% 40px 10%;
 }
 
 .musicGrid span{
@@ -138,7 +138,7 @@ code {
 }
 
 .musicGrid h2{
-  margin-bottom:20px;  
+  margin-bottom:20px;
 }
 
 .streetGallery .mt-5{
@@ -146,18 +146,18 @@ code {
 }
 
 .drawingGrid{
-  margin-top:40px; 
+  margin-top:40px;
 }
 
-.photographyGrid{  
-  margin-bottom:30px; 
-  margin-top:40px; 
+.photographyGrid{
+  margin-bottom:30px;
+  margin-top:40px;
 }
 
 .drawingImage,.photographyImage{
   width: 100%;
 }
- 
+
 .page-footer{
 border-top:1px solid black;
 }
@@ -182,24 +182,24 @@ border-top:1px solid black;
 }
 
 .homeCol a, .homeCol a .homeDescription{
-  width: 100%;  
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;      
+  justify-content: center;
 }
 
-.homeCol a .homeDescription{  
+.homeCol a .homeDescription{
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
-.homeHeader{  
+.homeHeader{
   text-align: center;
 }
 
 .homeHeader h2{
-  color:rgba(0,0,0,.7);  
+  color:rgba(0,0,0,.7);
 }
 
 .homeHeader h4{
@@ -223,19 +223,19 @@ border-top:1px solid black;
   background: #fff;
   color:rgba(0,0,0,.7);
   visibility: hidden;
-  opacity: 0;  
+  opacity: 0;
   transition: opacity .2s, visibility .2s;
 }
 
 .footerGrid{
-  height: 270px; 
+  height: 270px;
   margin:0 0;
   padding:0 0;
-  width: 100%;  
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;   
+  justify-content: center;
 }
 
 .footerCopyright{
@@ -243,8 +243,8 @@ border-top:1px solid black;
 }
 
 .footerRow{
-  width: 100%; 
-  padding-top: 50px; 
+  width: 100%;
+  padding-top: 50px;
 }
 
 .thumbnailtext{
@@ -253,7 +253,7 @@ border-top:1px solid black;
 }
 
 .fixed-top{
-  z-index: 10 !important;
+  z-index: 1 !important;
 }
 
 .humanHistoryRows{
@@ -265,21 +265,21 @@ border-top:1px solid black;
 }
 
 .MuiAppBar-colorPrimary{
-  background-color:#ffffff !important;  
+  background-color:#ffffff !important;
 }
 
 .MuiButton-label,.MuiTypography-root,.MuiButtonBase-root{
-  color:rgba(0,0,0,.4);  
+  color:rgba(0,0,0,.4);
 }
 
 .MuiTypography-root span:hover,.MuiButtonBase-root:hover{
-  color:rgba(0,0,0,.5);   
+  color:rgba(0,0,0,.5);
 }
 
 .photographyPage{
   display: inline-block;
   width: 100%;
-  padding: 10px 10% 40px 10%;  
+  padding: 10px 10% 40px 10%;
 }
 
 .photographyPage .photographyRow, .photographyPage .photographyCol{
@@ -287,18 +287,18 @@ border-top:1px solid black;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;     
+  justify-content: center;
 }
 .photographyPage .photographyCol .card-title{
-  color:rgba(0,0,0,.7);  
+  color:rgba(0,0,0,.7);
 }
 
 .photographyPage .photographyCol{
-margin-bottom:40px; 
+margin-bottom:40px;
 }
 
 .photographyPage .photographyCol img{
-  margin-top:10px; 
+  margin-top:10px;
   }
 
 .photographyPage .photographyHeader{
@@ -306,7 +306,7 @@ margin-bottom:40px;
 }
 
 .photographyPage .photographyHeader h2,.photographyPage .photographyHeader h4{
-  color:rgba(0,0,0,.6);  
+  color:rgba(0,0,0,.6);
 }
 
 .photographyPage .row{
@@ -328,7 +328,7 @@ margin-bottom:40px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
   line-height: 1.75;
-  letter-spacing: 0.02857em;  
+  letter-spacing: 0.02857em;
 }
 
 .dropdown-menu .dropdown-item,
@@ -336,14 +336,14 @@ margin-bottom:40px;
   background-color: #ffffff !important;
   color:rgba(0,0,0,.5) !important;
   font-size: 1.2rem;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;  
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: none;
   border:none;
   box-shadow: none;
-  outline: none;  
+  outline: none;
 }
 
 
@@ -353,7 +353,7 @@ margin-bottom:40px;
 
 .dropdown .btn-primary.dropdown-toggle:hover,
 .dropdown .btn-primary.dropdown-toggle:active,
-.dropdown .btn-primary.dropdown-toggle:visited {  
+.dropdown .btn-primary.dropdown-toggle:visited {
   background-color: #DBDBDB !important;
   box-shadow: none !important;
   border:none;
@@ -362,7 +362,7 @@ margin-bottom:40px;
 
 .dropdown .btn-primary.dropdown-toggle:focus{
   box-shadow: none !important;
-  color:rgba(0,0,0,.4) !important;  
+  color:rgba(0,0,0,.4) !important;
 }
 
 div.documentaryHeadContainer.row{
@@ -375,55 +375,55 @@ div.documentaryHeadContainer.row{
 }
 
 .toolbarTop{
-  border-bottom:1px solid rgba(0,0,0,.1);    
+  border-bottom:1px solid rgba(0,0,0,.1);
   background-color: #ffffff;
   position: fixed !important;
-  top: 0; 
+  top: 0;
   width: 100%;
   z-index: 1;
 }
 
 .barhome span,
 .barhome h6
-{  
-  float:left;  
+{
+  float:left;
 }
 
-.barhome button,.drawerCloser{ 
+.barhome button,.drawerCloser{
   outline: 0 !important;
 }
 
-.barhome{    
+.barhome{
   display: block;
   width: 40px;
-  float: left;  
+  float: left;
 }
 
 .barLinks
-{  
+{
   margin-right:25px;
-  display: block;    
+  display: block;
   position:absolute;
   right:0;
   top:0;
-  width: 450px;      
+  width: 450px;
 }
 
 .barLinks button
-{  
+{
   margin: 15px 0;
   display: block;
   float: left;
-  
+
 }
 .barLinks .dropdown-menu .dropdown-divider{
   border-top:1px solid rgba(59, 57, 57, 0.1);
   height: 1px;
-  width: 100%;  
+  width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 .barLinks .dropdown-menu  button
 {
@@ -432,7 +432,7 @@ div.documentaryHeadContainer.row{
   float: left;
 }
 
-button.barLinks:hover, #dropdown-item-button:hover{  
+button.barLinks:hover, #dropdown-item-button:hover{
   background-color: rgba(0,0,0,.05) !important;
 }
 
@@ -447,16 +447,16 @@ button.barLinks:hover, #dropdown-item-button:hover{
   cursor: pointer;
 }
 
-.homePage{  
-  z-index: 0;  
+.homePage{
+  z-index: 0;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;     
+  justify-content: center;
 }
 
 .homeContainer .mt-4{
-  margin-top: 0 !important;  
+  margin-top: 0 !important;
 }
 
 .documentaryHeader.col{
@@ -467,18 +467,18 @@ padding-left: 0 !important;
   cursor: pointer;
 }
 .pageContainer{
-  margin-top: 90px;  
+  margin-top: 90px;
   margin-left: 5%;
   margin-right: 5%;
 }
 .documentaryGrid,.musicGrid{
   display: inline-block;
   width: 100%;
-  padding: 0 5%;  
+  padding: 0 5%;
   margin-top: 90px;
 }
 
-.nav-link{  
+.nav-link{
   padding-left: 10px !important;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.2rem;
@@ -486,7 +486,7 @@ padding-left: 0 !important;
   letter-spacing: 0.02857em;
 }
 
-.nav-link:hover{  
+.nav-link:hover{
   background-color: rgba(0,0,0,.05) !important;
   color:rgba(0,0,0,.6) !important;
 }

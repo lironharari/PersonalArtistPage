@@ -33,13 +33,7 @@
       width: 250px;                                          
       margin-bottom: 40px;
     } 
-    .ril-image-current{      
-      left: -9px !important;                      
-    }
-    /* chrome */
-    /* .ril-image-current:not(*:root), .ril-image-current {
-      left: -5px !important;                      
-    } */
+    
     .barLinks{
       display: none !important;
     }
@@ -120,9 +114,6 @@
 
   /* Tablet Styles */
   @media only screen and (min-width: 415px) and (max-width: 1024px) {
-    .ril-image-current{      
-      left: -9px !important;          
-    }
     .navbar {
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
@@ -261,8 +252,9 @@
       margin-top: 70px;
       padding:0 0;      
     }
-    .navbar {    
-      padding: 0.5rem 5% !important;            
+    
+    .navbar {     
+      padding: 0.5rem  5% !important;
       outline: 0;
     } 
 

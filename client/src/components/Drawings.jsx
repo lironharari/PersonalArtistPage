@@ -24,14 +24,15 @@ class Drawings extends React.Component {
         this.setState({ drawings: commonScript.adjustGalleryPhotos(commonScript.sortByRank(drawings)) })
       })
       .catch(() => alert('Error fetching drawings'));
-  }       
+  }     
 
       render() {    
-        const { drawings } = this.state;  
+        const { drawings } = this.state; 
+        
       return (
         <div className="pageContainer">                                   
             <PageHeader title="Drawings" subtitle="various"></PageHeader>            
-            <ImageGallery photos={drawings}></ImageGallery>          
+            <ImageGallery photos={drawings}></ImageGallery>                      
         </div>        
         );
     }
