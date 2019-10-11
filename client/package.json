@@ -23,6 +23,7 @@
     "react-lazyload": "^2.6.2",
     "react-load-image": "^0.1.7",
     "react-loadable": "^5.5.0",
+    "react-modal-image": "^2.5.0",
     "react-modal-video": "^1.2.3",
     "react-photo-gallery": "^8.0.0",
     "react-progressive-image": "^0.6.0",

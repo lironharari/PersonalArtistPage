@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
+
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
     const [isOpen,setIsOpen] = useState(false);    
+    //const [photoSrc,setPhotoSrc] = useState("");
     
     const imageRenderer = ({
       key,
@@ -15,6 +17,7 @@ export default function ImageGallery({ photos }) {
       const handleOnClick = e => {
         setIsOpen(true);
         setPhotoIndex(index);
+        //setPhotoSrc(photo.src);
       };  
 
       return (
@@ -35,7 +38,7 @@ export default function ImageGallery({ photos }) {
       <Gallery 
                 renderImage={imageRenderer}
                 photos={photos}            
-                                />
+                                />                                         
             <ModalGateway>
             {isOpen ? (
               <Modal 
@@ -51,4 +54,4 @@ export default function ImageGallery({ photos }) {
           </ModalGateway>                                
   </div>
   );
-}
+} 
