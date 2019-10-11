@@ -35,12 +35,11 @@
     } 
     .ril-image-current{      
       left: -9px !important;                      
-    }  
+    }          
     /* chrome */
-    .selector:not(*:root), .ril-image-current {
-      left: -5px !important;
+    .ril-image-current:not(*:root), .ril-image-current {
+      left: -5px !important;                      
     }
-  
     .barLinks{
       display: none !important;
     }
