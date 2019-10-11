@@ -38,7 +38,7 @@
     }  
     /* chrome */
     .selector:not(*:root), .ril-image-current {
-      left: -9px !important;
+      left: -5px !important;
     }
   
     .barLinks{
