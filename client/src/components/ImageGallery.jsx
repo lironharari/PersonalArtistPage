@@ -40,7 +40,7 @@ export default function ImageGallery({ photos }) {
             {isOpen ? (
               <Modal 
                   onClose={() => setIsOpen(false)}
-                  allowFullscreen={false}
+                  allowFullscreen={true}
                   >
                 <Carousel 
                         views={photos}
