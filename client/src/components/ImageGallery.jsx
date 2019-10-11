@@ -45,7 +45,7 @@ export default function ImageGallery({ photos }) {
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
-                        trackPropsObject = {{ swipe: 'mouse' }}
+                        trackPropsObject = {{ swipe: false  }}
                          />
               </Modal>
             ) : null}
