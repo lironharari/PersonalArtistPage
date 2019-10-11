@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
-//import Lightbox from 'react-image-lightbox';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
 export default function ImageGallery({ photos }) {
@@ -32,8 +31,7 @@ export default function ImageGallery({ photos }) {
     };
         
   return (
-    <div className="galleryContainer">    
-      
+    <div className="galleryContainer">          
       <Gallery 
                 renderImage={imageRenderer}
                 photos={photos}            
@@ -42,12 +40,11 @@ export default function ImageGallery({ photos }) {
             {isOpen ? (
               <Modal 
                   onClose={() => setIsOpen(false)}
-                  allowFullscreen={false}
+                  allowFullscreen={true}
                   >
                 <Carousel 
                         views={photos}
                         currentIndex={photoIndex}
-                        trackProps={ { swipe: false }}
                          />
               </Modal>
             ) : null}
