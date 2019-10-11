@@ -48,12 +48,8 @@ export default function ImageGallery({ photos }) {
                         styles={{
                           container: base => ({
                             ...base,
-                            touchAction: 'manipulation'
-                          }),
-                          view: base => ({
-                            ...base,
-                            touchAction: 'manipulation'                            
-                          }),
+                            touchAction: 'auto'
+                          })                          
                         }}
                          />
               </Modal>
