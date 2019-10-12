@@ -518,4 +518,16 @@ padding-left: 0 !important;
 .modal-video-movie-wrap{
   background-color: #000000;
 }
+.ril-close,
+.ril-zoom-in,
+.ril-zoom-out,
+.ril-prev-button,
+.ril-next-button{
+  outline:0 !important;
+}
 
+.ril-close,
+.ril-zoom-in,
+.ril-zoom-out{
+  margin-left:5px;
+}
