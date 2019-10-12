@@ -506,7 +506,7 @@ padding-left: 0 !important;
   margin-top: 10px;
 }
 .galleryContainer{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .modal-video{
   background-color: rgba(0, 0, 0, 0.8);
@@ -524,4 +524,20 @@ padding-left: 0 !important;
 .ril-prev-button,
 .ril-next-button{
   outline:0 !important;
+}
+.documentaryRow h2,
+.documentaryHeadContainer h1,
+.pageHeader h1,
+.musicRow h2{
+    text-decoration: underline;
+}
+.pageHeader h4{
+  margin-bottom: 25px;
+}
+
+.pageHeader h4,
+.pageHeader h1{
+  text-align: center;
+  width: 100%;
+  display: block;
 }
