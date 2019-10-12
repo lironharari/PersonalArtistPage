@@ -39,9 +39,9 @@ export default function ImageGallery({ photos }) {
             
             {isOpen && (
           <Lightbox
-            mainSrc={photos[photoIndex].src}
-            nextSrc={photos[(photoIndex + 1) % photos.length]}
-            prevSrc={photos[(photoIndex + photos.length - 1) % photos.length]}
+            mainSrc={photos[photoIndex].src}            
+            nextSrc={photos[(photoIndex + 1) % photos.length].src}            
+            prevSrc={photos[(photoIndex + photos.length - 1) % photos.length].src}
             onCloseRequest={() => setIsOpen(false)}
             onMovePrevRequest={() =>
               setPhotoIndex((photoIndex + photos.length - 1) % photos.length)              
