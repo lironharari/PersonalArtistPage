@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from 'react-images';
+import Lightbox from 'react-image-lightbox';
 
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
     const [isOpen,setIsOpen] = useState(false);    
-    //const [photoSrc,setPhotoSrc] = useState("");    
 
     const imageRenderer = ({
       key,
@@ -16,7 +15,6 @@ export default function ImageGallery({ photos }) {
       const handleOnClick = e => {
         setIsOpen(true);
         setPhotoIndex(index);
-        //setPhotoSrc(photo.src);
       };  
 
       return (
@@ -38,20 +36,21 @@ export default function ImageGallery({ photos }) {
                 renderImage={imageRenderer}
                 photos={photos}            
                                 />                                         
-            <ModalGateway>
-            {isOpen ? (
-              <Modal 
-                  onClose={() => setIsOpen(false)}
-                  allowFullscreen={false}
-                  >
-                <Carousel 
-                        views={photos}
-                        currentIndex={photoIndex}
-
-                         />
-              </Modal>
-            ) : null}
-          </ModalGateway>                                
+            
+            {isOpen && (
+          <Lightbox
+            mainSrc={photos[photoIndex].src}
+            nextSrc={photos[(photoIndex + 1) % photos.length]}
+            prevSrc={photos[(photoIndex + photos.length - 1) % photos.length]}
+            onCloseRequest={() => setIsOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex((photoIndex + photos.length - 1) % photos.length)              
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % photos.length)                            
+            }
+          />
+        )}
   </div>
   );
 } 
