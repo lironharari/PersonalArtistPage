@@ -20,7 +20,7 @@
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
     }
-    .dropdown-menu{
+    .navbar-nav .dropdown-menu{
       border-left: none !important;
       border-right: none !important;
       border-radius: 0 !important;
@@ -124,7 +124,7 @@
       margin-bottom: 40px;
     } 
 
-    .dropdown-menu{
+    .navbar-nav .dropdown-menu{
       border-left: none !important;
       border-right: none !important;
       border-radius: 0 !important;
