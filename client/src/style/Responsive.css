@@ -15,7 +15,11 @@
       height: 150px;                                          
       width: 250px;                                          
     }
-    
+    .ril-close,
+    .ril-zoom-in,
+    .ril-zoom-out{  
+      width:45px !important;
+    }    
     .navbar {
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
@@ -118,7 +122,11 @@
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
     }     
-
+    .ril-close,
+    .ril-zoom-in,
+    .ril-zoom-out{  
+      width:45px !important;
+    }    
     .videoContainer{    
       
       margin-bottom: 40px;

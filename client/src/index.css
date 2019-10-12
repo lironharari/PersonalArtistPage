@@ -525,9 +525,3 @@ padding-left: 0 !important;
 .ril-next-button{
   outline:0 !important;
 }
-
-.ril-close,
-.ril-zoom-in,
-.ril-zoom-out{
-  margin-left:5px;
-}
