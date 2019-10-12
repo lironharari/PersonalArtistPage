@@ -485,6 +485,10 @@ padding-left: 0 !important;
   color:rgba(0,0,0,.6) !important;
 }
 
+.navbar-brand{
+  font-size:1.5rem !important;
+}
+
 .navbar-nav .dropdown-item,
 .navbar .navbar-brand{
   color:rgba(0,0,0,.5) !important;
