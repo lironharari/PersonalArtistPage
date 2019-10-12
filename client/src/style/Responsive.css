@@ -7,6 +7,22 @@
   
   /* Mobile Styles */
   @media only screen and (max-width: 415px) {
+
+
+    .fullscreen,
+    .react-images__blanket,
+    .react-images__positioner,
+    .react-images__dialog,
+    .react-images__container,
+    .react-images__header,
+    .react-images__footer,
+    .react-images__pager,
+    .react-images__track,
+    .react-images__frame,
+    .react-images__view-wrapper,
+    .react-images__view,
+    .react-images__view-image,
+    .react-images__view-image img,
     .fullscreen:focus,
     .react-images__blanket:focus,
     .react-images__positioner:focus,
