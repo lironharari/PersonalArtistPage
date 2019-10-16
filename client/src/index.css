@@ -332,7 +332,7 @@ margin-bottom:40px;
   outline: none;
 }
 
-.dropdown .btn-primary.dropdown-toggle:visited{
+.dropdown .btn-primary .dropdown-toggle:visited{
   background-color: #fff !important;
 }
 
@@ -340,15 +340,15 @@ margin-bottom:40px;
   background-color: #DBDBDB !important;
 }
 
-.dropdown .btn-primary.dropdown-toggle:hover,
-.dropdown .btn-primary.dropdown-toggle:active {
+.dropdown .btn-primary .dropdown-toggle:hover,
+.dropdown .btn-primary .dropdown-toggle:active {
   background-color: #DBDBDB !important;
   box-shadow: none !important;
   border:none;
   color:rgba(0,0,0,.6) !important;
 }
 
-.dropdown .btn-primary.dropdown-toggle:focus{
+.dropdown .btn-primary .dropdown-toggle:focus{
   box-shadow: none !important;
   background-color: #fff !important;
 }
