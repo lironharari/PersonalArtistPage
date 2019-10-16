@@ -15,6 +15,9 @@
       height: 150px;                                          
       width: 250px;                                          
     }
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #fff !important;      
+    }
     .ril-close,
     .ril-zoom-in,
     .ril-zoom-out{  
@@ -102,6 +105,9 @@
       padding: 0.9rem 5% !important;      
       border-bottom:1px solid rgba(0,0,0,.1);
     }     
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #fff !important;      
+    }
     .ril-close,
     .ril-zoom-in,
     .ril-zoom-out{  
