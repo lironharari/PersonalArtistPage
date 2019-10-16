@@ -58,13 +58,15 @@ body {
 }
 
 .navbarFooter .nav-link:hover,
-.navbarHeader .nav-link:hover,.navbarHeader .dropdown-item:hover{
+.navbarHeader .nav-link:hover,
+.navbarHeader .dropdown-item:hover{
   text-decoration: underline;  
   background-color: transparent;
   color:rgba(0,0,0,.7);
 }
 
- .navbarHeader .navbar-nav .nav-link, .navbarHeader .navbar-nav .nav-item{
+ .navbarHeader .navbar-nav .nav-link,
+  .navbarHeader .navbar-nav .nav-item{
   margin-left: 15px;
 }
 
@@ -84,7 +86,9 @@ body {
 
 .navbar,
 .navbar.navbar-light .breadcrumb .nav-item .nav-link,
-.navbar.navbar-light .navbar-nav .nav-item .nav-link,.navbar .dropdown-menu a,.navbar .dropdown-item{
+.navbar.navbar-light .navbar-nav .nav-item .nav-link,
+.navbar .dropdown-menu a,
+.navbar .dropdown-item{
 
   font-size: 1rem;
   font-weight: 400;
@@ -346,6 +350,7 @@ margin-bottom:40px;
 
 .dropdown .btn-primary.dropdown-toggle:focus{
   box-shadow: none !important;
+  background-color: #fff !important;
 }
 
 div.documentaryHeadContainer.row{
