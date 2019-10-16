@@ -1,17 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "proxima-nova" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: g1rayscale;
   background-color: #ffffff !important;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .documentaryRow,.musicRow{
@@ -32,7 +25,7 @@ code {
 }
 
 .dropdown-menu .dropdown-item{
-  text-transform:none !important;
+  text-transform:uppercase !important;
 }
 
 .documentaryHeadContainer h1{
@@ -64,7 +57,7 @@ code {
 
 .navbarFooter .nav-link:hover,
 .navbarHeader .nav-link:hover,.navbarHeader .dropdown-item:hover{
-  text-decoration: underline;
+  text-decoration: underline;  
   background-color: transparent;
   color:rgba(0,0,0,.7);
 }
@@ -91,18 +84,13 @@ code {
 .navbar.navbar-light .breadcrumb .nav-item .nav-link,
 .navbar.navbar-light .navbar-nav .nav-item .nav-link,.navbar .dropdown-menu a,.navbar .dropdown-item{
 
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   color:rgba(0,0,0,.5);
 }
 
 .is-active{
   text-decoration: underline;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .logo{
@@ -319,7 +307,7 @@ margin-bottom:40px;
 .dropdown .dropdown-item{
   color:rgba(0,0,0,.4) !important;
   font-size: 0.875rem;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "proxima-nova";  
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.02857em;
@@ -330,7 +318,7 @@ margin-bottom:40px;
   background-color: #ffffff !important;
   color:rgba(0,0,0,.5) !important;
   font-size: 1.2rem;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "proxima-nova";  
   font-weight: 400;
   line-height: 1.75;
   letter-spacing: 0.02857em;
@@ -346,8 +334,7 @@ margin-bottom:40px;
 }
 
 .dropdown .btn-primary.dropdown-toggle:hover,
-.dropdown .btn-primary.dropdown-toggle:active,
-.dropdown .btn-primary.dropdown-toggle:visited {
+.dropdown .btn-primary.dropdown-toggle:active {
   background-color: #DBDBDB !important;
   box-shadow: none !important;
   border:none;
@@ -447,6 +434,7 @@ button.barLinks:hover, #dropdown-item-button:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin:30px 5%;
 }
 
 .homeContainer .mt-4{
@@ -474,8 +462,8 @@ padding-left: 0 !important;
 
 .nav-link{
   padding-left: 10px !important;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 1.2rem;
+  font-family: "proxima-nova";  
+  font-size: 1rem;
   line-height: 1.75;
   letter-spacing: 0.02857em;
 }
@@ -486,21 +474,23 @@ padding-left: 0 !important;
 }
 
 .navbar-brand{
-  font-size:1.5rem !important;
+  font-size:1.2rem !important;
+  text-transform: uppercase;
 }
 
 .navbar-nav .dropdown-item,
 .navbar .navbar-brand{
   color:rgba(0,0,0,.5) !important;
-}
 
-.navbar-nav .dropdown-item,
+}
+.navbar-nav .dropdown-item:hover,
 .navbar .navbar-brand:hover{
   color:rgba(0,0,0,.6) !important;
 }
 
 .navbar-nav{
   padding-top: 5px !important;
+  text-transform: uppercase;
 }
 
 .navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
@@ -529,6 +519,16 @@ padding-left: 0 !important;
 .ril-next-button{
   outline:0 !important;
 }
+
+.ril-close:active,
+.ril-zoom-in:active,
+.ril-zoom-out:active,
+.ril-prev-button:active,
+.ril-next-button:active{
+  border: 1px solid white !important;
+}
+
+
 .documentaryRow h2,
 .documentaryHeadContainer h1,
 .pageHeader h1,
@@ -545,3 +545,59 @@ padding-left: 0 !important;
   width: 100%;
   display: block;
 }
+
+.songDetail{
+  text-align: center;
+}
+
+.homeContainer .homePage .imageContainer img{
+  height: auto;  
+  width: 100%;
+  margin-bottom:30px;
+}
+
+.homePage .about h2{                  
+  text-align: center;  
+  margin-bottom: 20px;  
+}        
+
+.homePage .about{     
+  color:rgba(0,0,0,.7);             
+  text-align: left;  
+} 
+
+.homePage .about .quotation{
+  font-size: 30px;
+  margin: 0 auto;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.homePage .about .quotation:before {
+  content: open-quote;
+  display: inline;  
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+.homePage .about .quotation::after {
+  content: close-quote;
+  display: inline;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 35px;
+  color: #ccc;
+  font-size: 3em;
+}
+.homePage .about footer{
+  margin:0;
+  text-align: right;
+  font-size: 1.5em;
+  font-style: italic;
+}
+

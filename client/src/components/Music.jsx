@@ -51,11 +51,13 @@ class Music extends React.Component {
                     songs.map(obj => (
                       <div key={obj._id}>
                                 <Row className="musicRow">
-                                    <Col>      
-                                            <h2>{obj.title}</h2>                                                                
-                                            <div className="lyrics">
-                                                  {Parser(obj.lyrics)}                                
-                                            </div>
+                                  <Col>                                    
+                                      <div className="songDetail">
+                                             <h2>{obj.title}</h2>                                                                
+                                              <div className="lyrics">
+                                                    {Parser(obj.lyrics)}                                
+                                              </div>
+                                      </div>
                                     </Col>
                                     <Col className="musicCol">                                    
                                         <div className="videoContainer" >

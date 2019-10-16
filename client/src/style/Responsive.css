@@ -49,14 +49,6 @@
     .homeDescription h4{
       font-size:1.2rem;
     }
-    
-    .homePage{
-      background-image: url(/images/home/mobile.jpg);
-      height: 1052px;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
-            
     .documentaryRow .description,
     .documentaryRow .col{
       text-align: left;
@@ -101,11 +93,7 @@
     }
     .main{
       width: 100%;      
-    }
-    
-    .homeContainer{
-      width: 95%;
-    }
+    }    
   }
 
   /* Tablet Styles */
@@ -204,13 +192,7 @@
       width: 100%;
       left: 0;
       border-bottom:1px solid rgba(0,0,0,.1);
-    }
-    .homePage{
-      background-image: url(/images/home/tablet.jpg);      
-      height: 875px;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-    }
+    }    
     .documentaryRow .description{
       text-align: left;
       padding: 0 2%;
@@ -231,9 +213,6 @@
     
     .main{
       width: 100%;
-    }
-    .homeContainer{
-      width: 96%;
     }
   }
 
@@ -274,20 +253,7 @@
 
     .MuiIconButton-root{
       display: none !important;
-    }
-
-    .homeContainer{
-      height: 500px;
-      width: 98%;
-    }
-
-    .homePage{
-      background-image: url(/images/home/desktop.jpg);
-      height: 959px;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      margin-top: 5px;;
-    }
+    }  
      .pageHeader h1{
       font-size:2.1rem;
     }
