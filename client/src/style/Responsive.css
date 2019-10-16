@@ -19,8 +19,9 @@
       background-color: #fff !important;      
     }
     .nav-link:hover{
-      background-color:#fff !important;
+      background-color:rgba(0,0,0,.05) !important;
     }
+    
     #dropdown-item-button:hover{
       background-color: #fff !important;
     }
@@ -115,7 +116,7 @@
       background-color: #fff !important;      
     }
     .nav-link:hover{
-      background-color:#fff !important;
+      background-color:rgba(0,0,0,.05) !important;
     }
     #dropdown-item-button:hover{
       background-color: #fff !important;
