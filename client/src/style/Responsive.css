@@ -18,6 +18,9 @@
     .dropdown .btn-primary .dropdown-toggle:hover{
       background-color: #fff !important;      
     }
+    .nav-link:hover{
+      background-color:#fff !important;
+    }
     .ril-close,
     .ril-zoom-in,
     .ril-zoom-out{  
@@ -107,6 +110,9 @@
     }     
     .dropdown .btn-primary .dropdown-toggle:hover{
       background-color: #fff !important;      
+    }
+    .nav-link:hover{
+      background-color:#fff !important;
     }
     .ril-close,
     .ril-zoom-in,

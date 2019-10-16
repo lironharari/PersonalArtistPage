@@ -9,11 +9,13 @@ body {
   background-color: #ffffff !important;
 }
 
-.documentaryRow,.musicRow{
+.documentaryRow,
+.musicRow{
   margin-top: 20px;
 }
 
-.documentaryRow h2, .musicRow h2{
+.documentaryRow h2, 
+.musicRow h2{
   margin-bottom: 30px;
 }
 
@@ -107,7 +109,8 @@ body {
   float: right;
 }
 
-.drawingGrid,.photographyGrid{
+.drawingGrid,
+.photographyGrid{
   display: inline-block;
   width: 100%;
   padding: 0 10% 40px 10%;
@@ -148,7 +151,8 @@ body {
   margin-top:40px;
 }
 
-.drawingImage,.photographyImage{
+.drawingImage,
+.photographyImage{
   width: 100%;
 }
 
@@ -158,34 +162,6 @@ border-top:1px solid black;
 
 .documentaryHeader{
   margin-top: 30px;
-}
-
-.homeCol:hover a, .homeCol:hover a .homeDescription {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity .4s, visibility .4s;
-}
-.homeCol:hover img {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .4s, visibility .4s;
-}
-
-.homeCol{
-  padding-bottom: 30px;
-}
-
-.homeCol a, .homeCol a .homeDescription{
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.homeCol a .homeDescription{
-  display: flex;
-  flex-direction: column;
 }
 
 .homeHeader{
@@ -198,14 +174,6 @@ border-top:1px solid black;
 
 .homeHeader h4{
   color:rgba(0,0,0,.5);
-}
-
-.homeCol a .homeDescription h2{
-  display: inline-block;
-}
-
-.homeCol a .homeDescription h4{
-  display: inline-block;
 }
 
 .homeDescription {
@@ -260,7 +228,8 @@ border-top:1px solid black;
   color:rgba(0,0,0,.4);
 }
 
-.MuiTypography-root span:hover,.MuiButtonBase-root:hover{
+.MuiTypography-root span:hover,
+.MuiButtonBase-root:hover{
   color:rgba(0,0,0,.5);
 }
 
@@ -293,7 +262,8 @@ margin-bottom:40px;
   margin-bottom:20px;
 }
 
-.photographyPage .photographyHeader h2,.photographyPage .photographyHeader h4{
+.photographyPage .photographyHeader h2,
+.photographyPage .photographyHeader h4{
   color:rgba(0,0,0,.6);
 }
 
@@ -302,11 +272,15 @@ margin-bottom:40px;
   margin-left: 0px !important;
 }
 
-.MuiButton-root:active, .MuiButton-root:focus {
+.MuiButton-root:active,
+.MuiButton-root:focus {
   outline: 0;
 }
 
-.MuiTypography-root span:hover,.thumbnailImage,.photographyContainer img:hover,.thumbnailtext{
+.MuiTypography-root span:hover,
+.thumbnailImage,
+.photographyContainer img:hover,
+.thumbnailtext{
   cursor: pointer;
 }
 
@@ -428,7 +402,8 @@ div.documentaryHeadContainer.row{
   float: left;
 }
 
-button.barLinks:hover, #dropdown-item-button:hover{
+button.barLinks:hover, 
+#dropdown-item-button:hover{
   background-color: rgba(0,0,0,.05) !important;
 }
 
@@ -508,7 +483,9 @@ padding-left: 0 !important;
   text-transform: uppercase;
 }
 
-.navbar-toggler, .navbar-toggler:active, .navbar-toggler:focus {
+.navbar-toggler, 
+.navbar-toggler:active, 
+.navbar-toggler:focus {
   outline: 0;
 }
 .musicBody{
