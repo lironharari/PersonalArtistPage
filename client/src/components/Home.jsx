@@ -39,7 +39,6 @@ class Home extends Component {
                                     </p>                                                 
                                     <blockquote>
                                         <p class="quotation"> 
-                                            life isn't about finding yourself or finding anything.
                                             life is about creating yourself and creating things.
                                         </p>                                        
                                         <footer>— Bob Dylan</footer>
