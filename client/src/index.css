@@ -319,10 +319,10 @@ margin-bottom:40px;
 }
 .dropdown .btn-primary .dropdown-toggle:hover{  
   color:rgba(0,0,0,.6) !important;
-  background-color: #fff !important;    
+  background-color: #DBDBDB !important;    
 }
 .dropdown .btn-primary .dropdown-toggle:active {
-  background-color: #fff !important;    
+  background-color: #DBDBDB !important;    
   color:rgba(0,0,0,.6) !important;
 }
 
