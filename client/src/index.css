@@ -318,7 +318,6 @@ margin-bottom:40px;
   background-color: #fff !important;
 }
 .dropdown .btn-primary .dropdown-toggle:hover{
-  background-color: #DBDBDB !important;
   box-shadow: none !important;
   border:none;
   color:rgba(0,0,0,.6) !important;
@@ -459,7 +458,6 @@ padding-left: 0 !important;
 }
 
 .nav-link:hover{
-  background-color: rgba(0,0,0,.05) !important;
   color:rgba(0,0,0,.6) !important;
 }
 

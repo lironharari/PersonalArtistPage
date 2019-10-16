@@ -236,7 +236,12 @@
       margin-top: 70px;
       padding:0 0;      
     }
-    
+    .dropdown .btn-primary .dropdown-toggle:hover{
+      background-color: #DBDBDB !important;      
+    }
+    .nav-link:hover{      
+      background-color: rgba(0,0,0,.05) !important;
+    }
     .navbar {     
       padding: 0.5rem  5% !important;
       outline: 0;
