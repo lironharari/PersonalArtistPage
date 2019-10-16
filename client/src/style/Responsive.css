@@ -17,13 +17,14 @@
     }
     
     #dropdown-item-button:hover{
-      background-color: #fff !important;
+      background-color:rgba(0,0,0,.05) !important;
     }
     .dropdown .btn-primary .dropdown-toggle:hover{
       background-color: #fff !important;      
     }
     .nav-link:hover{
-      background-color: #fff !important;
+      background-color: rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
     }
     
     
@@ -118,10 +119,11 @@
       background-color: rgba(0,0,0,.05) !important;
     }   
     .dropdown .btn-primary .dropdown-toggle:hover{
-      background-color: #fff !important;      
+      background-color: #fff !important;          
     }
     .nav-link:hover{
       background-color:rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
     }
    
     .ril-close,
@@ -250,10 +252,11 @@
       background-color: rgba(0,0,0,.05) !important;
     }
     .dropdown .btn-primary .dropdown-toggle:hover{
-      background-color: #DBDBDB !important;      
+      background-color: #DBDBDB !important;       
     }
     .nav-link:hover{      
       background-color: rgba(0,0,0,.05) !important;
+      color:rgba(0,0,0,.5) !important;
     }
 
     .navbar {     
