@@ -332,23 +332,31 @@ margin-bottom:40px;
   outline: none;
 }
 
-.dropdown .btn-primary .dropdown-toggle:visited{
-  background-color: #fff !important;
-}
 
 .dropdown-menu .dropdown-item:active{
   background-color: #DBDBDB !important;
 }
 
-.dropdown .btn-primary .dropdown-toggle:hover,
-.dropdown .btn-primary .dropdown-toggle:active {
+.dropdown .btn-primary .dropdown-toggle:link{
+  background-color: #fff !important;
+}
+.dropdown .btn-primary .dropdown-toggle:visited{
+  background-color: #fff !important;
+}
+.dropdown .btn-primary .dropdown-toggle:hover{
   background-color: #DBDBDB !important;
   box-shadow: none !important;
   border:none;
   color:rgba(0,0,0,.6) !important;
 }
+.dropdown .btn-primary .dropdown-toggle:active {
+  background-color: #fff !important;
+  box-shadow: none !important;
+  border:none;
+  color:rgba(0,0,0,.6) !important;
+}
 
-.dropdown .btn-primary .dropdown-toggle:focus{
+.dropdown .btn-primary  .dropdown-toggle:focus{
   box-shadow: none !important;
   background-color: #fff !important;
 }
