@@ -325,6 +325,31 @@ margin-bottom:40px;
   background-color: #DBDBDB !important;    
   color:rgba(0,0,0,.6) !important;
 }
+.dropdown .btn-primary .dropdown-toggle:focus {
+  background-color: #DBDBDB !important;    
+  color:rgba(0,0,0,.6) !important;
+}
+
+#dropdown-item-button:focus{
+  background-color:rgba(0,0,0,.05) !important;
+}
+#dropdown-item-button:visited{
+  background-color: #fff !important;
+}
+#dropdown-item-button:hover{
+  background-color: #fff;
+}
+#dropdown-item-button:active{
+  background-color:rgba(0,0,0,.05) !important;
+}
+
+button.barLinks:hover, 
+#dropdown-item-button:visited,
+#dropdown-item-button:hover,
+#dropdown-item-button:focus{  
+  border-color:transparent !important;
+  box-shadow:none !important;
+}
 
 div.documentaryHeadContainer.row{
   margin-right: 0 !important;
@@ -392,30 +417,6 @@ div.documentaryHeadContainer.row{
   display: block;
   float: left;
 }
-
-
-#dropdown-item-button:focus{
-  background-color:#fff!important;
-}
-#dropdown-item-button:visited{
-  background-color: rgba(0,0,0,.05) !important;
-}
-#dropdown-item-button:hover{
-  background-color: rgba(0,0,0,.05);
-}
-#dropdown-item-button:active{
-  background-color: rgba(0,0,0,.05) !important;
-}
-
-
-button.barLinks:hover, 
-#dropdown-item-button:visited,
-#dropdown-item-button:hover,
-#dropdown-item-button:focus{  
-  border-color:transparent !important;
-  box-shadow:none !important;
-}
-
 .dropdown-item:hover{
   background-color: rgba(0,0,0,.05) !important;
 }
@@ -465,10 +466,6 @@ padding-left: 0 !important;
   line-height: 1.75;
   letter-spacing: 0.02857em;
   outline: 0;
-}
-
-.nav-link:hover{
-  color:rgba(0,0,0,.6) !important;
 }
 
 .navbar-brand{
