@@ -444,7 +444,9 @@ padding-left: 0 !important;
   padding: 0 5%;
   margin-top: 30px;
 }
-
+.documentaryGrid{
+  margin-bottom: 30px;
+}
 .nav-link{
   padding-left: 10px !important;
   font-size: 1rem;

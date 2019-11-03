@@ -59,12 +59,14 @@ class Documentary extends React.Component {
         let episode1 = [];
         let episode2 = [];
         let episode3 = [];        
+        let episode4 = [];        
 
         if(photos.length>0)
         {          
           episode1 = photos.filter(function (photo) { return photo.subcategory === "episode1";});          
           episode2 = photos.filter(function (photo) { return photo.subcategory === "episode2";});          
           episode3 = photos.filter(function (photo) { return photo.subcategory === "episode3";});                    
+          episode4 = photos.filter(function (photo) { return photo.subcategory === "episode4";});                    
         }
 
       return (
@@ -128,6 +130,7 @@ class Documentary extends React.Component {
                                     {(obj.rank === 10) ? <ImageGallery photos={this.styleGalleryPhotos(episode1)}></ImageGallery>:''}           
                                     {(obj.rank === 9) ? <ImageGallery photos={this.styleGalleryPhotos(episode2)}></ImageGallery>:''}           
                                     {(obj.rank === 8) ? <ImageGallery photos={this.styleGalleryPhotos(episode3)}></ImageGallery>:''}                                                           
+                                    {(obj.rank === 7) ? <ImageGallery photos={this.styleGalleryPhotos(episode4)}></ImageGallery>:''}                                                           
                                     </div>                         
                                 </Col>                      
                             </Row>
