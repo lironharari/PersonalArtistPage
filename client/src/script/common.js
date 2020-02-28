@@ -2,6 +2,10 @@ export function sortByRank(list) {
   return list.sort((a, b) => b.rank - a.rank );      
 }
 
+export function inPageLink(id) {
+  return id.replace( ' ', '-');      
+}
+
 export function adjustGalleryPhotos(photos) {
     const galleryPhotos = [];
     const defaultWidth = 3;

@@ -6,6 +6,9 @@ const compression = require("compression");
 const bodyParser = require('body-parser');
 const path = require('path');
 
+//possible EventEmitter memory leak detected
+require('events').EventEmitter.prototype._maxListeners = 100;
+
 // importing files
 const routes = require('./routes');
 
