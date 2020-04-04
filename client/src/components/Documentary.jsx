@@ -63,6 +63,8 @@ class Documentary extends React.Component {
         let episode5 = [];        
         let episode6 = [];        
         let episode7 = [];        
+        let episode8 = [];        
+        let episode9 = [];        
 
         if(photos.length>0)
         {          
@@ -73,6 +75,8 @@ class Documentary extends React.Component {
           episode5 = photos.filter(function (photo) { return photo.subcategory === "episode5";});                    
           episode6 = photos.filter(function (photo) { return photo.subcategory === "episode6";});                    
           episode7 = photos.filter(function (photo) { return photo.subcategory === "episode7";});                    
+          episode8 = photos.filter(function (photo) { return photo.subcategory === "episode8";});                    
+          episode9 = photos.filter(function (photo) { return photo.subcategory === "episode9";});                    
         }
 
       return (
@@ -80,7 +84,7 @@ class Documentary extends React.Component {
                   <Row className="documentaryHeadContainer">                
                       <Col>
                             <h1>Human History Revisited</h1>
-                            <h4>Crash curse in Intervention Theory</h4>                                                  
+                            <h4>Crash Curse in Intervention Theory</h4>                                                  
                       </Col>                                    
                   </Row>                  
                   <Row className="documentaryHeadContainer">
@@ -140,6 +144,8 @@ class Documentary extends React.Component {
                                     {(obj.rank === 6) ? <ImageGallery photos={this.styleGalleryPhotos(episode5)}></ImageGallery>:''}                                                           
                                     {(obj.rank === 5) ? <ImageGallery photos={this.styleGalleryPhotos(episode6)}></ImageGallery>:''}                                                           
                                     {(obj.rank === 4) ? <ImageGallery photos={this.styleGalleryPhotos(episode7)}></ImageGallery>:''}                                                           
+                                    {(obj.rank === 3) ? <ImageGallery photos={this.styleGalleryPhotos(episode8)}></ImageGallery>:''}                                                           
+                                    {(obj.rank === 2) ? <ImageGallery photos={this.styleGalleryPhotos(episode9)}></ImageGallery>:''}                                                           
                                     </div>                         
                                 </Col>                      
                             </Row>
