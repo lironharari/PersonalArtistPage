@@ -12,6 +12,7 @@ import Notfound from './components/Notfound';
 import Home from './components/Home';
 import Drawings from './components/Drawings';
 import Animals from './components/Animals';
+import About from './components/About';
 // import Manager from './components/Manager';
 import Kids from './components/Kids';              
 import Documentary from './components/Documentary';                            
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/music" component={Music} />    
             <Route exact path="/life-on-the-railroads" component={DocumentaryPhotography} />    
             <Route exact path="/its-more-fun-in-manila" component={DocumentaryPhotography} />                  
+            <Route exact path="/about" component={About} />                  
             <Route  component={Notfound} />
             </Switch> 
         </Router>

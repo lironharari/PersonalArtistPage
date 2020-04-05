@@ -534,6 +534,10 @@ padding-left: 0 !important;
   text-align: center;
 }
 
+.homeGrid{
+  margin:30px 5%; 
+}
+
 .homeContainer .homePage .imageContainer img{
   height: auto;  
   width: 100%;
