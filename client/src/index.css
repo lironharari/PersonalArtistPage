@@ -588,4 +588,16 @@ padding-left: 0 !important;
   font-size: 1.5em;
   font-style: italic;
 }
+.social-icon{
+  margin: 0 5px;
+}
+
+.home-bottom-social-icons{
+  float: right;
+}
+
+.home-bottom-text{
+  float: left;
+  color:rgba(0,0,0,.5);
+}
 
