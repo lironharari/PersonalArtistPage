@@ -90,20 +90,16 @@ class Documentary extends React.Component {
                   <Row className="documentaryHeadContainer">
                       <Col className="documentaryHeader">
                             <p>
-                                    Did life on Earth evolve over millions of years, or was it created in the blink of an eye by God?
-                                    That's the question at the core of the creation evolution debate.
-                            </p>
-                            <p>
-                                    It is an ongoing, cultural, political, and theological dispute about the origins of the Earth, humanity, and life.      
+                                    Did life on Earth evolve over millions of years, or was it created in the blink of an eye by god?
+                                    That's the question at the core of the creation evolution debate. 
+                                    It is an ongoing, cultural, political, and theological dispute about the origins of the Earth, humanity, and life.
                             </p>
                             <p>
                                     Intervention theory puts an end to the dispute by harmonizing apparently two conflicting points of view. 
+                                    Intervention theory embraces both creationism and biological evolution by adding critical information from a variety of fields such as archeology, anthropology, astronomy, religion and biology, to name but a few.
                             </p>                
                             <p>
-                                    Intervention theory embraces both creationism and biological evolution by adding critical information from a variety of fields such as archeology, anthropology, astronomy, religion and biology, to name but a few.                                     
-                            </p>          
-                            <p>
-                                So what is intervention theory? to put it briefly, It is the theory that Aliens “intervened” in the development of Life on Earth.                          
+                                So what is intervention theory? to put it briefly, It is the theory that aliens “intervened” in the development of life on earth.                          
                             </p>
                       </Col>                  
                   </Row>                  

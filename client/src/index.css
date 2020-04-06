@@ -66,10 +66,10 @@ body {
   background-color: transparent;
   color:rgba(0,0,0,.5);
 }
- .navbarHeader .navbar-nav .nav-link,
+ /* .navbarHeader .navbar-nav .nav-link,
   .navbarHeader .navbar-nav .nav-item{
   margin-left: 15px;
-}
+} */
 
 .documentaryHeader,
 .documentaryRow,
@@ -99,9 +99,9 @@ body {
   text-decoration: underline;
 }
 
-.logo{
+/* .logo{
     margin-left:15px;
- }
+ } */
 
  .links{
   float: right;
@@ -550,8 +550,11 @@ padding-left: 0 !important;
 }        
 
 .homePage .about{     
-  color:rgba(0,0,0,.7);             
+  color:rgba(0,0,0,.6);             
   text-align: left;  
+} 
+.homePage .about h4{     
+  text-decoration: underline;
 } 
 
 .homePage .about .quotation{
@@ -593,11 +596,20 @@ padding-left: 0 !important;
 }
 
 .home-bottom-social-icons{
-  float: right;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
-.home-bottom-text{
-  float: left;
-  color:rgba(0,0,0,.5);
+.copyright{
+margin-bottom: 25px;
 }
 
+.copyright a{
+  color:rgba(0,0,0,.6);
+  }
+
+footer{
+  margin-top: 40px;
+  text-align: center;
+  color:rgba(0,0,0,.6);
+}
