@@ -7,7 +7,6 @@ const Documentary = require('../models/documentary');
 const router = express.Router();
 
 router.post('/api/do', async (req, res) => {
-    console.log("at server");
     const data = {}
     try {
         return res.json({

@@ -28,7 +28,7 @@ class Animals extends React.Component {
 
       render() {    
         const { photos } = this.state;      
-  console.log(photos);
+        
       return (
         <div className="pageContainer">                                   
             <PageHeader title="Street Photography" subtitle="animals"></PageHeader>            

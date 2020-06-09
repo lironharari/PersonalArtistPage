@@ -10,7 +10,7 @@ import Notfound from './Notfound';
 import Home from './Home';
 import Drawings from './Drawings';
 import Animals from './Animals';
-import About from './About';
+// import About from './About';
 
 class Content extends Component {
   
@@ -29,8 +29,8 @@ class Content extends Component {
             <Route exact path="/music" component={Music} />    
             <Route exact path="/life-on-the-railroads" component={DocumentaryPhotography} />    
             <Route exact path="/its-more-fun-in-manila" component={DocumentaryPhotography} />                  
-            <Route exact path="/about" component={About} />                  
-            <Route  component={Notfound} />
+            {/* <Route exact path="/about" component={About} />                   */}
+            <Route component={Notfound} />
             </Switch> 
         </Router> 
       );
