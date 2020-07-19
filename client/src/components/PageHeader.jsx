@@ -1,19 +1,11 @@
 import React from 'react';
 
-class PageHeader extends React.Component {  
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: props.title,
-            subtitle: props.subtitle
-        };        
-      }
-    render() {        
-        const {title, subtitle} = this.state;
+class PageHeader extends React.Component {      
+    render() {                
       return (
           <div className="pageHeader">
-                <h1>{title}</h1>
-                <h4>{subtitle}</h4>
+                <h1>{this.props.title}</h1>
+                <h4>{this.props.subtitle}</h4>
           </div>         
         );
     }

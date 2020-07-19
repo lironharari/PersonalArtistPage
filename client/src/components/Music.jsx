@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import HeadsetIcon from '@material-ui/icons/Headset';
 import PageHeader from './PageHeader';
 import Parser from 'html-react-parser';
 import * as commonScript from '../script/common';
@@ -43,7 +42,7 @@ class Music extends React.Component {
         
       return (
           <div className="musicGrid"> 
-              <PageHeader title="Music" subtitle="demos" icon={<HeadsetIcon className="icon"></HeadsetIcon>}></PageHeader>                                                            
+              <PageHeader title="Music" subtitle="demos"></PageHeader>                                                            
               <div className="musicBody">
                   {
                     songs.map(obj => (                      

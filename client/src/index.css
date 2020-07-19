@@ -613,3 +613,6 @@ footer{
   text-align: center;
   color:rgba(0,0,0,.6);
 }
+.activeFilter{
+  font-weight: 600 !important;
+}
