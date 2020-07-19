@@ -6,7 +6,6 @@ import Parser from 'html-react-parser'
 import * as commonScript from '../script/common'
 import ImageGallery from './ImageGallery'
 import ModalVideo from 'react-modal-video'
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 class Documentary extends React.Component {      
     constructor(props) {
@@ -31,10 +30,8 @@ class Documentary extends React.Component {
         return commonScript.adjustGalleryPhotos(photos);
       }
 
-      openModal = (e) => {
-        const video = e.target.dataset.video;                 
-
-        this.setState({videoId: video});
+      openModal = (e) => {        
+        this.setState({videoId: e.target.dataset.video});
         this.setState({isOpen: true});
       }
 
@@ -56,30 +53,7 @@ class Documentary extends React.Component {
       }   
 
       render() {   
-        const { episodes, photos } = this.state;              
-        let episode1 = [];
-        let episode2 = [];
-        let episode3 = [];        
-        let episode4 = [];        
-        let episode5 = [];        
-        let episode6 = [];        
-        let episode7 = [];        
-        let episode8 = [];        
-        let episode9 = [];        
-
-        if(photos.length>0)
-        {          
-          episode1 = photos.filter(function (photo) { return photo.subcategory === "episode1";});          
-          episode2 = photos.filter(function (photo) { return photo.subcategory === "episode2";});          
-          episode3 = photos.filter(function (photo) { return photo.subcategory === "episode3";});                    
-          episode4 = photos.filter(function (photo) { return photo.subcategory === "episode4";});                    
-          episode5 = photos.filter(function (photo) { return photo.subcategory === "episode5";});                    
-          episode6 = photos.filter(function (photo) { return photo.subcategory === "episode6";});                    
-          episode7 = photos.filter(function (photo) { return photo.subcategory === "episode7";});                    
-          episode8 = photos.filter(function (photo) { return photo.subcategory === "episode8";});                    
-          episode9 = photos.filter(function (photo) { return photo.subcategory === "episode9";});                    
-        }
-
+        const { episodes, photos } = this.state;                      
       return (
         <div className="documentaryGrid">                                              
                   <Row className="documentaryHeadContainer">                
@@ -104,7 +78,7 @@ class Documentary extends React.Component {
                             </p>
                       </Col>                  
                   </Row>                                          
-                {episodes.map(obj => (
+                {episodes.map((obj, index) => (
                     <div key={obj._id}>
                             <Row>
                                 <Col>
@@ -132,15 +106,12 @@ class Documentary extends React.Component {
                             <Row>
                                 <Col>
                                     <div className="humanHistoryThumbs">
-                                    {(obj.rank === 10) ? <ImageGallery photos={this.styleGalleryPhotos(episode1)}></ImageGallery>:''}           
-                                    {(obj.rank === 9) ? <ImageGallery photos={this.styleGalleryPhotos(episode2)}></ImageGallery>:''}           
-                                    {(obj.rank === 8) ? <ImageGallery photos={this.styleGalleryPhotos(episode3)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 7) ? <ImageGallery photos={this.styleGalleryPhotos(episode4)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 6) ? <ImageGallery photos={this.styleGalleryPhotos(episode5)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 5) ? <ImageGallery photos={this.styleGalleryPhotos(episode6)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 4) ? <ImageGallery photos={this.styleGalleryPhotos(episode7)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 3) ? <ImageGallery photos={this.styleGalleryPhotos(episode8)}></ImageGallery>:''}                                                           
-                                    {(obj.rank === 2) ? <ImageGallery photos={this.styleGalleryPhotos(episode9)}></ImageGallery>:''}                                                           
+                                      <ImageGallery photos={
+                                        this.styleGalleryPhotos(
+                                          photos.filter(
+                                            (photo) => { return photo.subcategory === `episode${index+1}`;}
+                                            ))}>
+                                      </ImageGallery>                                              
                                     </div>                         
                                 </Col>                      
                             </Row>

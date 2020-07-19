@@ -4,12 +4,13 @@ import Kids from './Kids';
 import Documentary from './Documentary';                            
 import StreetPhotography from './StreetPhotography';                                                        
 import Music from './Music';                                                        
-import DocumentaryPhotography from './DocumentaryPhotography';                                                                      
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Notfound from './Notfound';
 import Home from './Home';
 import Drawings from './Drawings';
 import Animals from './Animals';
+import LifeOnTheRailroads from './LifeOnTheRailroads';
+import ItsMoreFunInManila from './ItsMoreFunInManila';
 // import About from './About';
 
 class Content extends Component {
@@ -27,8 +28,8 @@ class Content extends Component {
             <Route exact path="/human-history-revisited" component={Documentary} />    
             <Route exact path="/street-photography" component={StreetPhotography} />    
             <Route exact path="/music" component={Music} />    
-            <Route exact path="/life-on-the-railroads" component={DocumentaryPhotography} />    
-            <Route exact path="/its-more-fun-in-manila" component={DocumentaryPhotography} />                  
+            <Route exact path="/life-on-the-railroads" component={LifeOnTheRailroads} />    
+            <Route exact path="/its-more-fun-in-manila" component={ItsMoreFunInManila} />                  
             {/* <Route exact path="/about" component={About} />                   */}
             <Route component={Notfound} />
             </Switch> 
