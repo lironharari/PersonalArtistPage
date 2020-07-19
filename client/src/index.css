@@ -405,9 +405,9 @@ div.documentaryHeadContainer.row{
 .dropdown-item:hover{
   background-color: rgba(0,0,0,.05) !important;
 }
-
 .galleryImage{
-  margin: 2px; display: block;
+  padding: 2px; 
+  display: block;
 }
 .galleryImage:hover{
   cursor: pointer;

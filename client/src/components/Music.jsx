@@ -24,10 +24,8 @@ class Music extends React.Component {
 
       componentWillUnmount() {}
     
-      openModal (e) {
-        const video = e.target.dataset.video;                 
-
-        this.setState({videoId: video});
+      openModal = (e) => {
+        this.setState({videoId: e.target.dataset.video});
         this.setState({isOpen: true});
       }
 
@@ -44,11 +42,11 @@ class Music extends React.Component {
         const { songs } = this.state;      
         
       return (
-          <div className="musicGrid">                                        
+          <div className="musicGrid"> 
               <PageHeader title="Music" subtitle="demos" icon={<HeadsetIcon className="icon"></HeadsetIcon>}></PageHeader>                                                            
               <div className="musicBody">
                   {
-                    songs.map(obj => (
+                    songs.map(obj => (                      
                       <div key={obj._id}>
                                 <Row className="musicRow">
                                   <Col>                                    
@@ -75,9 +73,10 @@ class Music extends React.Component {
                                     </Col>                  
                                 </Row>                                        
                         </div>
+                        
                     ))                  
                   }
-              </div>
+              </div>              
               <ModalVideo 
                         channel='youtube' 
                         isOpen={this.state.isOpen} 

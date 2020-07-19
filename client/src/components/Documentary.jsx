@@ -6,6 +6,7 @@ import Parser from 'html-react-parser'
 import * as commonScript from '../script/common'
 import ImageGallery from './ImageGallery'
 import ModalVideo from 'react-modal-video'
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 class Documentary extends React.Component {      
     constructor(props) {
@@ -30,7 +31,7 @@ class Documentary extends React.Component {
         return commonScript.adjustGalleryPhotos(photos);
       }
 
-      openModal (e) {
+      openModal = (e) => {
         const video = e.target.dataset.video;                 
 
         this.setState({videoId: video});
@@ -102,10 +103,8 @@ class Documentary extends React.Component {
                                 So what is intervention theory? to put it briefly, It is the theory that aliens “intervened” in the development of life on earth.                          
                             </p>
                       </Col>                  
-                  </Row>                  
-
-                {
-                episodes.map(obj => (
+                  </Row>                                          
+                {episodes.map(obj => (
                     <div key={obj._id}>
                             <Row>
                                 <Col>

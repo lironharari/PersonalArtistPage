@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Gallery from "react-photo-gallery";
 import Lightbox from 'react-image-lightbox';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default function ImageGallery({ photos }) {
     const [photoIndex,setPhotoIndex] = useState(0);
@@ -17,27 +18,20 @@ export default function ImageGallery({ photos }) {
         setPhotoIndex(index);
       };  
 
-      return (
-        <div 
-            key={key} >  
-                  <img                    
-                    alt={photo.title}
-                    className="galleryImage"
-                    {...photo}
-                    onClick={handleOnClick}
-                  />                            
-        </div>
+      return (      
+                <LazyLoadImage
+                key={key}
+                alt={photo.title}
+                className="galleryImage"
+                {...photo}
+                onClick={handleOnClick} />                  
       );
     };
         
   return (
     <div className="galleryContainer">          
-      <Gallery 
-                renderImage={imageRenderer}
-                photos={photos}            
-                                />                                         
-            
-            {isOpen && (
+      <Gallery renderImage={imageRenderer} photos={photos} />                                                     
+      {isOpen && (
           <Lightbox            
             imageCaption={photos[photoIndex].caption}            
             mainSrc={photos[photoIndex].src}            
