@@ -616,3 +616,7 @@ footer{
 .activeFilter{
   font-weight: 600 !important;
 }
+#loading{
+  text-align: center;
+  margin-top: 40px;    
+}
