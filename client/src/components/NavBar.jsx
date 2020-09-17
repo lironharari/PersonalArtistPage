@@ -26,7 +26,7 @@ class NavBar extends React.Component {
                         </NavDropdown>                        
                         <Nav.Link href="/drawings">drawings</Nav.Link>
                         <Nav.Link href="/music">music</Nav.Link>                                                                                                
-                        {/* <Nav.Link href="/about">about</Nav.Link> */}
+                        <Nav.Link href="/about">about</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

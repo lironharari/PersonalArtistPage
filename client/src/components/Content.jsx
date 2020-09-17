@@ -1,7 +1,6 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const Manager = lazy(() => import('./Manager'));
 const Kids = lazy(() => import('./Kids'));
 const Documentary = lazy(() => import('./Documentary'));  
 const StreetPhotography = lazy(() => import('./StreetPhotography'));                  
@@ -24,8 +23,7 @@ class Content extends Component {
             <Switch>                      
             <Route activeClassName='is-active' exact={true} path="/" component={Home} />
             <Route exact path="/drawings" component={Drawings} />
-            <Route exact path="/animals" component={Animals} />
-            <Route exact path="/manager" component={Manager} />    
+            <Route exact path="/animals" component={Animals} />            
             <Route exact path="/kids" component={Kids} />    
             <Route exact path="/human-history-revisited" component={Documentary} />    
             <Route exact path="/street-photography" component={StreetPhotography} />    
