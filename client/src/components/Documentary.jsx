@@ -6,6 +6,8 @@ import Parser from 'html-react-parser'
 import * as commonScript from '../script/common'
 import ImageGallery from './ImageGallery'
 import ModalVideo from 'react-modal-video'
+import { CircularProgress } from '@material-ui/core';
+const { isEmpty } = require('lodash');				
 
 class Documentary extends React.Component {      
     constructor(props) {
@@ -54,6 +56,7 @@ class Documentary extends React.Component {
 
       render() {   
         const { episodes, photos } = this.state;                      
+
       return (
         <div className="documentaryGrid">                                              
                   <Row className="documentaryHeadContainer">                
@@ -77,47 +80,52 @@ class Documentary extends React.Component {
                                 So what is intervention theory? to put it briefly, It is the theory that aliens “intervened” in the development of life on earth.                          
                             </p>
                       </Col>                  
-                  </Row>                                          
-                {episodes.map((obj, index) => (
-                    <div key={obj._id}>
-                            <Row>
-                                <Col>
-                                    <hr id={commonScript.inPageLink(obj.title)}/>
-                                </Col>                  
-                            </Row>
-                            <Row className="documentaryRow">
-                              <Col>                                                                  
-                                  <h3>{obj.title}</h3>
-                                  <h2>{obj.subtitle}</h2>                  
-                                  <div className="description">
-                                      {Parser(obj.description)}
-                                  </div>              
-                                </Col>
-                                <Col className="documentaryCol">                                    
-                                  <div className="videoContainer" >
-                                      <img  src={obj.videoThumbnail}
-                                            className="videoThumbnail"
-                                            alt={obj.title}                                               
-                                            data-video={obj.src}
-                                            onClick={this.openModal} />
-                                  </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <div className="humanHistoryThumbs">
-                                      <ImageGallery photos={
-                                        this.styleGalleryPhotos(
-                                          photos.filter(
-                                            (photo) => { return photo.subcategory === `episode${index+1}`;}
-                                            ))}>
-                                      </ImageGallery>                                              
-                                    </div>                         
-                                </Col>                      
-                            </Row>
-                    </div>
-                ))                  
-              }            
+                  </Row>   
+                  {!isEmpty(episodes) ? (
+                    <>
+                    {episodes.map((obj, index) => (
+                        <div key={obj._id}>
+                                <Row>
+                                    <Col>
+                                        <hr id={commonScript.inPageLink(obj.title)}/>
+                                    </Col>                  
+                                </Row>
+                                <Row className="documentaryRow">
+                                  <Col>                                                                  
+                                      <h3>{obj.title}</h3>
+                                      <h2>{obj.subtitle}</h2>                  
+                                      <div className="description">
+                                          {Parser(obj.description)}
+                                      </div>              
+                                    </Col>
+                                    <Col className="documentaryCol">                                    
+                                      <div className="videoContainer" >
+                                          <img  src={obj.videoThumbnail}
+                                                className="videoThumbnail"
+                                                alt={obj.title}                                               
+                                                data-video={obj.src}
+                                                onClick={this.openModal} />
+                                      </div>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <div className="humanHistoryThumbs">
+                                          <ImageGallery photos={
+                                            this.styleGalleryPhotos(
+                                              photos.filter(
+                                                (photo) => { return photo.subcategory === `episode${index+1}`;}
+                                                ))}>
+                                          </ImageGallery>                                              
+                                        </div>                         
+                                    </Col>                      
+                                </Row>
+                        </div>
+                    ))                  
+                  }                                
+                    </>
+                  ) : <div className="spinner"><CircularProgress /></div>}                                       
+
               <ModalVideo 
                         channel='youtube' 
                         isOpen={this.state.isOpen} 

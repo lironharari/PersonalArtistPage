@@ -619,3 +619,10 @@ footer{
   text-align: center;
   margin-top: 40px;    
 }
+.spinner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;  
+}

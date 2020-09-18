@@ -5,6 +5,9 @@ import ImageGallery from './ImageGallery';
 import * as commonScript from '../script/common';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
+import { CircularProgress } from '@material-ui/core';
+
+var _ = require('lodash');
 
 class StreetPhotography extends React.Component {      
   constructor(props) {
@@ -50,16 +53,22 @@ class StreetPhotography extends React.Component {
 
     return (        
       <div className="pageContainer">                                   
-          <PageHeader title="Street Photography" subtitle={active}></PageHeader>                              
+          <PageHeader title="Street Photography" subtitle={_.capitalize(active)}></PageHeader>                              
+          {!_.isEmpty(photos) ? (
+              <>
               <DropdownButton className="filter" id="dropdown-item-button" title="filter by location:">
-                  <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''}  data-location="thailand" onClick={this.filter}>thailand</Dropdown.Item>                  
-                  <Dropdown.Item as="button" className={active === 'india' ? 'activeFilter' : ''}   data-location="india" onClick={this.filter}>india</Dropdown.Item>                  
-                  <Dropdown.Item as="button" className={active === 'america' ? 'activeFilter' : ''}   data-location="america" onClick={this.filter}>latin america</Dropdown.Item>            
-                  <Dropdown.Item as="button" className={active === 'israel' ? 'activeFilter' : ''}  data-location="israel" onClick={this.filter}>israel</Dropdown.Item>            
-                  <Dropdown.Divider />
-                  <Dropdown.Item as="button" className={active === 'various' ? 'activeFilter' : ''} data-location="various" onClick={this.filter}>show all</Dropdown.Item>            
+                <Dropdown.Item as="button" className={active === 'thailand' ? 'activeFilter' : ''}  data-location="thailand" onClick={this.filter}>thailand</Dropdown.Item>                  
+                <Dropdown.Item as="button" className={active === 'india' ? 'activeFilter' : ''}   data-location="india" onClick={this.filter}>india</Dropdown.Item>                  
+                <Dropdown.Item as="button" className={active === 'america' ? 'activeFilter' : ''}   data-location="america" onClick={this.filter}>america</Dropdown.Item>            
+                <Dropdown.Item as="button" className={active === 'israel' ? 'activeFilter' : ''}  data-location="israel" onClick={this.filter}>israel</Dropdown.Item>            
+                <Dropdown.Divider />
+                <Dropdown.Item as="button" className={active === 'various' ? 'activeFilter' : ''} data-location="various" onClick={this.filter}>show all</Dropdown.Item>            
               </DropdownButton>            
-            <ImageGallery photos={photos}></ImageGallery>
+              <ImageGallery photos={photos}></ImageGallery>
+              </>
+              ) : <div className="spinner"><CircularProgress /></div>}
+
+
       </div>                 
     );
   }

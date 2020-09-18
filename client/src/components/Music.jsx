@@ -6,6 +6,8 @@ import PageHeader from './PageHeader';
 import Parser from 'html-react-parser';
 import * as commonScript from '../script/common';
 import ModalVideo from 'react-modal-video'
+import { CircularProgress } from '@material-ui/core';
+const { isEmpty } = require('lodash');				
 
 class Music extends React.Component {      
     constructor(props) {
@@ -42,39 +44,36 @@ class Music extends React.Component {
         
       return (
           <div className="musicGrid"> 
-              <PageHeader title="Music" subtitle="demos"></PageHeader>                                                            
+              <PageHeader title="Music" subtitle="Home demos"></PageHeader>                                                            
               <div className="musicBody">
-                  {
-                    songs.map(obj => (                      
-                      <div key={obj._id}>
-                                <Row className="musicRow">
-                                  <Col>                                    
-                                      <div className="songDetail">
-                                             <h2>{obj.title}</h2>                                                                
-                                              <div className="lyrics">
-                                                    {Parser(obj.lyrics)}                                
-                                              </div>
-                                      </div>
-                                    </Col>
-                                    <Col className="musicCol">                                    
-                                        <div className="videoContainer" >
-                                          <img  src={obj.videoThumbnail}
-                                                className="videoThumbnail"
-                                                alt={obj.title}                                               
-                                                data-video={obj.src}
-                                                onClick={this.openModal} />
-                                      </div>                                    
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <hr/>
-                                    </Col>                  
-                                </Row>                                        
-                        </div>
-                        
-                    ))                  
-                  }
+                {!isEmpty(songs) ? (
+                      <>
+                      { songs.map(obj => (                      
+                          <div key={obj._id}>
+                                    <Row className="musicRow">
+                                      <Col>                                    
+                                          <div className="songDetail">
+                                                <h2>{obj.title}</h2>                                                                
+                                                  <div className="lyrics"> {Parser(obj.lyrics)}</div>
+                                          </div>
+                                        </Col>
+                                        <Col className="musicCol">                                    
+                                            <div className="videoContainer" >
+                                              <img  src={obj.videoThumbnail}
+                                                    className="videoThumbnail"
+                                                    alt={obj.title}                                               
+                                                    data-video={obj.src}
+                                                    onClick={this.openModal} />
+                                          </div>                                    
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col> <hr/> </Col>                  
+                                    </Row>                                        
+                            </div>                            
+                        ))}                      
+                      </>
+                    ) : <div className="spinner"><CircularProgress /></div>}                                       
               </div>              
               <ModalVideo 
                         channel='youtube' 
