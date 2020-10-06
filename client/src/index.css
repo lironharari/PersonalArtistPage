@@ -409,7 +409,10 @@ div.documentaryHeadContainer.row{
   padding: 2px; 
   display: block;
 }
-.galleryImage:hover{
+.galleryImage:hover{  
+  cursor: zoom-in;
+}
+.homeGrid .galleryImage:hover{  
   cursor: pointer;
 }
 
