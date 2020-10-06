@@ -3,6 +3,8 @@ import axios from 'axios';
 import PageHeader from './PageHeader';
 import ImageGallery from './ImageGallery';
 import * as commonScript from '../script/common';
+import { CircularProgress } from '@material-ui/core';
+const { isEmpty } = require('lodash');				
 
 class Poverty extends React.Component {      
   constructor(props) {
@@ -29,9 +31,9 @@ class Poverty extends React.Component {
       render() {    
         const { photos } = this.state;      
       return (
-        <div>
-            <PageHeader title="Street Photography" subtitle="poverty"></PageHeader>            
-            <ImageGallery photos={photos}></ImageGallery>
+        <div className="pageContainer">
+            <PageHeader title="Street Photography" subtitle="Poverty"></PageHeader>            
+            {!isEmpty(photos) ? <ImageGallery photos={photos}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}                                  
         </div>        
         );
     }

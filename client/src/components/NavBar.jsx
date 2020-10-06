@@ -23,6 +23,7 @@ class NavBar extends React.Component {
                             <NavDropdown.Item href="/street-photography">street photography</NavDropdown.Item>
                             <NavDropdown.Item href="/animals">animals</NavDropdown.Item>
                             <NavDropdown.Item href="/kids">kids</NavDropdown.Item>
+                            <NavDropdown.Item href="/poverty">poverty</NavDropdown.Item>
                         </NavDropdown>                        
                         <Nav.Link href="/drawings">drawings</Nav.Link>
                         <Nav.Link href="/music">music</Nav.Link>                                                                                                

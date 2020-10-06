@@ -12,6 +12,7 @@ const Animals = lazy(() => import('./Animals'));
 const LifeOnTheRailroads = lazy(() => import('./LifeOnTheRailroads'));                                                              
 const ItsMoreFunInManila = lazy(() => import('./ItsMoreFunInManila'));                                                              
 const About = lazy(() => import('./About'));                                                              
+const Poverty = lazy(() => import('./Poverty'));                                                              
 
 class Content extends Component {
   
@@ -30,6 +31,7 @@ class Content extends Component {
             <Route exact path="/music" component={Music} />    
             <Route exact path="/life-on-the-railroads" component={LifeOnTheRailroads} />    
             <Route exact path="/its-more-fun-in-manila" component={ItsMoreFunInManila} />                  
+            <Route exact path="/poverty" component={Poverty} />
             <Route exact path="/about" component={About} />                  
             <Route component={Notfound} />
             </Switch> 
