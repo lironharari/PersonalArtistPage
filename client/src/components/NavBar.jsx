@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                         <Nav.Link href="/human-history-revisited">documentary</Nav.Link>
                         <NavDropdown title="photography" id="collasible-nav-dropdown">                        
                             <NavDropdown.Item href="/life-on-the-railroads">life on the railroads</NavDropdown.Item>
-                            <NavDropdown.Item href="/its-more-fun-in-manila">it's more fun in manila!</NavDropdown.Item>
+                            <NavDropdown.Item href="/its-more-fun-in-manila">it's more fun in manila</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/street-photography">street photography</NavDropdown.Item>
                             <NavDropdown.Item href="/animals">animals</NavDropdown.Item>

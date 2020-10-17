@@ -37,7 +37,7 @@ class ItsMoreFunInManila extends React.Component {
     const { photos } = this.state;        
       return (        
         <div className="pageContainer">                                   
-            <PageHeader title="It's more fun in Manila!" subtitle="Manila, The Philippines"></PageHeader>                               
+            <PageHeader title="It's more fun in Manila" subtitle="Manila, The Philippines"></PageHeader>                               
             {!isEmpty(photos) ? <ImageGallery photos={photos}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
         </div>                 
       );
