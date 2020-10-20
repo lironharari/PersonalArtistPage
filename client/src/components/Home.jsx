@@ -11,7 +11,7 @@ class Home extends Component {
     render() {          
       const imageRenderer = ({ key, photo }) => {
         return (
-          <a href={photo.href}>
+          <a href={photo.href} key={key}>
                 <LazyLoadImage                    
                   alt={photo.title}
                   key={key}                  
