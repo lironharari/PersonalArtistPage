@@ -25,13 +25,18 @@ class Home extends Component {
       return (     
         <div className="homeGrid">
             <Helmet>              
-              <meta property="og:title" content="Liron Harari" />
+              {/* <meta property="og:title" content="Liron Harari" />
               <meta property="og:description" content="photography, documentary, drawings, and music." />
               <meta property="og:image" content="http://lironharari.herokuapp.com/images/Home.jpg" />
               <meta property="og:image:width" content="1280" />
               <meta property="og:image:height" content="854" />
               <meta property="og:url" content="https://lironharari.herokuapp.com/" />              
-              <meta property="og:site_name" content="Liron Harari" />                            
+              <meta property="og:site_name" content="Liron Harari" />                             */}
+              <meta property="og:type" content="website" />
+              <meta property='og:title' content="Liron Harari"/>
+              <meta property='og:image' content="https://lironharari.herokuapp.com/images/Home.jpg"/>
+              <meta property='og:description' content="Photography, YouTube documentary, Drawings, and Music."/>              
+              <meta property='og:url' content="https://lironharari.herokuapp.com" />
             </Helmet>
             {!isEmpty(photos) ? <Gallery photos={photos} renderImage={imageRenderer}></Gallery> : <div className="spinner"><CircularProgress /></div>}                                  
         </div>
