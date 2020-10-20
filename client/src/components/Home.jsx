@@ -25,11 +25,11 @@ class Home extends Component {
       return (     
         <div className="homeGrid">
             <Helmet>
-              <meta name="Description" content="photography, documentary, drawings, and music" />
+              <meta name="Description" content="photography, documentary, drawings, and music." />
               <title>liron harari</title>
               <meta property="og:title" content="Liron Harari" />
               <meta property="og:description" content="photography, documentary, drawings, and music." />
-              <meta property="og:image" content="//lironharari.herokuapp.com/images/DSC02957c.jpg" />
+              <meta property="og:image" content="//lironharari.herokuapp.com/images/Home.jpg" />
               <meta property="og:url" content="//lironharari.herokuapp.com/" />              
               <meta property="og:site_name" content="Liron Harari" />                            
             </Helmet>
