@@ -29,7 +29,7 @@ class Home extends Component {
               <title>liron harari</title>
               <meta property="og:title" content="Liron Harari" />
               <meta property="og:description" content="photography, documentary, drawings, and music." />
-              <meta property="og:image" content="//lironharari.herokuapp.com/images/thumbnails/_DSC3766.jpg" />
+              <meta property="og:image" content="//lironharari.herokuapp.com/images/thumbnails/Scan_20191217_173459a.jpg" />
               <meta property="og:url" content="//lironharari.herokuapp.com/" />              
               <meta property="og:site_name" content="Liron Harari" />                            
             </Helmet>
