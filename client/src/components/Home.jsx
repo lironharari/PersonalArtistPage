@@ -32,11 +32,18 @@ class Home extends Component {
               <meta property="og:image:height" content="854" />
               <meta property="og:url" content="https://lironharari.herokuapp.com/" />              
               <meta property="og:site_name" content="Liron Harari" />                             */}
-              <meta property="og:type" content="website" />
+              {/* <meta property="og:type" content="website" />
               <meta property='og:title' content="Liron Harari"/>
               <meta property='og:image' content="https://lironharari.herokuapp.com/images/Home.jpg"/>
               <meta property='og:description' content="Photography, YouTube documentary, Drawings, and Music."/>              
-              <meta property='og:url' content="https://lironharari.herokuapp.com" />
+              <meta property='og:url' content="https://lironharari.herokuapp.com" /> */}
+
+              
+              <meta property='og:title' content='Liron Harari'/>
+              <meta property='og:image' content='//lironharari.herokuapp.com/images/Home.jpg'/>
+              <meta property='og:description' content='Photography, YouTube documentary, Drawings, and Music.'/>
+              <meta property='og:url' content='//lironharari.herokuapp.com'/>
+
             </Helmet>
             {!isEmpty(photos) ? <Gallery photos={photos} renderImage={imageRenderer}></Gallery> : <div className="spinner"><CircularProgress /></div>}                                  
         </div>
