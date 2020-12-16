@@ -197,76 +197,76 @@ router.get('/api/drawings', async (req, res) => {
        
 });
 
-router.post('/api/searchPhotoBySrc', async (req, res) => {
+// router.post('/api/searchPhotoBySrc', async (req, res) => {
     
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    }
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     }
     
-    const { src } = req.body;  
+//     const { src } = req.body;  
         
-    try {
-        const photo = await Photo.findOne({ src: src });
-        return res.json({
-            photo
-        });
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Internal Server error'
-        });
-    }
-});
+//     try {
+//         const photo = await Photo.findOne({ src: src });
+//         return res.json({
+//             photo
+//         });
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: 'Internal Server error'
+//         });
+//     }
+// });
 
-router.post('/api/updateDocumentary', async (req, res) => {
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    } 
+// router.post('/api/updateDocumentary', async (req, res) => {
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     } 
             
-    const { id, update } = req.body;  
+//     const { id, update } = req.body;  
 
-    try {        
-        await Documentary.updateOne( { _id: id }, update, { upsert: true, new: true }, ( err ) => {
-            if (err) return res.json({ success: false, error: err });
-            return res.json({ success: true });
-        });
-    } catch (error) {
-        console.log('Error: ', error);
-        res.status(500).json({
-            message: 'Internal Server error',
-            statusCode: 500
-        });
-    }
-});
+//     try {        
+//         await Documentary.updateOne( { _id: id }, update, { upsert: true, new: true }, ( err ) => {
+//             if (err) return res.json({ success: false, error: err });
+//             return res.json({ success: true });
+//         });
+//     } catch (error) {
+//         console.log('Error: ', error);
+//         res.status(500).json({
+//             message: 'Internal Server error',
+//             statusCode: 500
+//         });
+//     }
+// });
 
-router.post('/api/updatePhoto', async (req, res) => {
-    if (isEmpty(req.body)) {
-        return res.status(403).json({
-            message: 'Body should not be empty',
-            statusCode: 403
-        });
-    } 
+// router.post('/api/updatePhoto', async (req, res) => {
+//     if (isEmpty(req.body)) {
+//         return res.status(403).json({
+//             message: 'Body should not be empty',
+//             statusCode: 403
+//         });
+//     } 
             
-    const { id, update } = req.body;  
+//     const { id, update } = req.body;  
 
-    try {        
-        await Photo.updateOne( { _id: id }, update, { upsert: true, new: true }, ( err ) => {
-            if (err) return res.json({ success: false, error: err });
-            return res.json({ success: true });
-        });
-    } catch (error) {
-        console.log('Error: ', error);
-        res.status(500).json({
-            message: 'Internal Server error',
-            statusCode: 500
-        });
-    }
-});
+//     try {        
+//         await Photo.updateOne( { _id: id }, update, { upsert: true, new: true }, ( err ) => {
+//             if (err) return res.json({ success: false, error: err });
+//             return res.json({ success: true });
+//         });
+//     } catch (error) {
+//         console.log('Error: ', error);
+//         res.status(500).json({
+//             message: 'Internal Server error',
+//             statusCode: 500
+//         });
+//     }
+// });
 
 router.post('/addPhoto', async (req, res) => {
     if (isEmpty(req.body)) {
