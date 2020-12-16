@@ -4,7 +4,7 @@ import PageHeader from './PageHeader';
 import ImageGallery from './ImageGallery';
 import * as commonScript from '../script/common';
 import { CircularProgress } from '@material-ui/core';
-import {Helmet} from "react-helmet";
+//import {Helmet} from "react-helmet";
 const { isEmpty } = require('lodash');				
 
 class LifeOnTheRailrods extends React.Component {   
@@ -39,7 +39,7 @@ class LifeOnTheRailrods extends React.Component {
 
       return (        
         <div className="pageContainer"> 
-            <Helmet>            
+            {/* <Helmet>            
                 <meta name="title" content="Liron Harari - Documentary Photography"/>
                 <meta name="description" content="Documentary Photography - Kolkata, India"/>
                 <meta property="og:type" content="website"/>
@@ -48,7 +48,7 @@ class LifeOnTheRailrods extends React.Component {
                 <meta property="og:description" content="Documentary Photography - Kolkata, India"/>
                 <meta property="og:image" content="https://lironharari.herokuapp.com/images/_DSC8301.jpg"/>
                 <meta property="og:image:alt" content="Documentary Photography - Kolkata, India"/>  
-            </Helmet>                                          
+            </Helmet>                                           */}
             <PageHeader title="Life on the Railroads" subtitle="Kolkata, India"></PageHeader>                   
             {!isEmpty(photos) ? <ImageGallery photos={photos}></ImageGallery> : <div className="spinner"><CircularProgress /></div>}
         </div>                 
