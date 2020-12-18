@@ -6,7 +6,6 @@ import * as commonScript from '../script/common';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import { CircularProgress } from '@material-ui/core';
-import {Helmet} from "react-helmet";
 
 var _ = require('lodash');
 
@@ -53,22 +52,7 @@ class StreetPhotography extends React.Component {
     const { photos, active } = this.state;
 
     return (        
-      <div className="pageContainer">                                   
-          <Helmet>            
-                <meta charset="utf-8" />
-                <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />    
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>     
-                <title>Liron Harari - Street Photography</title>     
-                <meta name="title" content="Liron Harari - Street Photography"/>
-                <meta name="description" content="Street Photography"/>
-                <meta property="og:type" content="website"/>
-                <meta property="og:url" content="https://lironharari.herokuapp.com/street-photography"/>
-                <meta property="og:title" content="Liron Harari - Street Photography"/>
-                <meta property="og:description" content="Street Photography"/>
-                <meta property="og:image" content="https://lironharari.herokuapp.com/images/PersonalArtistPage-Street.jpg"/>
-                <meta property="og:image:alt" content="Street Photography"/>  
-                <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />                               
-          </Helmet>                                                
+      <div className="pageContainer">                                                                                           
           <PageHeader title="Street Photography" subtitle={_.capitalize(active)}></PageHeader>                              
           {!_.isEmpty(photos) ? (
               <>
