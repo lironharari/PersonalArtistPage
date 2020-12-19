@@ -32,8 +32,7 @@ export default function ImageGallery({ photos }) {
     <div className="galleryContainer">          
       <Gallery renderImage={imageRenderer} photos={photos} />                                                     
       {isOpen && (
-          <Lightbox  
-            enableZoom={false}          
+          <Lightbox        
             imageCaption={photos[photoIndex].caption}            
             mainSrc={photos[photoIndex].src}            
             nextSrc={photos[(photoIndex + 1) % photos.length].src}            
