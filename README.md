@@ -9,4 +9,4 @@ MERN (Mongo, express, React, and Nodejs)
 This website was hosted on the Heroku cloud platform.
 
 ### Link
- Click here to view: [Liron Harari](https://lironharari.herokuapp.com/)
+ Click here to view: [Liron Harari](https://lironharari.herokuapp.com/);
