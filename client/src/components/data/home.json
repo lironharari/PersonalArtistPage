@@ -31,7 +31,7 @@
       "src": "/images/thumbnails/DSC07512SMALL.jpg",
       "width": 640,
       "height": 427,
-      "title":"Life on the Railroads - Photography Documerntary",
+      "title":"Life on the Railroads - Photography documentary",
       "href":"life-on-the-railroads"          
     },
     {
@@ -52,7 +52,7 @@
       "src": "/images/thumbnails/_DSC8301.jpg",
       "width": 800,
       "height": 533,
-      "title":"Life on the Railroads - Photography Documerntary",
+      "title":"Life on the Railroads - Photography documentary",
       "href":"life-on-the-railroads"          
     },
     {
@@ -61,5 +61,26 @@
       "height": 960,
       "title":"The life and death of Joe Shmoe",
       "href":"drawings"
-    } 
+    },
+    {
+      "src": "/images/thumbnails/_DSC7685BIG.jpg",
+      "width": 900,
+      "height": 600,
+      "title":"It's more fun in Manila - Photography documentary",
+      "href":"its-more-fun-in-manila"          
+    },
+    {
+      "src": "/images/thumbnails/DSC_1581.jpg",
+      "width": 581,
+      "height": 389,
+      "title":"Animals",
+      "href":"animals"          
+    },                        
+    {
+      "src": "/images/thumbnails/DSC_0758insta.jpg",
+      "width": 319,
+      "height": 479,
+      "title":"Street photography - Kids",
+      "href":"kids"          
+    }  
   ]
