@@ -24,7 +24,7 @@ function shouldCompress(req, res) {
   }
 
 // Step 2
-mongoose.connect( process.env.MONGODB_URI || 'mongodb+srv://test1:yVj2V2Rx6BHoOPE3@cluster0-vlvmu.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect( process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
