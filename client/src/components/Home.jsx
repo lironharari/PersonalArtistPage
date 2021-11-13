@@ -22,7 +22,7 @@ class Home extends Component {
       };
 
       return (     
-        <div className="homeGrid">
+        <div className="pageContainer">
             {!isEmpty(photos) ? <Gallery photos={photos} renderImage={imageRenderer}></Gallery> : <div className="spinner"><CircularProgress /></div>}                                  
         </div>
       );
