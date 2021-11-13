@@ -47,6 +47,13 @@
       "height": 569,
       "title":"Street photography - Various",
       "href":"street-photography"
+    },
+    {
+      "src": "/images/thumbnails/IMG_2311dd.jpg",
+      "width": 751,
+      "height": 501,
+      "title":"Street photography - Kids",
+      "href":"kids"          
     },                                                      
     {
       "src": "/images/thumbnails/_DSC8301.jpg",
@@ -82,5 +89,26 @@
       "height": 479,
       "title":"Street photography - Kids",
       "href":"kids"          
+    },
+    {
+      "src": "/images/thumbnails/ep4-plasma-lamp.jpg",
+      "width": 528,
+      "height": 426,
+      "title":"Human History Revisited - YouTube Series",
+      "href":"human-history-revisited"          
+    },
+    {
+      "src": "/images/thumbnails/_DSC3980.jpg",
+      "width": 1440,
+      "height": 960,
+      "title":"The life and death of Joe Shmoe",
+      "href":"drawings"
+    },
+    {
+      "src": "/images/thumbnails/_DSC5777BIG.jpg",
+      "width": 900,
+      "height": 600,
+      "title":"It's more fun in Manila - Photography documentary",
+      "href":"its-more-fun-in-manila"          
     }  
   ]
