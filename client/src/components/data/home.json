@@ -40,5 +40,19 @@
       "height": 850,
       "title":"Human History Revisited - YouTube Series",
       "href":"human-history-revisited"          
+    },                                                      
+    {
+      "src": "/images/thumbnails/DSC07512SMALL.jpg",
+      "width": 640,
+      "height": 427,
+      "title":"Life on the Railroads - Photography Documerntary",
+      "href":"life-on-the-railroads"          
+    },
+    {
+      "src": "/images/thumbnails/paracas-skulls.jpg",
+      "width": 640,
+      "height": 850,
+      "title":"Human History Revisited - YouTube Series",
+      "href":"human-history-revisited"          
     }        
   ]
