@@ -40,61 +40,26 @@
       "height": 850,
       "title":"Human History Revisited - YouTube Series",
       "href":"human-history-revisited"          
+    },            
+    {
+      "src": "/images/thumbnails/_DSC0484bb.jpg",
+      "width": 854,
+      "height": 569,
+      "title":"Street photography - Various",
+      "href":"street-photography"
     },                                                      
     {
-      "src": "/images/thumbnails/DSC07512SMALL.jpg",
-      "width": 640,
-      "height": 427,
+      "src": "/images/thumbnails/_DSC8301.jpg",
+      "width": 800,
+      "height": 533,
       "title":"Life on the Railroads - Photography Documerntary",
       "href":"life-on-the-railroads"          
     },
     {
-      "src": "/images/thumbnails/paracas-skulls.jpg",
-      "width": 640,
-      "height": 850,
-      "title":"Human History Revisited - YouTube Series",
-      "href":"human-history-revisited"          
-    },                                                      
-    {
-      "src": "/images/thumbnails/DSC07512SMALL.jpg",
-      "width": 640,
-      "height": 427,
-      "title":"Life on the Railroads - Photography Documerntary",
-      "href":"life-on-the-railroads"          
-    },
-    {
-      "src": "/images/thumbnails/paracas-skulls.jpg",
-      "width": 640,
-      "height": 850,
-      "title":"Human History Revisited - YouTube Series",
-      "href":"human-history-revisited"          
-    },                                                      
-    {
-      "src": "/images/thumbnails/DSC07512SMALL.jpg",
-      "width": 640,
-      "height": 427,
-      "title":"Life on the Railroads - Photography Documerntary",
-      "href":"life-on-the-railroads"          
-    },
-    {
-      "src": "/images/thumbnails/paracas-skulls.jpg",
-      "width": 640,
-      "height": 850,
-      "title":"Human History Revisited - YouTube Series",
-      "href":"human-history-revisited"          
-    },                                                      
-    {
-      "src": "/images/thumbnails/DSC07512SMALL.jpg",
-      "width": 640,
-      "height": 427,
-      "title":"Life on the Railroads - Photography Documerntary",
-      "href":"life-on-the-railroads"          
-    },
-    {
-      "src": "/images/thumbnails/paracas-skulls.jpg",
-      "width": 640,
-      "height": 850,
-      "title":"Human History Revisited - YouTube Series",
-      "href":"human-history-revisited"          
-    }                    
+      "src": "/images/thumbnails/_DSC3960.jpg",
+      "width": 1440,
+      "height": 960,
+      "title":"The life and death of Joe Shmoe",
+      "href":"drawings"
+    } 
   ]
